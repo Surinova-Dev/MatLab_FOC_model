@@ -1,0 +1,11 @@
+motor_poles = 7;
+I_amp = 20;
+PWM_frequency = 20e3;
+rps = 40;
+omg_ref = 2 * 3.14 * rps;
+dt = 0.0001;
+theta = 0;
+theta = theta + omg_ref * dt;
+I_a = I_amp * sin(theta);
+I_b = I_amp * sin(theta - ((2*3.14)/3));
+I_a = I_amp * sin(theta + ((2*3.14)/3));

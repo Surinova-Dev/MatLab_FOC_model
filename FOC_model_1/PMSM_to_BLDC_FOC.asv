@@ -1,0 +1,5 @@
+motor_poles = 7;
+PWM_frequency = 20e3;
+rps = 40;
+omg_ref = 2 * 3.414 * rps;
+theta += omg_ref * dt;
