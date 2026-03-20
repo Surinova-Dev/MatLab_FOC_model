@@ -1,11 +1,21 @@
 motor_poles = 7;
 I_amp = 20;
 PWM_frequency = 20e3;
-rps = 40;
+rps = 400;
 omg_ref = 2 * 3.14 * rps;
+omg_cl = 2 * 3.141 * PWM_frequency;
+%bldc 5065
+Ld=0.000035;
+Lq=Ld;                         
+R_s=0.064; 
+%bldc 5065
 dt = 0.0001;
 theta = 0;
 theta = theta + omg_ref * dt;
 I_a = I_amp * sin(theta);
 I_b = I_amp * sin(theta - ((2*3.14)/3));
 I_a = I_amp * sin(theta + ((2*3.14)/3));
+Kp_Id = omg_cl * Ld;
+Ki_Id = omg_cl * R_s;
+Kp_Iq = omg_cl * Lq;
+Kp_Iq = omg_cl * R_s;
