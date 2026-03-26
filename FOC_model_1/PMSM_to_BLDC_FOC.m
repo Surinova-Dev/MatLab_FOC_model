@@ -1,9 +1,10 @@
 % Parameters
 pwm_frequency = 20e3;
-x=60;
+x=600;
 rps=x;
 f_speed= pwm_frequency/100;
 f_current=pwm_frequency/10
+omg_cl = 2 * 3.14 * pwm_frequency;
 %Bldc RPP parameters
 Ld = 0.0017;
 Lq = 0.0018;
@@ -22,4 +23,4 @@ Ki_Id = omg_clc * R_s;
 Kp_Iq = omg_clc * Lq;
 Ki_Iq = omg_clc * R_s;
 kp_speed = ((J*omg_cls)/(1.5*motor_polepairs*flux_linkage)) ;
-ki_speed = ((B *omg_cls * omg_cl)/(1.5*motor_polepairs*flux_linkage)) ;
+ki_speed = ((B *omg_cls * omg_cls)/(1.5*motor_polepairs*flux_linkage)) ;
