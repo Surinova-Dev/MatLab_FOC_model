@@ -1,0 +1,14 @@
+The Images of plot attached are results from the FOC sensor less model with plant model set with speed input both from FOC and in the PMSM block in plant model.
+
+observations: 1st plot- waves were jittery in the beginning but 120 degree phase difference maintained 
+              2nd plot - after 8 secs plot appeared messy and more rippled 
+              3rd plot - after the initial jitter rest of the plot was smooth SVPWM for rest of the sim duration
+
+Time Segment,System State,Key Characteristic:
+4.8s - 6.2s,Steady State,Clean SVPWM waveforms; stable low-speed operation.
+8.4s - 9.7s,Control Instability,Phase distortion; likely an error in the Back-EMF observer or position tracking.
+11.0s - 11.1s,Transient/Recovery,High-frequency correction burst; transition to high-speed mode.
+11.2s - 12.2s,High-Speed Steady State,Stable modulation with significantly reduced fundamental period (increased RPM).
+
+
+Phase offset is - 1.45 and gain is 1/3 (while changing this entire plot became noisy).
