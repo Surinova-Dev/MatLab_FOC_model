@@ -1,0 +1,10 @@
+config load "C:\Users\Surinova\OneDrive - Surinova Pvt Ltd\Documents\Github\PMSM_Embedded_Model\F405_PMSM_Mod1\F405_PMSM_Mod1.ioc"
+project toolchain "MDK-ARM V5"
+
+SetStructure Advanced
+
+project setCustomFWPath "C:\Users\Surinova\STM32Cube\Repository\STM32Cube_FW_F4_V1.28.0"
+
+project generate 
+
+exit wait
