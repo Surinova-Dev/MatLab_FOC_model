@@ -1,8 +1,8 @@
 % Parameters
 pwm_frequency = 20e3;
 x=600;
-rps=x;
-f_speed= pwm_frequency/100;
+rps=x/6.28;
+f_speed=pwm_frequency/100;
 f_current=pwm_frequency/10
 omg_cl = 2 * 3.14 * pwm_frequency;
 %Bldc RPP parameters

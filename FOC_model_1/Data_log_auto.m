@@ -8,7 +8,7 @@
 MODEL_NAME    = 'PMSM_to_BLDC_mod1';
 DEST_FOLDER   = 'D:\Harini\Matlab_FOC_studymodels\Data_logging_Sensorlessmod';
 FILE_PREFIX   = 'Sensorless_log';
-SIM_STOP_TIME = 47;
+SIM_STOP_TIME = 100;
 
 % --- Signals to log ---
 SIGNAL_NAMES = { ...
@@ -21,13 +21,13 @@ SIGNAL_NAMES = { ...
     'W_fb_sim', ...
     'Phase_current', ...
     'Pos', ...
-    'Duty cycle', ...
-    'Vabc' ...
+    'Duty cycle'
 };
 
-% --- Gate_pulse zoom window (seconds) ---
-GATE_ZOOM_START    = 46.5;
-GATE_ZOOM_END      = 47.0;
+% --- Gate_pulse zoom window ---
+% Zooms into the last 0.5s of simulation automatically
+% regardless of SIM_STOP_TIME
+GATE_ZOOM_DURATION  = 0.5;   % seconds to show from end of simulation
 GATE_PULSE_CHANNELS = {'GA_H', 'GB_H', 'GC_H', 'GA_L', 'GB_L', 'GC_L'};
 %% ===================================
 
@@ -39,8 +39,8 @@ if ~exist(DEST_FOLDER, 'dir')
 end
 
 %% 2. Timestamped run ID
-timestamp  = datestr(now, 'yyyymmdd_HHMMSS');
-run_id     = sprintf('%s_%s', FILE_PREFIX, timestamp);
+timestamp = datestr(now, 'yyyymmdd_HHMMSS');
+run_id    = sprintf('%s_%s', FILE_PREFIX, timestamp);
 fprintf('Run ID   : %s\n', run_id);
 fprintf('Saving to: %s\n\n', DEST_FOLDER);
 
@@ -66,18 +66,17 @@ for k = 1:logsout.numElements
     logsout_map(logsout{k}.Name) = k;
 end
 
-% Print all available signal names for reference
 fprintf('Signals found in logsout:\n');
 disp(keys(logsout_map));
 
-%% 6. Extract signals into structured log
+%% 6. Extract ALL signals into structured log
 log_data  = struct();
 n_saved   = 0;
 n_skipped = 0;
 
 for i = 1:numel(SIGNAL_NAMES)
     sig_name  = SIGNAL_NAMES{i};
-    safe_name = regexprep(sig_name, '[^\w]', '_');  % e.g. 'Duty cycle' -> 'Duty_cycle'
+    safe_name = regexprep(sig_name, '[^\w]', '_');
 
     %% -- Check signal exists --
     if ~isKey(logsout_map, sig_name)
@@ -91,27 +90,28 @@ for i = 1:numel(SIGNAL_NAMES)
     t    = s.Values.Time;
     data = squeeze(s.Values.Data);
 
-    %% -- Store full signal --
+    %% -- Store FULL signal for ALL signals --
     log_data.(safe_name).time   = t;
     log_data.(safe_name).data   = data;
     log_data.(safe_name).name   = sig_name;
     log_data.(safe_name).run_id = run_id;
 
-    %% -- Gate_pulse: zoom window + channel labels --
+    %% -- Gate_pulse ONLY: additionally store zoomed window + channel labels --
     if strcmp(sig_name, 'Gate_pulse')
-        idx = t >= GATE_ZOOM_START & t <= GATE_ZOOM_END;
+
+        % Auto zoom: last GATE_ZOOM_DURATION seconds of actual data
+        t_end   = t(end);
+        t_start = t_end - GATE_ZOOM_DURATION;
+        idx     = t >= t_start & t <= t_end;
 
         log_data.(safe_name).zoomed_time = t(idx);
 
         if ~isvector(data)
-            zoomed_data = data(idx, :);
-            log_data.(safe_name).zoomed_data = zoomed_data;
-
+            log_data.(safe_name).zoomed_data = data(idx, :);
             n_ch = size(data, 2);
             if n_ch == numel(GATE_PULSE_CHANNELS)
                 log_data.(safe_name).channels = GATE_PULSE_CHANNELS;
             else
-                % Fallback channel names if count doesn't match
                 log_data.(safe_name).channels = arrayfun( ...
                     @(n) sprintf('CH%d', n), 1:n_ch, 'UniformOutput', false);
             end
@@ -120,11 +120,10 @@ for i = 1:numel(SIGNAL_NAMES)
             log_data.(safe_name).channels    = {'Gate_pulse'};
         end
 
-        fprintf('  [OK] Logged: %s  (full + zoomed [%.1f–%.1f s], %d channels)\n', ...
-                sig_name, GATE_ZOOM_START, GATE_ZOOM_END, ...
-                numel(log_data.(safe_name).channels));
+        fprintf('  [OK] Logged: %s  (full data + zoomed last %.1fs, %d channels)\n', ...
+                sig_name, GATE_ZOOM_DURATION, numel(log_data.(safe_name).channels));
     else
-        fprintf('  [OK] Logged: %s\n', sig_name);
+        fprintf('  [OK] Logged: %s  (full data, %d samples)\n', sig_name, numel(t));
     end
 
     n_saved = n_saved + 1;
@@ -145,12 +144,12 @@ fprintf('\n[SAVED] %s\n', mat_filename);
 
 %% 9. Summary
 fprintf('\n========== Run Summary ==========\n');
-fprintf('Run ID   : %s\n',        run_id);
-fprintf('Model    : %s\n',        MODEL_NAME);
-fprintf('Stop time: %d s\n',      SIM_STOP_TIME);
+fprintf('Run ID   : %s\n',          run_id);
+fprintf('Model    : %s\n',          MODEL_NAME);
+fprintf('Stop time: %d s\n',        SIM_STOP_TIME);
 fprintf('Signals  : %d/%d saved\n', n_saved, numel(SIGNAL_NAMES));
 if n_skipped > 0
     fprintf('Skipped  : %d signal(s) not found\n', n_skipped);
 end
-fprintf('File     : %s\n',        mat_filename);
-fprintf('=================================\n');
+fprintf('File     : %s\n',          mat_filename);
+fprintf('=================================\n')
