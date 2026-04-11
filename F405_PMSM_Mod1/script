@@ -1,5 +1,5 @@
-config load "C:\Users\Surinova\OneDrive - Surinova Pvt Ltd\Documents\Github\PMSM_Embedded_Model\F405_PMSM_Mod1\F405_PMSM_Mod1.ioc"
-project toolchain "MDK-ARM V5"
+config load "C:\Users\Surinova\OneDrive - Surinova Pvt Ltd\Documents\Github\MatLab_FOC_model\F405_PMSM_Mod1\F405_PMSM_Mod1.ioc"
+project toolchain STM32CubeIDE
 
 SetStructure Advanced
 

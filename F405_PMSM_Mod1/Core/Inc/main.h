@@ -37,6 +37,8 @@ extern "C" {
 #include "stm32f4xx_ll_cortex.h"
 #include "stm32f4xx_ll_utils.h"
 #include "stm32f4xx_ll_pwr.h"
+#include "stm32f4xx_ll_spi.h"
+#include "stm32f4xx_ll_tim.h"
 #include "stm32f4xx_ll_usart.h"
 #include "stm32f4xx_ll_gpio.h"
 
@@ -60,14 +62,16 @@ extern "C" {
 
 /* USER CODE END EM */
 
-void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
-
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
 void MX_GPIO_Init(void);
 void MX_DMA_Init(void);
 void MX_ADC1_Init(void);
 void MX_USART2_UART_Init(void);
+void MX_ADC2_Init(void);
+void MX_TIM8_Init(void);
+void MX_ADC3_Init(void);
+void MX_SPI3_Init(void);
 
 /* USER CODE BEGIN EFP */
 

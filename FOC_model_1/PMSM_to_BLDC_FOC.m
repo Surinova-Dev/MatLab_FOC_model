@@ -28,3 +28,14 @@ ki_speed = ((B *omg_cls * omg_cls)/(1.5*motor_polepairs*flux_linkage)) ;
 Torque = [0,0.5,1.6,2];
 speed = [0,0,5000.7900];
 Vdc = [48];
+
+%control data
+
+reg_ctrl_1= ( bitshift(21,6) + bitshift(1,4) + bitshift(0,3) + bitshift(0,2) + bitshift(0,0));
+reg_ctrl_2= ( bitshift(0,6) + bitshift(0,4) + bitshift(1,2) + bitshift(0,0));
+read_reg = 1;
+write_reg = 0;
+ctrl_reg1 = 0x02;
+ctrl_reg2 = 0x03;
+stat_reg1 = 0x00;
+stat_reg2 = 0x01;
