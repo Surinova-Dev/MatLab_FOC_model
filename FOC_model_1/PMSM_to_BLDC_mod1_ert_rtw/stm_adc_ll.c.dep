@@ -39,6 +39,7 @@ stm_adc_ll.c.o: \
  C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/F405_PMSM_Mod1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_cortex.h \
  C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/F405_PMSM_Mod1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_utils.h \
  C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/F405_PMSM_Mod1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_pwr.h \
+ C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/F405_PMSM_Mod1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_spi.h \
  C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/F405_PMSM_Mod1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_tim.h \
  C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/F405_PMSM_Mod1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usart.h \
  C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/F405_PMSM_Mod1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_gpio.h \
@@ -86,6 +87,7 @@ C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_mo
 C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/F405_PMSM_Mod1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_cortex.h:
 C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/F405_PMSM_Mod1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_utils.h:
 C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/F405_PMSM_Mod1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_pwr.h:
+C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/F405_PMSM_Mod1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_spi.h:
 C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/F405_PMSM_Mod1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_tim.h:
 C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/F405_PMSM_Mod1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usart.h:
 C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/F405_PMSM_Mod1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_gpio.h:

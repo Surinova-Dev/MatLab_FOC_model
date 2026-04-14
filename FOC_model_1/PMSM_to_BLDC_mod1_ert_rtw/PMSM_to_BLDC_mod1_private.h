@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'PMSM_to_BLDC_mod1'.
  *
- * Model version                  : 4.375
+ * Model version                  : 4.415
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Sat Apr 11 19:18:24 2026
+ * C/C++ source code generated on : Tue Apr 14 18:10:32 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -29,14 +29,17 @@
 #define rtmSetTFinal(rtm, val)         ((rtm)->Timing.tFinal = (val))
 #endif
 
-extern void PMSM_to_BLDC_mod1_BitShift_Init(DW_BitShift_PMSM_to_BLDC_mod1_T
-  *localDW);
+extern void PMSM_to_BLDC__BitShift_Init(DW_BitShift_PMSM_to_BLDC_mod1_T *localDW);
 extern void PMSM_to_BLDC_mod1_BitShift(uint16_T rtu_u, uint16_T *rty_y,
   DW_BitShift_PMSM_to_BLDC_mod1_T *localDW);
-extern void PMSM_to_BLDC_mod_BitShift4_Init(DW_BitShift4_PMSM_to_BLDC_mod_T
+extern void PMSM_to_BLDC_BitShift1_Init(DW_BitShift1_PMSM_to_BLDC_mod_T *localDW);
+extern void PMSM_to_BLDC_mod1_BitShift1(uint16_T rtu_u, uint16_T *rty_y,
+  DW_BitShift1_PMSM_to_BLDC_mod_T *localDW);
+extern void SPIControllerTransfer_Init(DW_SPIControllerTransfer_PMSM_T *localDW);
+extern void PMSM__SPIControllerTransfer(uint16_T rtu_0,
+  B_SPIControllerTransfer_PMSM__T *localB, DW_SPIControllerTransfer_PMSM_T
   *localDW);
-extern void PMSM_to_BLDC_mod1_BitShift4(uint16_T rtu_u, uint16_T *rty_y,
-  DW_BitShift4_PMSM_to_BLDC_mod_T *localDW);
+extern void SPIControllerTransfer_Term(DW_SPIControllerTransfer_PMSM_T *localDW);
 
 #endif                                 /* PMSM_to_BLDC_mod1_private_h_ */
 

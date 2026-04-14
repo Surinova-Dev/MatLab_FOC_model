@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'PMSM_to_BLDC_mod1'.
  *
- * Model version                  : 4.375
+ * Model version                  : 4.415
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Sat Apr 11 19:18:24 2026
+ * C/C++ source code generated on : Tue Apr 14 18:10:32 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -24,28 +24,77 @@
 #include "MW_target_hardware_resources.h"
 
 volatile int IsrOverrun = 0;
-static boolean_T OverrunFlag = 0;
+boolean_T isRateRunning[2] = { 0, 0 };
+
+boolean_T need2runFlags[2] = { 0, 0 };
+
 void rt_OneStep(void)
 {
   extmodeSimulationTime_T currentTime = (extmodeSimulationTime_T) 0;
+  boolean_T eventFlags[2];
 
-  /* Check for overrun. Protect OverrunFlag against preemption */
-  if (OverrunFlag++) {
+  /* Check base rate for overrun */
+  if (isRateRunning[0]++) {
     IsrOverrun = 1;
-    OverrunFlag--;
+    isRateRunning[0]--;                /* allow future iterations to succeed*/
     return;
   }
 
+  /*
+   * For a bare-board target (i.e., no operating system), the rates
+   * that execute this base step are buffered locally to allow for
+   * overlapping preemption.
+   */
+  PMSM_to_BLDC_mod1_SetEventsForThisBaseStep(eventFlags);
   __enable_irq();
   currentTime = (extmodeSimulationTime_T) PMSM_to_BLDC_mod1_M->Timing.taskTime0;
-  PMSM_to_BLDC_mod1_step();
+  PMSM_to_BLDC_mod1_step0();
 
   /* Get model outputs here */
 
   /* Trigger External Mode event */
   extmodeEvent(0, currentTime);
   __disable_irq();
-  OverrunFlag--;
+  isRateRunning[0]--;
+  if (eventFlags[1]) {
+    if (need2runFlags[1]++) {
+      IsrOverrun = 1;
+      need2runFlags[1]--;              /* allow future iterations to succeed*/
+      return;
+    }
+  }
+
+  if (need2runFlags[1]) {
+    if (isRateRunning[1]) {
+      /* Yield to higher priority*/
+      return;
+    }
+
+    isRateRunning[1]++;
+    __enable_irq();
+
+    /* Step the model for subrate "1" */
+    switch (1)
+    {
+     case 1 :
+      currentTime = (extmodeSimulationTime_T)
+        ((PMSM_to_BLDC_mod1_M->Timing.clockTick1) * 1.0);
+      PMSM_to_BLDC_mod1_step1();
+
+      /* Get model outputs here */
+
+      /* Trigger External Mode event */
+      extmodeEvent(1, currentTime);
+      break;
+
+     default :
+      break;
+    }
+
+    __disable_irq();
+    need2runFlags[1]--;
+    isRateRunning[1]--;
+  }
 }
 
 volatile boolean_T stopRequested;

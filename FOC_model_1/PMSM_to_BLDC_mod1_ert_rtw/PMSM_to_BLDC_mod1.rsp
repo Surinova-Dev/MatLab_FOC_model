@@ -3,7 +3,6 @@ xcp_ext_mode.c.o
 PMSM_to_BLDC_mod1.c.o
 PMSM_to_BLDC_mod1_data.c.o
 ert_main.c.o
-rt_nonfinite.c.o
 xcp_ext_common.c.o
 xcp_ext_classic_trigger.c.o
 xcp.c.o
@@ -56,3 +55,4 @@ system_stm32f4xx.c.o
 syscalls.c.o
 sysmem.c.o
 startup_stm32f405rgtx.s.o
+stm_adc_ll.c.o
