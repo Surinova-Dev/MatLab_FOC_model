@@ -5,10 +5,6 @@ ert_main.c.o: \
  C:/Program\ Files/MATLAB/R2025b/simulink/include/rtw_extmode.h \
  C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/FOC_model_1/PMSM_to_BLDC_mod1_ert_rtw/rtwtypes.h \
  C:/Program\ Files/MATLAB/R2025b/simulink/include/sysran_types.h \
- C:/Program\ Files/MATLAB/R2025b/toolbox/target/shared/svd/common/include/MW_SPI.h \
- C:/Program\ Files/MATLAB/R2025b/toolbox/target/shared/svd/common/include/MW_digitalIO.h \
- C:/Program\ Files/MATLAB/R2025b/toolbox/target/shared/svd/common/include/MW_SVD.h \
- C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/shared/supportpackages/stm32/include/mw_stm32_spi_ll.h \
  C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/F405_PMSM_Mod1/Core/Inc/main.h \
  C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/F405_PMSM_Mod1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/F405_PMSM_Mod1/Core/Inc/stm32f4xx_hal_conf.h \
@@ -50,9 +46,13 @@ ert_main.c.o: \
  C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/F405_PMSM_Mod1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_tim.h \
  C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/F405_PMSM_Mod1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usart.h \
  C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/F405_PMSM_Mod1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_gpio.h \
+ C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/shared/supportpackages/stm32/include/mw_stm32_utils.h \
+ C:/Program\ Files/MATLAB/R2025b/toolbox/target/shared/svd/common/include/MW_SPI.h \
+ C:/Program\ Files/MATLAB/R2025b/toolbox/target/shared/svd/common/include/MW_digitalIO.h \
+ C:/Program\ Files/MATLAB/R2025b/toolbox/target/shared/svd/common/include/MW_SVD.h \
+ C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/shared/supportpackages/stm32/include/mw_stm32_spi_ll.h \
  C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/shared/supportpackages/stm32/include/mw_stm32_types.h \
  C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/FOC_MO~1/PMSM_to_BLDC_mod1_ert_rtw/PMSM_to_BLDC_mod1_types.h \
- C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/shared/supportpackages/stm32/include/stm_adc_ll.h \
  C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/FOC_MO~1/PMSM_to_BLDC_mod1_ert_rtw/MW_target_hardware_resources.h \
  C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/shared/supportpackages/stm32/include/mw_stm32_board_header.h \
  C:/Program\ Files/MATLAB/R2025b/toolbox/target/shared/armcortexmbase/scheduler/include/SysTickScheduler.h \
@@ -71,10 +71,6 @@ C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/FOC_MO~1/PMSM_to_BLDC_mod1_e
 C:/Program\ Files/MATLAB/R2025b/simulink/include/rtw_extmode.h:
 C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/FOC_model_1/PMSM_to_BLDC_mod1_ert_rtw/rtwtypes.h:
 C:/Program\ Files/MATLAB/R2025b/simulink/include/sysran_types.h:
-C:/Program\ Files/MATLAB/R2025b/toolbox/target/shared/svd/common/include/MW_SPI.h:
-C:/Program\ Files/MATLAB/R2025b/toolbox/target/shared/svd/common/include/MW_digitalIO.h:
-C:/Program\ Files/MATLAB/R2025b/toolbox/target/shared/svd/common/include/MW_SVD.h:
-C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/shared/supportpackages/stm32/include/mw_stm32_spi_ll.h:
 C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/F405_PMSM_Mod1/Core/Inc/main.h:
 C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/F405_PMSM_Mod1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/F405_PMSM_Mod1/Core/Inc/stm32f4xx_hal_conf.h:
@@ -116,9 +112,13 @@ C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_mo
 C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/F405_PMSM_Mod1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_tim.h:
 C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/F405_PMSM_Mod1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usart.h:
 C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/F405_PMSM_Mod1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_gpio.h:
+C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/shared/supportpackages/stm32/include/mw_stm32_utils.h:
+C:/Program\ Files/MATLAB/R2025b/toolbox/target/shared/svd/common/include/MW_SPI.h:
+C:/Program\ Files/MATLAB/R2025b/toolbox/target/shared/svd/common/include/MW_digitalIO.h:
+C:/Program\ Files/MATLAB/R2025b/toolbox/target/shared/svd/common/include/MW_SVD.h:
+C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/shared/supportpackages/stm32/include/mw_stm32_spi_ll.h:
 C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/shared/supportpackages/stm32/include/mw_stm32_types.h:
 C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/FOC_MO~1/PMSM_to_BLDC_mod1_ert_rtw/PMSM_to_BLDC_mod1_types.h:
-C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/shared/supportpackages/stm32/include/stm_adc_ll.h:
 C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/FOC_MO~1/PMSM_to_BLDC_mod1_ert_rtw/MW_target_hardware_resources.h:
 C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/shared/supportpackages/stm32/include/mw_stm32_board_header.h:
 C:/Program\ Files/MATLAB/R2025b/toolbox/target/shared/armcortexmbase/scheduler/include/SysTickScheduler.h:

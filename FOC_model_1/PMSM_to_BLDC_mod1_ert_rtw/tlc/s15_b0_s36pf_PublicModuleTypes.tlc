@@ -1,0 +1,51 @@
+%implements s15_b0_s36pf_PublicModuleTypes "C"
+
+%function PublicModuleTypes(block) Output
+
+#ifndef struct_tag_92DzsjXuaF7c99tFkgTmuB
+#define struct_tag_92DzsjXuaF7c99tFkgTmuB
+struct tag_92DzsjXuaF7c99tFkgTmuB
+{
+    boolean_T matlabCodegenIsDeleted;
+    int32_T isInitialized;
+    boolean_T isSetupComplete;
+};
+#endif /* struct_tag_92DzsjXuaF7c99tFkgTmuB */
+#ifndef typedef_stm32cube_blocks_DigitalPortW_T
+#define typedef_stm32cube_blocks_DigitalPortW_T
+typedef struct tag_92DzsjXuaF7c99tFkgTmuB stm32cube_blocks_DigitalPortW_T;
+#endif /* typedef_stm32cube_blocks_DigitalPortW_T */
+
+
+
+#ifndef struct_tag_AkYSLo56SBzQIYxVc5esmB
+#define struct_tag_AkYSLo56SBzQIYxVc5esmB
+struct tag_AkYSLo56SBzQIYxVc5esmB
+{
+    boolean_T matlabCodegenIsDeleted;
+    int32_T isInitialized;
+    boolean_T isSetupComplete;
+    STM32_SPI_Struct_T * MW_SPI_HANDLE;
+    STM32_SPI_Struct_T MW_SPI_BlockStruct;
+};
+#endif /* struct_tag_AkYSLo56SBzQIYxVc5esmB */
+#ifndef typedef_stm32cube_blocks_SPIControlle_T
+#define typedef_stm32cube_blocks_SPIControlle_T
+typedef struct tag_AkYSLo56SBzQIYxVc5esmB stm32cube_blocks_SPIControlle_T;
+#endif /* typedef_stm32cube_blocks_SPIControlle_T */
+#ifndef struct_tag_IKm6TRZqtpfiV17vKa6x5
+#define struct_tag_IKm6TRZqtpfiV17vKa6x5
+struct tag_IKm6TRZqtpfiV17vKa6x5
+{
+    boolean_T matlabCodegenIsDeleted;
+    int32_T isInitialized;
+    boolean_T isSetupComplete;
+    STM32_SPI_Struct_T * MW_SPI_HANDLE;
+    STM32_SPI_Struct_T MW_SPI_BlockStruct;
+};
+#endif /* struct_tag_IKm6TRZqtpfiV17vKa6x5 */
+#ifndef typedef_stm32cube_blocks_SPIControl_o_T
+#define typedef_stm32cube_blocks_SPIControl_o_T
+typedef struct tag_IKm6TRZqtpfiV17vKa6x5 stm32cube_blocks_SPIControl_o_T;
+#endif /* typedef_stm32cube_blocks_SPIControl_o_T */
+%endfunction

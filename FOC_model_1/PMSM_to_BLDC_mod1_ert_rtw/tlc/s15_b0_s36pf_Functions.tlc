@@ -1,0 +1,96 @@
+%implements s15_b0_s36pf_Functions "C"
+
+%function PMSM_to_B_SPIDrvBlock_setupImpl_Fcn0(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+MW_STM32_SPI_FIFO_Access_type b_dataType;
+STM32_SPI_Struct_T * spiBlock;
+STM32_SPI_ModuleStruct_T c;
+/* Start for MATLABSystem: '<S2>/SPI Transmit1' */
+/*@>1a53d5*/c./*@>1b0abc*/buffer./*@>1b0ab9*/rxBufferPtr/*@>179b3d*/ = /*@>1a53a7*/NULL;
+/*@>1a53d9*/c./*@>1b0ac2*/buffer./*@>1b0abf*/txBufferPtr/*@>179b35*/ = /*@>1a53a8*/NULL;
+/*@>1a5390*/c./*@>1b0a8c*/PeripheralPtr/*@>179b67*/ = /*@>1a53a9*/SPI3;
+/*@>1a538d*/c./*@>1b0a89*/enableRxOrTx/*@>179b63*/ = /*@>1b09e4*/0U;
+/*@>1a53b4*/c./*@>1b0a95*/buffer./*@>1b0a98*/rxBufferSize/*@>19d577*/ = /*@>1a53d0*/0U;
+/*@>1a53b8*/c./*@>1b0a9b*/buffer./*@>1b0a9e*/txBufferSize/*@>19d593*/ = /*@>1a53d1*/0U;
+/* Start for MATLABSystem: '<S2>/SPI Transmit1' */
+/*@>1a538a*/c./*@>1b0a86*/rxMode/*@>179b5b*/ = /*@>1a53aa*/SPI_RX_POLLING_MODE;
+/*@>1a5387*/c./*@>1b0a83*/txMode/*@>179b57*/ = /*@>1a53ab*/SPI_TX_POLLING_MODE;
+/*@>1a5384*/c./*@>1b0a80*/rxdmaPeripheralPtr/*@>179b53*/ = /*@>1a53ac*/NULL;
+/*@>1a5381*/c./*@>1b0a7d*/rxdmastream/*@>179b4f*/ = /*@>1a53ad*/0;
+/*@>1a537e*/c./*@>1b0a7a*/txdmaPeripheralPtr/*@>179b4b*/ = /*@>1a53ae*/NULL;
+/*@>1a537b*/c./*@>1b0a77*/txdmastream/*@>179b47*/ = /*@>1a53af*/0;
+/*@>1a53dd*/obj->/*@>1b0ac8*/MW_SPI_BlockStruct./*@>1b0ac5*/h_spi/*@>179b7f*/ = /*@>1a53b0*/NULL;
+/*@>1a53e1*/obj->/*@>1b0ace*/MW_SPI_BlockStruct./*@>1b0acb*/gpioPort/*@>179b7b*/ = /*@>1a53b1*/GPIOC;
+/*@>1a53ce*/b_dataType/*@>179b6f*/ = /*@>1a5398*/FIFO_ACCESS_16BIT;
+/* Start for MATLABSystem: '<S2>/SPI Transmit1' */
+/*@>1a53bc*/obj->/*@>1b0aa1*/MW_SPI_BlockStruct./*@>1b0aa4*/gpioPin/*@>19d5ce*/ = /*@>1a53d2*/14U;
+/*@>1a53c0*/obj->/*@>1b0aa7*/MW_SPI_BlockStruct./*@>1b0aaa*/chipSelectActiveLow/*@>19d5dd*/ = /*@>1a53d3*/true;
+/*@>1a53c4*/obj->/*@>1b0aad*/MW_SPI_BlockStruct./*@>1b0ab0*/dataType/*@>19d5ec*/ = /*@>1a53c8*/b_dataType;
+/*@>1a53ca*/obj->/*@>1b0ab3*/MW_SPI_BlockStruct./*@>1b0ab6*/dataLength/*@>19d5fb*/ = /*@>1a53d4*/1.0;
+/*@>1a5392*/spiBlock/*@>179bc3*/ = /*@>1ab855*/(STM32_SPI_Struct_T *)(&/*@>1a539f*/obj->/*@>1b0a92*/MW_SPI_BlockStruct);
+/*@>1a53a1*/obj->/*@>1b0a8f*/MW_SPI_HANDLE/*@>179bca*/ = /*@>1ab857*/SPI_STM32_Init(&/*@>1a53a3*/c, /*@>1a5396*/spiBlock);
+/*@>1ab859*/MW_STM32_SPI_SetFormat(/*@>1a53a5*/obj->MW_SPI_HANDLE, /*@>1a539c*/2U, /*@>1a539d*/3840U, /*@>1a53b2*/MW_SPI_MODE_3);
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void PMSM_to_B_SPIDrvBlock_setupImpl(\
+%assign comma = ""
+%<comma>stm32cube_blocks_SPIControlle_T *obj\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(2, 0, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function PMSM_to_SPIDrvBlock_setupImpl_o_Fcn1(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+MW_STM32_SPI_FIFO_Access_type b_dataType;
+STM32_SPI_Struct_T * spiBlock;
+STM32_SPI_ModuleStruct_T c;
+/* Start for MATLABSystem: '<S35>/SPI Controller Transfer' */
+/*@>1a5458*/c./*@>1b0bc4*/buffer./*@>1b0bc1*/rxBufferPtr/*@>187c05*/ = /*@>1a542a*/NULL;
+/*@>1a545c*/c./*@>1b0bca*/buffer./*@>1b0bc7*/txBufferPtr/*@>187bfd*/ = /*@>1a542b*/NULL;
+/*@>1a5413*/c./*@>1b0b94*/PeripheralPtr/*@>187c2f*/ = /*@>1a542c*/SPI3;
+/*@>1a5410*/c./*@>1b0b91*/enableRxOrTx/*@>187c2b*/ = /*@>1b0aec*/0U;
+/*@>1a5437*/c./*@>1b0b9d*/buffer./*@>1b0ba0*/rxBufferSize/*@>19d4d1*/ = /*@>1a5453*/0U;
+/*@>1a543b*/c./*@>1b0ba3*/buffer./*@>1b0ba6*/txBufferSize/*@>19d4ed*/ = /*@>1a5454*/0U;
+/* Start for MATLABSystem: '<S35>/SPI Controller Transfer' */
+/*@>1a540d*/c./*@>1b0b8e*/rxMode/*@>187c23*/ = /*@>1a542d*/SPI_RX_POLLING_MODE;
+/*@>1a540a*/c./*@>1b0b8b*/txMode/*@>187c1f*/ = /*@>1a542e*/SPI_TX_POLLING_MODE;
+/*@>1a5407*/c./*@>1b0b88*/rxdmaPeripheralPtr/*@>187c1b*/ = /*@>1a542f*/NULL;
+/*@>1a5404*/c./*@>1b0b85*/rxdmastream/*@>187c17*/ = /*@>1a5430*/0;
+/*@>1a5401*/c./*@>1b0b82*/txdmaPeripheralPtr/*@>187c13*/ = /*@>1a5431*/NULL;
+/*@>1a53fe*/c./*@>1b0b7f*/txdmastream/*@>187c0f*/ = /*@>1a5432*/0;
+/*@>1a5460*/obj->/*@>1b0bd0*/MW_SPI_BlockStruct./*@>1b0bcd*/h_spi/*@>187c47*/ = /*@>1a5433*/NULL;
+/*@>1a5464*/obj->/*@>1b0bd6*/MW_SPI_BlockStruct./*@>1b0bd3*/gpioPort/*@>187c43*/ = /*@>1a5434*/GPIOC;
+/*@>1a5451*/b_dataType/*@>187c37*/ = /*@>1a541b*/FIFO_ACCESS_16BIT;
+/* Start for MATLABSystem: '<S35>/SPI Controller Transfer' */
+/*@>1a543f*/obj->/*@>1b0ba9*/MW_SPI_BlockStruct./*@>1b0bac*/gpioPin/*@>19d528*/ = /*@>1a5455*/14U;
+/*@>1a5443*/obj->/*@>1b0baf*/MW_SPI_BlockStruct./*@>1b0bb2*/chipSelectActiveLow/*@>19d537*/ = /*@>1a5456*/true;
+/*@>1a5447*/obj->/*@>1b0bb5*/MW_SPI_BlockStruct./*@>1b0bb8*/dataType/*@>19d546*/ = /*@>1a544b*/b_dataType;
+/*@>1a544d*/obj->/*@>1b0bbb*/MW_SPI_BlockStruct./*@>1b0bbe*/dataLength/*@>19d555*/ = /*@>1a5457*/1.0;
+/*@>1a5415*/spiBlock/*@>187c8b*/ = /*@>1ab85b*/(STM32_SPI_Struct_T *)(&/*@>1a5422*/obj->/*@>1b0b9a*/MW_SPI_BlockStruct);
+/*@>1a5424*/obj->/*@>1b0b97*/MW_SPI_HANDLE/*@>187c92*/ = /*@>1ab85d*/SPI_STM32_Init(&/*@>1a5426*/c, /*@>1a5419*/spiBlock);
+/*@>1ab85f*/MW_STM32_SPI_SetFormat(/*@>1a5428*/obj->MW_SPI_HANDLE, /*@>1a541f*/2U, /*@>1a5420*/3840U, /*@>1a5435*/MW_SPI_MODE_3);
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void PMSM_to_SPIDrvBlock_setupImpl_o(\
+%assign comma = ""
+%<comma>stm32cube_blocks_SPIControl_o_T *obj\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(2, 1, fcnProtoType)>
+%return fcnBuff
+%endfunction
+

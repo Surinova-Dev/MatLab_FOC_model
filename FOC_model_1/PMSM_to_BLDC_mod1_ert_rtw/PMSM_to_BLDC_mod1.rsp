@@ -55,4 +55,3 @@ system_stm32f4xx.c.o
 syscalls.c.o
 sysmem.c.o
 startup_stm32f405rgtx.s.o
-stm_adc_ll.c.o

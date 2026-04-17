@@ -1,0 +1,44 @@
+%implements s15_b0_s36pf_1_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%<SLibGenerateExtModeOutput(system)>
+/* MATLAB Function: '<S28>/bit_shift' */
+/*@>19b741*/localDW->/*@>19b87d*/sfEvent/*@>197f11*/ = /*@>19b089*/PMSM_to_BLDC_mod1_CALL_EVENT_g;
+*rty_y/*@>197f15*/ = /*@>19b168*/(uint16_T)(/*@>19b08d*/rtu_u/*@>19b090*/ << /*@>19b08a*/11);
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[1].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Output", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))
+%<SLibCG_AccessArg(1, 2, 0)>
+%endif
+%if SLibCG_ArgAccessed(1, 2, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Output", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(1, 2, 0)>
+%endif
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void PMSM_to_BLDC_mod1_BitShift4(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(1, 2, 0)
+%<comma>%<::tSimStructType> * const %<::tSimStruct>\
+%assign comma = ", "
+%<SLibUpdateSymbolForFunction("PMSM_to_BLDC_mod1_BitShift4", SLibGetFcnDefinitionRTMSymbolName(), TLC_FALSE)>\
+%endif
+%<comma>uint16_T rtu_u\
+%assign comma = ", "
+%<comma>uint16_T *rty_y\
+%assign comma = ", "
+%<comma>DW_BitShift4_PMSM_to_BLDC_mod_T *localDW\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(1, 2, fcnProtoType)>
+%endfunction

@@ -1,0 +1,160 @@
+%implements s15_b0_s36pf_Terminate "C"
+
+%function Terminate(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+uint32_T SPIPinsLoc;
+%closefile localVarDecl
+%assign tlcTerminateFcnOfS11B10 = OpaqueTLCBlockFcn("Terminate", 11, 10, 2, 4, 0)
+%assign tlcTerminateFcnOfS7B2 = OpaqueTLCBlockFcn("Terminate", 7, 2, 2, 4, 1)
+%assign tlcTerminateFcnOfS11B15 = OpaqueTLCBlockFcn("Terminate", 11, 15, 2, 4, 2)
+%assign tlcTerminateFcnOfS11B16 = OpaqueTLCBlockFcn("Terminate", 11, 16, 2, 4, 3)
+%assign tlcTerminateFcnOfS9B2 = OpaqueTLCBlockFcn("Terminate", 9, 2, 2, 4, 4)
+%assign tlcTerminateFcnOfS11B21 = OpaqueTLCBlockFcn("Terminate", 11, 21, 2, 4, 5)
+%assign tlcTerminateFcnOfS11B22 = OpaqueTLCBlockFcn("Terminate", 11, 22, 2, 4, 6)
+%assign tlcTerminateFcnOfS11B23 = OpaqueTLCBlockFcn("Terminate", 11, 23, 2, 4, 7)
+%assign tlcTerminateFcnOfS11B25 = OpaqueTLCBlockFcn("Terminate", 11, 25, 2, 4, 8)
+%assign tlcTerminateFcnOfS11B26 = OpaqueTLCBlockFcn("Terminate", 11, 26, 2, 4, 9)
+%assign tlcCleanupRuntimeResourcesFcnOfS11B10 = OpaqueTLCBlockFcn("CleanupRuntimeResources", 11, 10, 2, 4, 10)
+%assign tlcCleanupRuntimeResourcesFcnOfS7B2 = OpaqueTLCBlockFcn("CleanupRuntimeResources", 7, 2, 2, 4, 11)
+%assign tlcCleanupRuntimeResourcesFcnOfS11B15 = OpaqueTLCBlockFcn("CleanupRuntimeResources", 11, 15, 2, 4, 12)
+%assign tlcCleanupRuntimeResourcesFcnOfS11B16 = OpaqueTLCBlockFcn("CleanupRuntimeResources", 11, 16, 2, 4, 13)
+%assign tlcCleanupRuntimeResourcesFcnOfS9B2 = OpaqueTLCBlockFcn("CleanupRuntimeResources", 9, 2, 2, 4, 14)
+%assign tlcCleanupRuntimeResourcesFcnOfS11B21 = OpaqueTLCBlockFcn("CleanupRuntimeResources", 11, 21, 2, 4, 15)
+%assign tlcCleanupRuntimeResourcesFcnOfS11B22 = OpaqueTLCBlockFcn("CleanupRuntimeResources", 11, 22, 2, 4, 16)
+%assign tlcCleanupRuntimeResourcesFcnOfS11B23 = OpaqueTLCBlockFcn("CleanupRuntimeResources", 11, 23, 2, 4, 17)
+%assign tlcCleanupRuntimeResourcesFcnOfS11B25 = OpaqueTLCBlockFcn("CleanupRuntimeResources", 11, 25, 2, 4, 18)
+%assign tlcCleanupRuntimeResourcesFcnOfS11B26 = OpaqueTLCBlockFcn("CleanupRuntimeResources", 11, 26, 2, 4, 19)
+/* {S!d138}Terminate for MATLABSystem: '<S21>/Digital Port Write' */
+/*@>198313*/if (!/*@<198311*//*@>1acf8e*/PMSM_to_BLDC_mod1_DW./*@>1b1473*/obj_c.matlabCodegenIsDeleted) {
+    /*@>1acf94*/PMSM_to_BLDC_mod1_DW./*@>1b1476*/obj_c./*@>1b146a*/matlabCodegenIsDeleted/*@>198310*/ = /*@>1a511f*/true;
+}
+/* {E!d138}End of Terminate for MATLABSystem: '<S21>/Digital Port Write' */
+%if !WHITE_SPACE(tlcTerminateFcnOfS11B10)
+
+/* {S!d140}Terminate for ToAsyncQueueBlock generated from: '<S1>/Compare To Constant' */
+%<SLibCG_DumpSSCode("/*@[1ae20d*/",tlcTerminateFcnOfS11B10,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcTerminateFcnOfS7B2)
+/* {S!d129}Terminate for Enabled SubSystem: '<S2>/Ctrl_Reg_1' */
+/* {S!d142}Terminate for ToAsyncQueueBlock generated from: '<S26>/Bitwise AND' */
+%<SLibCG_DumpSSCode("/*@[1ae20f*/",tlcTerminateFcnOfS7B2,"/*@]*/")>\
+/* {E!d129}End of Terminate for SubSystem: '<S2>/Ctrl_Reg_1' */
+
+%endif
+/* {S!d144}Terminate for MATLABSystem: '<S2>/SPI Transmit1' */
+/*@>198328*/if (!/*@<198326*//*@>1acf9a*/PMSM_to_BLDC_mod1_DW./*@>1b1479*/obj.matlabCodegenIsDeleted) {
+    /*@>1acfa0*/PMSM_to_BLDC_mod1_DW./*@>1b147c*/obj./*@>1b146d*/matlabCodegenIsDeleted/*@>198325*/ = /*@>1a5126*/true;
+    /*@>19832e*/if ((/*@>1acfa6*/PMSM_to_BLDC_mod1_DW./*@>1b147f*/obj.isInitialized/*@>19832d*/ == /*@>1a513f*/1)/*@>19834a*/ && /*@>1acfac*/PMSM_to_BLDC_mod1_DW./*@>1b1482*/obj.isSetupComplete) {
+        /*@>1a5129*/SPIPinsLoc/*@>198334*/ = /*@>1a512c*/MW_UNDEFINED_VALUE;
+        /*@>1ab7e9*/MW_SPI_Close(/*@>1acfb2*/PMSM_to_BLDC_mod1_DW./*@>1b1485*/obj.MW_SPI_HANDLE, /*@>1a512e*/SPIPinsLoc, /*@>1a5130*/SPIPinsLoc, /*@>1a5132*/SPIPinsLoc, /*@>1a513e*/14U);
+    }
+}
+/* {E!d144}End of Terminate for MATLABSystem: '<S2>/SPI Transmit1' */
+%if !WHITE_SPACE(tlcTerminateFcnOfS11B15)
+
+/* {S!d146}Terminate for ToAsyncQueueBlock generated from: '<S2>/Ctrl_Reg_1' */
+%<SLibCG_DumpSSCode("/*@[1ae211*/",tlcTerminateFcnOfS11B15,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcTerminateFcnOfS11B16)
+/* {S!d148}Terminate for ToAsyncQueueBlock generated from: '<S2>/SPI Transmit1' */
+%<SLibCG_DumpSSCode("/*@[1ae213*/",tlcTerminateFcnOfS11B16,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcTerminateFcnOfS9B2)
+/* {S!d131}Terminate for Enabled SubSystem: '<S35>/Control_Reg1_read' */
+/* {S!d150}Terminate for ToAsyncQueueBlock generated from: '<S36>/Bitwise OR' */
+%<SLibCG_DumpSSCode("/*@[1ae215*/",tlcTerminateFcnOfS9B2,"/*@]*/")>\
+/* {E!d131}End of Terminate for SubSystem: '<S35>/Control_Reg1_read' */
+
+%endif
+/* {S!d152}Terminate for MATLABSystem: '<S35>/SPI Controller Transfer' */
+/*@>19835c*/if (!/*@<19835a*//*@>1acfb8*/PMSM_to_BLDC_mod1_DW./*@>1b1488*/obj_a.matlabCodegenIsDeleted) {
+    /*@>1acfbe*/PMSM_to_BLDC_mod1_DW./*@>1b148b*/obj_a./*@>1b1470*/matlabCodegenIsDeleted/*@>198359*/ = /*@>1a5142*/true;
+    /*@>198362*/if ((/*@>1acfc4*/PMSM_to_BLDC_mod1_DW./*@>1b148e*/obj_a.isInitialized/*@>198361*/ == /*@>1a515b*/1)/*@>19837e*/ && /*@>1acfca*/PMSM_to_BLDC_mod1_DW./*@>1b1491*/obj_a.isSetupComplete) {
+        /*@>1a5145*/SPIPinsLoc/*@>198368*/ = /*@>1a5148*/MW_UNDEFINED_VALUE;
+        /*@>1ab7f1*/MW_SPI_Close(/*@>1acfd0*/PMSM_to_BLDC_mod1_DW./*@>1b1494*/obj_a.MW_SPI_HANDLE, /*@>1a514a*/SPIPinsLoc, /*@>1a514c*/SPIPinsLoc, /*@>1a514e*/SPIPinsLoc, /*@>1a515a*/14U);
+    }
+}
+/* {E!d152}End of Terminate for MATLABSystem: '<S35>/SPI Controller Transfer' */
+%if !WHITE_SPACE(tlcTerminateFcnOfS11B21)
+
+/* {S!d154}Terminate for ToAsyncQueueBlock generated from: '<S35>/Bitwise AND' */
+%<SLibCG_DumpSSCode("/*@[1ae217*/",tlcTerminateFcnOfS11B21,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcTerminateFcnOfS11B22)
+/* {S!d156}Terminate for ToAsyncQueueBlock generated from: '<S35>/Control_Reg1_read' */
+%<SLibCG_DumpSSCode("/*@[1ae219*/",tlcTerminateFcnOfS11B22,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcTerminateFcnOfS11B23)
+/* {S!d158}Terminate for ToAsyncQueueBlock generated from: '<S35>/SPI Controller Transfer' */
+%<SLibCG_DumpSSCode("/*@[1ae21b*/",tlcTerminateFcnOfS11B23,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcTerminateFcnOfS11B25)
+/* {S!d160}Terminate for ToAsyncQueueBlock generated from: '<S3>/AND1' */
+%<SLibCG_DumpSSCode("/*@[1ae21d*/",tlcTerminateFcnOfS11B25,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcTerminateFcnOfS11B26)
+/* {S!d162}Terminate for ToAsyncQueueBlock generated from: '<S3>/AND' */
+%<SLibCG_DumpSSCode("/*@[1ae21f*/",tlcTerminateFcnOfS11B26,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcCleanupRuntimeResourcesFcnOfS11B10)
+/* {S!d164}CleanupRuntimeResources for ToAsyncQueueBlock generated from: '<S1>/Compare To Constant' */
+%<SLibCG_DumpSSCode("/*@[1ae221*/",tlcCleanupRuntimeResourcesFcnOfS11B10,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcCleanupRuntimeResourcesFcnOfS7B2)
+/* {S!d133}CleanupRuntimeResources for Enabled SubSystem: '<S2>/Ctrl_Reg_1' */
+/* {S!d166}CleanupRuntimeResources for ToAsyncQueueBlock generated from: '<S26>/Bitwise AND' */
+%<SLibCG_DumpSSCode("/*@[1ae223*/",tlcCleanupRuntimeResourcesFcnOfS7B2,"/*@]*/")>\
+/* {E!d133}End of CleanupRuntimeResources for SubSystem: '<S2>/Ctrl_Reg_1' */
+%endif
+%if !WHITE_SPACE(tlcCleanupRuntimeResourcesFcnOfS11B15)
+
+/* {S!d168}CleanupRuntimeResources for ToAsyncQueueBlock generated from: '<S2>/Ctrl_Reg_1' */
+%<SLibCG_DumpSSCode("/*@[1ae225*/",tlcCleanupRuntimeResourcesFcnOfS11B15,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcCleanupRuntimeResourcesFcnOfS11B16)
+/* {S!d170}CleanupRuntimeResources for ToAsyncQueueBlock generated from: '<S2>/SPI Transmit1' */
+%<SLibCG_DumpSSCode("/*@[1ae227*/",tlcCleanupRuntimeResourcesFcnOfS11B16,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcCleanupRuntimeResourcesFcnOfS9B2)
+/* {S!d135}CleanupRuntimeResources for Enabled SubSystem: '<S35>/Control_Reg1_read' */
+/* {S!d172}CleanupRuntimeResources for ToAsyncQueueBlock generated from: '<S36>/Bitwise OR' */
+%<SLibCG_DumpSSCode("/*@[1ae229*/",tlcCleanupRuntimeResourcesFcnOfS9B2,"/*@]*/")>\
+/* {E!d135}End of CleanupRuntimeResources for SubSystem: '<S35>/Control_Reg1_read' */
+%endif
+%if !WHITE_SPACE(tlcCleanupRuntimeResourcesFcnOfS11B21)
+
+/* {S!d174}CleanupRuntimeResources for ToAsyncQueueBlock generated from: '<S35>/Bitwise AND' */
+%<SLibCG_DumpSSCode("/*@[1ae22b*/",tlcCleanupRuntimeResourcesFcnOfS11B21,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcCleanupRuntimeResourcesFcnOfS11B22)
+/* {S!d176}CleanupRuntimeResources for ToAsyncQueueBlock generated from: '<S35>/Control_Reg1_read' */
+%<SLibCG_DumpSSCode("/*@[1ae22d*/",tlcCleanupRuntimeResourcesFcnOfS11B22,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcCleanupRuntimeResourcesFcnOfS11B23)
+/* {S!d178}CleanupRuntimeResources for ToAsyncQueueBlock generated from: '<S35>/SPI Controller Transfer' */
+%<SLibCG_DumpSSCode("/*@[1ae22f*/",tlcCleanupRuntimeResourcesFcnOfS11B23,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcCleanupRuntimeResourcesFcnOfS11B25)
+/* {S!d180}CleanupRuntimeResources for ToAsyncQueueBlock generated from: '<S3>/AND1' */
+%<SLibCG_DumpSSCode("/*@[1ae231*/",tlcCleanupRuntimeResourcesFcnOfS11B25,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcCleanupRuntimeResourcesFcnOfS11B26)
+/* {S!d182}CleanupRuntimeResources for ToAsyncQueueBlock generated from: '<S3>/AND' */
+%<SLibCG_DumpSSCode("/*@[1ae233*/",tlcCleanupRuntimeResourcesFcnOfS11B26,"/*@]*/")>\
+%endif
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedTerminateLocalVars", localVarDecl)>
+%endfunction
+%function TerminateFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Terminate(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(2, 4, fcnProtoType)>
+%endfunction

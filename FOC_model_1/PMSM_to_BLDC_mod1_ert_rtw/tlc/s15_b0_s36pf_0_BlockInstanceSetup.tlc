@@ -1,0 +1,13 @@
+%implements s15_b0_s36pf_0_BlockInstanceSetup "C"
+
+%function BlockInstanceSetup(block, system) Output
+%% Subsystems with iterators in IR:
+%% TLC Block Registration buffer:
+%<LibAddToCommonIncludes("main.h")>
+%<LibAddToCommonIncludes("mw_stm32_utils.h")>
+%<LibAddToCommonIncludes("MW_SPI.h")>
+%<LibAddToCommonIncludes("mw_stm32_spi_ll.h")>
+%<LibAddToCommonIncludes("MW_SPI.h")>
+%<LibAddToCommonIncludes("mw_stm32_spi_ll.h")>
+%% END  Block Registration buffer
+%endfunction

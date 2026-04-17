@@ -1,0 +1,493 @@
+%implements s15_b0_s36pf_Outputs "C"
+
+%function OutputsForTID(block, system, tid) Output
+%if tid == 0
+%assign ::GlobalCurrentTID = 0
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+GPIO_TypeDef * portNameLoc;
+uint32_T shiftVal;
+real_T Initial;
+real_T Initial_l;
+uint32_T pinMask;
+uint32_T pinWriteLoc;
+%closefile localVarDecl
+%assign tlcOutputsFcnOfS11B9 = OpaqueTLCBlockFcn("Outputs", 11, 9, 2, 2, 0)
+%assign tlcOutputsFcnOfS11B10 = OpaqueTLCBlockFcn("Outputs", 11, 10, 2, 2, 1)
+%<SLibGenerateExtModeOutput(system)>
+/* {S!d18}InitialCondition: '<S12>/Initial' */
+/*@>1966cc*/if (/*@>1ace20*/PMSM_to_BLDC_mod1_DW./*@>1b0cd6*/Initial_FirstOutputTime) {
+    /*@>1ace26*/PMSM_to_BLDC_mod1_DW./*@>1b0cd9*/Initial_FirstOutputTime/*@>1966d0*/ = /*@>1a4db8*/false;
+    /* {S!d14}InitialCondition: '<S12>/Initial' */
+    /*@>1a4db9*/Initial/*@>1966d2*/ = /*@>1a4d8b*/0.0;
+} else {
+    /* {S!d16}InitialCondition: '<S12>/Initial' incorporates:
+ *  Bias: '<S15>/Bias'
+ *  Gain: '<S15>/Gain'
+ *  Gain: '<S15>/Gain1'
+ *  Rounding: '<S15>/Rounding Function'
+ *  Sum: '<S15>/Sum1'
+ */
+    /*@>1a4dbb*/Initial/*@>1966d4*/ = /*@>1ace9e*/PMSM_to_BLDC_mod1_DW./*@>1b0d09*/Integrator_DSTATE/*@>19da30*/ - /*@>1ab793*/floor(/*@>1a4d8c*/100.0/*@>1a54d0*/ * /*@>1acea4*/PMSM_to_BLDC_mod1_DW./*@>1b0d0c*/Integrator_DSTATE)/*@>1a54c6*/ * /*@>1a4d8d*/0.01;
+}
+/* {E!d18}End of InitialCondition: '<S12>/Initial' */
+
+/* {S!d20}DiscreteIntegrator: '<S12>/Integrator' incorporates:
+ *  Constant: '<S13>/Constant'
+ *  Constant: '<S14>/Constant'
+ *  Logic: '<S12>/Logical Operator'
+ *  RelationalOperator: '<S13>/Compare'
+ *  RelationalOperator: '<S14>/Compare'
+ */
+/*@>196703*/if ((/*@>1ace2c*/PMSM_to_BLDC_mod1_DW./*@>1b0cdc*/Integrator_DSTATE/*@>19dad8*/ < /*@>1a4d8a*/0.0)/*@>19da36*/ || (/*@>1ace32*/PMSM_to_BLDC_mod1_DW./*@>1b0cdf*/Integrator_DSTATE/*@>19dadd*/ >= /*@>1a4d89*/0.01)) {
+    /*@>1ace38*/PMSM_to_BLDC_mod1_DW./*@>1b0ce2*/Integrator_DSTATE/*@>196706*/ = /*@>1a4dbd*/Initial;
+}
+/* {S!d22}Product: '<S11>/Product1' incorporates:
+ *  Constant: '<S11>/Constant'
+ *  DiscreteIntegrator: '<S12>/Integrator'
+ *  Product: '<S11>/Product'
+ *  Sum: '<S11>/Sum'
+ */
+/*@>1a4dc1*/Initial/*@>19675f*/ = /*@>1a4d88*/0.01/*@>1a54c0*/ / (/*@>1a4d87*/0.01/*@>19dae6*/ - /*@>1acbb5*/PMSM_to_BLDC_mod1_B./*@>1b0cc7*/Probe/*@>1ac574*/[/*@>1ac571*/0])/*@>1a54b8*/ * /*@>1ace3e*/PMSM_to_BLDC_mod1_DW./*@>1b0ce5*/Integrator_DSTATE;
+/* {S!d28}InitialCondition: '<S16>/Initial' */
+/*@>1968d3*/if (/*@>1ace44*/PMSM_to_BLDC_mod1_DW./*@>1b0ce8*/Initial_FirstOutputTime_e) {
+    /*@>1ace4a*/PMSM_to_BLDC_mod1_DW./*@>1b0ceb*/Initial_FirstOutputTime_e/*@>1968d7*/ = /*@>1a4dc7*/false;
+    /* {S!d24}InitialCondition: '<S16>/Initial' */
+    /*@>1a4dc8*/Initial_l/*@>1968d9*/ = /*@>1a4d83*/0.0;
+} else {
+    /* {S!d26}InitialCondition: '<S16>/Initial' incorporates:
+ *  Bias: '<S19>/Bias'
+ *  Gain: '<S19>/Gain'
+ *  Gain: '<S19>/Gain1'
+ *  Rounding: '<S19>/Rounding Function'
+ *  Sum: '<S19>/Sum1'
+ */
+    /*@>1a4dca*/Initial_l/*@>1968db*/ = /*@>1ace92*/PMSM_to_BLDC_mod1_DW./*@>1b0d03*/Integrator_DSTATE_e/*@>19da74*/ - /*@>1ab795*/floor(/*@>1a4d84*/50.0/*@>1a54ae*/ * /*@>1ace98*/PMSM_to_BLDC_mod1_DW./*@>1b0d06*/Integrator_DSTATE_e)/*@>1a54a4*/ * /*@>1a4d85*/0.02;
+}
+/* {E!d28}End of InitialCondition: '<S16>/Initial' */
+
+/* {S!d30}DiscreteIntegrator: '<S16>/Integrator' incorporates:
+ *  Constant: '<S17>/Constant'
+ *  Constant: '<S18>/Constant'
+ *  Logic: '<S16>/Logical Operator'
+ *  RelationalOperator: '<S17>/Compare'
+ *  RelationalOperator: '<S18>/Compare'
+ */
+/*@>19690a*/if ((/*@>1ace50*/PMSM_to_BLDC_mod1_DW./*@>1b0cee*/Integrator_DSTATE_e/*@>19db16*/ < /*@>1a4d82*/0.0)/*@>19da7a*/ || (/*@>1ace56*/PMSM_to_BLDC_mod1_DW./*@>1b0cf1*/Integrator_DSTATE_e/*@>19db1b*/ >= /*@>1a4d81*/0.02)) {
+    /*@>1ace5c*/PMSM_to_BLDC_mod1_DW./*@>1b0cf4*/Integrator_DSTATE_e/*@>19690d*/ = /*@>1a4dcc*/Initial_l;
+}
+/* {E!d30}End of DiscreteIntegrator: '<S16>/Integrator' */
+
+/* {S!d32}Gain: '<S5>/Gain1' incorporates:
+ *  Bias: '<S11>/Bias'
+ *  Product: '<S11>/Product2'
+ *  Product: '<S11>/Product3'
+ *  Rounding: '<S11>/Rounding Function'
+ *  Sum: '<S11>/Sum1'
+ */
+/*@>1a64f5*/Initial/*@>1a64f7*/ = (/*@>1a6d91*/Initial/*@>1a6d8f*/ - /*@>1ab797*/floor(/*@>1a6d97*/Initial/*@>1a6d95*/ / (/*@>1acbbb*/PMSM_to_BLDC_mod1_B./*@>1b0cca*/Probe/*@>1ac579*/[/*@>1ac576*/0]/*@>1a6dc2*/ + /*@>1a6dc7*/0.01))/*@>1a6d92*/ * (/*@>1acbc1*/PMSM_to_BLDC_mod1_B./*@>1b0ccd*/Probe/*@>1ac57e*/[/*@>1ac57b*/0]/*@>1a6dc9*/ + /*@>1a6dce*/0.01))/*@>1a548c*/ * /*@>1a4d80*/100.0;
+/* {S!d34}Saturate: '<S5>/Saturation' */
+/*@>1a6f53*/if (/*@>1a6da4*/Initial/*@>1a6da2*/ > /*@>1a6da5*/1.0) {
+    /*@>1a6f57*/Initial/*@>1a6f56*/ = /*@>1a6da6*/1.0;
+} else /*@>1a6f5d*/if (/*@>1a6daa*/Initial/*@>1a6da8*/ < /*@>1a6dab*/0.0) {
+    /*@>1a6f61*/Initial/*@>1a6f60*/ = /*@>1a6dac*/0.0;
+}
+/* {S!d36}Sum: '<S1>/Add' incorporates:
+ *  Delay: '<S1>/Delay'
+ *  Saturate: '<S5>/Saturation'
+ */
+/*@>1ace62*/PMSM_to_BLDC_mod1_DW./*@>1b0cf7*/Delay_DSTATE/*@>1b0c00*/ += /*@>1a6f48*/Initial;
+/* {S!d38}RelationalOperator: '<S4>/Compare' incorporates:
+ *  Constant: '<S4>/Constant'
+ *  Delay: '<S1>/Delay'
+ */
+/*@>1acbc7*/PMSM_to_BLDC_mod1_B./*@>1b0cd0*/Compare/*@>196a88*/ = /*@>1a733a*/(uint8_T)(/*@>1ace6e*/PMSM_to_BLDC_mod1_DW./*@>1b0cfa*/Delay_DSTATE/*@>197aef*/ >= /*@>1a4d7d*/20.0);
+/* {S!d40}MATLABSystem: '<S21>/Digital Port Write' */
+/*@>1a4e17*/portNameLoc/*@>19802c*/ = /*@>1a4e06*/GPIOB;
+/*@>1a4e15*/shiftVal/*@>19802a*/ = /*@>1a4e05*/MW_GPIO_BIT_SHIFT;
+/*@>1a6f58*/if (/*@>1acbcd*/PMSM_to_BLDC_mod1_B./*@>1b0cd3*/Compare/*@>1a6db1*/ != /*@>1b0bf7*/0) {
+    /*@>1a6f5c*/pinWriteLoc/*@>1a6f5b*/ = /*@>1a6db6*/4096U;
+} else {
+    /*@>1a6f4c*/pinWriteLoc/*@>1a6f4e*/ = /*@>1a6db7*/0U;
+}
+/*@>1a4e13*/pinWriteLoc/*@>198026*/ = /*@>1ab799*/mw_shift(/*@>1a6f50*/pinWriteLoc, /*@>1a4e11*/shiftVal);
+/*@>1a4e0f*/pinMask/*@>198022*/ = /*@>1ab79b*/mw_shift(/*@>1a4e00*/4096U, /*@>1a4e0d*/shiftVal);
+/*@>1ab79d*/LL_GPIO_SetOutputPin(/*@>1a4e0b*/portNameLoc, /*@>1a4e09*/pinWriteLoc);
+/*@>1ab79f*/LL_GPIO_ResetOutputPin(/*@>1a4e07*/portNameLoc, ~/*@<1a5486*//*@>1a4e19*/pinWriteLoc/*@>1a5485*/ & /*@>1a4dfe*/pinMask);
+/* {E!d40}End of MATLABSystem: '<S21>/Digital Port Write' */
+%if !WHITE_SPACE(tlcOutputsFcnOfS11B9)
+
+/* {S!d42}Scope: '<S1>/Scope' */
+%<SLibCG_DumpSSCode("/*@[1ae05e*/",tlcOutputsFcnOfS11B9,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS11B10)
+/* {S!d44}ToAsyncQueueBlock generated from: '<S1>/Compare To Constant' */
+%<SLibCG_DumpSSCode("/*@[1ae060*/",tlcOutputsFcnOfS11B10,"/*@]*/")>\
+%endif
+/* {S!d46}Update for DiscreteIntegrator: '<S12>/Integrator' incorporates:
+ *  Constant: '<S5>/Constant3'
+ */
+/*@>1ace7a*/PMSM_to_BLDC_mod1_DW./*@>1b0cfd*/Integrator_DSTATE/*@>1b0c01*/ += /*@>1a4d7c*/0.001;
+/* {S!d48}Update for DiscreteIntegrator: '<S16>/Integrator' incorporates:
+ *  Constant: '<S5>/Constant3'
+ */
+/*@>1ace86*/PMSM_to_BLDC_mod1_DW./*@>1b0d00*/Integrator_DSTATE_e/*@>1b0c02*/ += /*@>1a4d7b*/0.001;
+%<SLibInsertSolverResetCode()>\
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedOutput0LocalVars", localVarDecl)>
+%assign ::GlobalCurrentTID = []
+%endif
+%if tid == 1
+%assign ::GlobalCurrentTID = 1
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+GPIO_TypeDef * portNameLoc;
+uint16_T y_n;
+uint16_T y_o;
+%closefile localVarDecl
+%assign _modelSS = ""
+
+%assign tlcOutputsFcnOfS7B2 = OpaqueTLCBlockFcn("Outputs", 7, 2, 2, 3, 0)
+%assign tlcOutputsFcnOfS11B14 = OpaqueTLCBlockFcn("Outputs", 11, 14, 2, 3, 1)
+%assign tlcOutputsFcnOfS11B15 = OpaqueTLCBlockFcn("Outputs", 11, 15, 2, 3, 2)
+%assign tlcOutputsFcnOfS11B16 = OpaqueTLCBlockFcn("Outputs", 11, 16, 2, 3, 3)
+%assign tlcOutputsFcnOfS9B2 = OpaqueTLCBlockFcn("Outputs", 9, 2, 2, 3, 4)
+%assign tlcOutputsFcnOfS11B19 = OpaqueTLCBlockFcn("Outputs", 11, 19, 2, 3, 5)
+%assign tlcOutputsFcnOfS11B20 = OpaqueTLCBlockFcn("Outputs", 11, 20, 2, 3, 6)
+%assign tlcOutputsFcnOfS11B21 = OpaqueTLCBlockFcn("Outputs", 11, 21, 2, 3, 7)
+%assign tlcOutputsFcnOfS11B22 = OpaqueTLCBlockFcn("Outputs", 11, 22, 2, 3, 8)
+%assign tlcOutputsFcnOfS11B23 = OpaqueTLCBlockFcn("Outputs", 11, 23, 2, 3, 9)
+%assign tlcOutputsFcnOfS11B24 = OpaqueTLCBlockFcn("Outputs", 11, 24, 2, 3, 10)
+%assign tlcOutputsFcnOfS11B25 = OpaqueTLCBlockFcn("Outputs", 11, 25, 2, 3, 11)
+%assign tlcOutputsFcnOfS11B26 = OpaqueTLCBlockFcn("Outputs", 11, 26, 2, 3, 12)
+/* Reset subsysRan breadcrumbs */
+srClearBC(PMSM_to_BLDC_mod1_DW.Ctrl_Reg_1_SubsysRanBC);
+/* Reset subsysRan breadcrumbs */
+srClearBC(PMSM_to_BLDC_mod1_DW.Control_Reg1_read_SubsysRanBC);
+/* {S!d70}Sum: '<S2>/Add' incorporates:
+ *  Constant: '<S2>/Constant'
+ *  Delay: '<S2>/Delay'
+ */
+/*@>1aceb6*/PMSM_to_BLDC_mod1_DW./*@>1b0f36*/Delay_DSTATE_d/*@>1b0dbb*/++;
+/* {S!d49}Outputs for Enabled SubSystem: '<S2>/Ctrl_Reg_1' incorporates:
+ *  EnablePort: '<S26>/Enable'
+ */
+/* {S!d80}Logic: '<S2>/AND' incorporates:
+ *  Constant: '<S22>/Constant'
+ *  Constant: '<S24>/Constant'
+ *  Constant: '<S26>/Constant5'
+ *  Constant: '<S26>/Constant6'
+ *  Delay: '<S2>/Delay'
+ *  RelationalOperator: '<S22>/Compare'
+ *  RelationalOperator: '<S24>/Compare'
+ */
+/*@>197797*/if ((/*@>1acec2*/PMSM_to_BLDC_mod1_DW./*@>1b0f39*/Delay_DSTATE_d/*@>19dc11*/ >= /*@>1a4fe8*/2.0)/*@>19dbef*/ && (/*@>1acec8*/PMSM_to_BLDC_mod1_DW./*@>1b0f3c*/Delay_DSTATE_d/*@>19dc16*/ <= /*@>1a4fe9*/8.0)) {
+    /*@>19779b*/if (!/*@<19779a*//*@>1acece*/PMSM_to_BLDC_mod1_DW./*@>1b0f3f*/Ctrl_Reg_1_MODE) {
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[4], "SystemReset",1)
+        /* {S!d50}SystemReset for Atomic SubSystem: '<S26>/Bit Shift' */
+%if SLibCG_SystemFcnArgAccessed("PMSM_to_BLDC_BitShift_Reset",4,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[1ae1e3*/",SLibCGIRGenReusableSysCall("PMSM_to_BLDC_BitShift_Reset", ["%<_modelSS>", "&/*@>1b10b5*/PMSM_to_BLDC_mod1_DW./*@>1b10b4*/BitShift"], 4, 0, 5, 1, 6, 11),"/*@]*/")>\
+%assign ss = ::CompiledModel.System[4]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+        /* {E!d50}End of SystemReset for SubSystem: '<S26>/Bit Shift' */
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[6], "SystemReset",1)
+
+        /* {S!d52}SystemReset for Atomic SubSystem: '<S26>/Bit Shift4' */
+%if SLibCG_SystemFcnArgAccessed("PMSM_to_BLD_BitShift4_Reset",6,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[1ae1e5*/",SLibCGIRGenReusableSysCall("PMSM_to_BLD_BitShift4_Reset", ["%<_modelSS>", "&/*@>1b10f3*/PMSM_to_BLDC_mod1_DW./*@>1b10f2*/BitShift4"], 6, 0, 5, 1, 6, 11),"/*@]*/")>\
+%assign ss = ::CompiledModel.System[6]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+        /* {E!d52}End of SystemReset for SubSystem: '<S26>/Bit Shift4' */
+%endif
+        /*@>1acee0*/PMSM_to_BLDC_mod1_DW./*@>1b0f48*/Ctrl_Reg_1_MODE/*@>1977a0*/ = /*@>1a4f0b*/true;
+    }
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[4], "Output",1)
+    /* {S!d54}Outputs for Atomic SubSystem: '<S26>/Bit Shift' */
+%if SLibCG_SystemFcnArgAccessed("PMSM_to_BLDC_mod1_BitShift",4,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[1ae1e4*/",SLibCGIRGenReusableSysCall("PMSM_to_BLDC_mod1_BitShift", ["%<_modelSS>", "/*@>1b1134*/0", "&/*@>1b1143*/y_n", "&/*@>1b1153*/PMSM_to_BLDC_mod1_DW./*@>1b1152*/BitShift"], 4, 0, 6, 1, 6, 11),"/*@]*/")>\
+%assign ss = ::CompiledModel.System[4]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+    /* {E!d54}End of Outputs for SubSystem: '<S26>/Bit Shift' */
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[6], "Output",1)
+
+    /* {S!d56}Outputs for Atomic SubSystem: '<S26>/Bit Shift4' */
+%if SLibCG_SystemFcnArgAccessed("PMSM_to_BLDC_mod1_BitShift4",6,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[1ae1e6*/",SLibCGIRGenReusableSysCall("PMSM_to_BLDC_mod1_BitShift4", ["%<_modelSS>", "/*@>1b1194*/2", "&/*@>1b11a3*/y_o", "&/*@>1b11b3*/PMSM_to_BLDC_mod1_DW./*@>1b11b2*/BitShift4"], 6, 0, 6, 1, 6, 11),"/*@]*/")>\
+%assign ss = ::CompiledModel.System[6]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+    /* {E!d56}End of Outputs for SubSystem: '<S26>/Bit Shift4' */
+
+%endif
+    /* {S!d72}S-Function (sfix_bitop): '<S26>/Bitwise AND' incorporates:
+ *  Constant: '<S26>/Constant5'
+ *  Constant: '<S26>/Constant6'
+ */
+    /*@>1acbdf*/PMSM_to_BLDC_mod1_B./*@>1b0ef1*/BitwiseAND_l/*@>1980a5*/ = /*@>1abd9c*/(uint16_T)(/*@>1a4f3c*/y_n/*@>1a551c*/ | /*@>1a4f3e*/y_o/*@>1a551b*/ | /*@>1acde1*/PMSM_to_BLDC_mod1_ConstB./*@>1b0f2a*/BitwiseOR);
+%if !WHITE_SPACE(tlcOutputsFcnOfS7B2)
+    /* {S!d74}ToAsyncQueueBlock generated from: '<S26>/Bitwise AND' */
+%<SLibCG_DumpSSCode("/*@[1ae1c4*/",tlcOutputsFcnOfS7B2,"/*@]*/")>\
+%endif
+    /* {S!d76}DataTypeConversion: '<S26>/Data Type Conversion' */
+    /*@>1acbeb*/PMSM_to_BLDC_mod1_B./*@>1b0ef4*/DataTypeConversion_e/*@>198080*/ = /*@>1acbf1*/PMSM_to_BLDC_mod1_B./*@>1b0ef7*/BitwiseAND_l;
+    /*@>1ab7b3*/srUpdateBC(/*@>1acef2*/PMSM_to_BLDC_mod1_DW./*@>1b0f51*/Ctrl_Reg_1_SubsysRanBC);
+} else /*@>1977a6*/if (/*@>1acf82*/PMSM_to_BLDC_mod1_DW./*@>1b0f8a*/Ctrl_Reg_1_MODE) {
+    /* {S!d78}Disable for DataTypeConversion: '<S26>/Data Type Conversion' incorporates:
+ *  Outport: '<S26>/Out2'
+ */
+    /*@>1accb1*/PMSM_to_BLDC_mod1_B./*@>1b0f27*/DataTypeConversion_e/*@>198058*/ = /*@>1b0da7*/0U;
+    /*@>1acf88*/PMSM_to_BLDC_mod1_DW./*@>1b0f8d*/Ctrl_Reg_1_MODE/*@>1977a9*/ = /*@>1a4f13*/false;
+}
+/* {E!d80}End of Logic: '<S2>/AND' */
+/* {E!d49}End of Outputs for SubSystem: '<S2>/Ctrl_Reg_1' */
+
+/* {S!d84}MATLABSystem: '<S2>/SPI Transmit1' */
+/*@>1acbf7*/PMSM_to_BLDC_mod1_B./*@>1b0efa*/SPITransmit1/*@>19818d*/ = /*@>1ab7b5*/MW_STM32_SPI_SetFormat(/*@>1acef8*/PMSM_to_BLDC_mod1_DW./*@>1b0f54*/obj.MW_SPI_HANDLE, /*@>1a4f77*/2U, /*@>1a4f76*/3840U, /*@>1a4f6e*/MW_SPI_MODE_3);
+/*@>1981a3*/if (/*@>1acbfd*/PMSM_to_BLDC_mod1_B./*@>1b0efd*/SPITransmit1/*@>198191*/ == /*@>1b0da9*/0) {
+    /*@>1ab7b7*/LL_GPIO_ResetOutputPin(/*@>1a4f6d*/GPIOC, /*@>1a4f80*/16384U);
+    /* {S!d82}MATLABSystem: '<S2>/SPI Transmit1' */
+    /*@>1acc03*/PMSM_to_BLDC_mod1_B./*@>1b0f00*/SPITransmit1/*@>19819a*/ = /*@>1ab7b9*/MW_SPI_Write_Databits(/*@>1acefe*/PMSM_to_BLDC_mod1_DW./*@>1b0f57*/obj.MW_SPI_HANDLE, &/*@>1acc09*/PMSM_to_BLDC_mod1_B./*@>1b0f03*/DataTypeConversion_e, /*@>1a4f83*/1U, /*@>1a7486*/1, /*@>1a7489*/1, /*@>1a4f7e*/10U);
+}
+/* {E!d84}End of MATLABSystem: '<S2>/SPI Transmit1' */
+%if !WHITE_SPACE(tlcOutputsFcnOfS11B14)
+
+/* {S!d86}Scope: '<S2>/Scope1' */
+%<SLibCG_DumpSSCode("/*@[1ae1c7*/",tlcOutputsFcnOfS11B14,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS11B15)
+/* {S!d88}ToAsyncQueueBlock generated from: '<S2>/Ctrl_Reg_1' */
+%<SLibCG_DumpSSCode("/*@[1ae1c9*/",tlcOutputsFcnOfS11B15,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS11B16)
+/* {S!d90}ToAsyncQueueBlock generated from: '<S2>/SPI Transmit1' */
+%<SLibCG_DumpSSCode("/*@[1ae1cb*/",tlcOutputsFcnOfS11B16,"/*@]*/")>\
+%endif
+/* {S!d92}Sum: '<S3>/Add' incorporates:
+ *  Constant: '<S3>/Constant'
+ *  Delay: '<S3>/Delay'
+ */
+/*@>1acf0a*/PMSM_to_BLDC_mod1_DW./*@>1b0f5a*/Delay_DSTATE_b/*@>1b0dbc*/++;
+/* {S!d94}Logic: '<S3>/AND' incorporates:
+ *  Constant: '<S31>/Constant'
+ *  Constant: '<S32>/Constant'
+ *  Delay: '<S3>/Delay'
+ *  RelationalOperator: '<S31>/Compare'
+ *  RelationalOperator: '<S32>/Compare'
+ */
+/*@>1acc21*/PMSM_to_BLDC_mod1_B./*@>1b0f06*/AND/*@>196f6e*/ = ((/*@>1acf16*/PMSM_to_BLDC_mod1_DW./*@>1b0f5d*/Delay_DSTATE_b/*@>19dbf5*/ >= /*@>1a4fee*/14.0)/*@>196f6d*/ && (/*@>1acf1c*/PMSM_to_BLDC_mod1_DW./*@>1b0f60*/Delay_DSTATE_b/*@>19dbfa*/ <= /*@>1a4fef*/16.0));
+/* {S!d59}Outputs for Enabled SubSystem: '<S35>/Control_Reg1_read' incorporates:
+ *  EnablePort: '<S36>/Enable'
+ */
+/*@>1977dc*/if (/*@>1acc27*/PMSM_to_BLDC_mod1_B./*@>1b0f09*/AND) {
+    /*@>1977e0*/if (!/*@<1977df*//*@>1acf22*/PMSM_to_BLDC_mod1_DW./*@>1b0f63*/Control_Reg1_read_MODE) {
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[4], "SystemReset",1)
+        /* {S!d60}SystemReset for Atomic SubSystem: '<S36>/Bit Shift' */
+%if SLibCG_SystemFcnArgAccessed("PMSM_to_BLDC_BitShift_Reset",4,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[1ae1e7*/",SLibCGIRGenReusableSysCall("PMSM_to_BLDC_BitShift_Reset", ["%<_modelSS>", "&/*@>1b1225*/PMSM_to_BLDC_mod1_DW./*@>1b1224*/BitShift_p"], 4, 1, 5, 1, 6, 11),"/*@]*/")>\
+%assign ss = ::CompiledModel.System[4]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+        /* {E!d60}End of SystemReset for SubSystem: '<S36>/Bit Shift' */
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[6], "SystemReset",1)
+
+        /* {S!d62}SystemReset for Atomic SubSystem: '<S36>/Bit Shift1' */
+%if SLibCG_SystemFcnArgAccessed("PMSM_to_BLD_BitShift4_Reset",6,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[1ae1e9*/",SLibCGIRGenReusableSysCall("PMSM_to_BLD_BitShift4_Reset", ["%<_modelSS>", "&/*@>1b1263*/PMSM_to_BLDC_mod1_DW./*@>1b1262*/BitShift1"], 6, 1, 5, 1, 6, 11),"/*@]*/")>\
+%assign ss = ::CompiledModel.System[6]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+        /* {E!d62}End of SystemReset for SubSystem: '<S36>/Bit Shift1' */
+%endif
+        /*@>1acf34*/PMSM_to_BLDC_mod1_DW./*@>1b0f6c*/Control_Reg1_read_MODE/*@>1977e5*/ = /*@>1a4f1a*/true;
+    }
+    /* {S!d64}Outputs for Atomic SubSystem: '<S36>/Bit Shift' */
+    /* {S!d96}Constant: '<S36>/Constant' */
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[4], "Output",1)
+%if SLibCG_SystemFcnArgAccessed("PMSM_to_BLDC_mod1_BitShift",4,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[1ae1e8*/",SLibCGIRGenReusableSysCall("PMSM_to_BLDC_mod1_BitShift", ["%<_modelSS>", "/*@>1b12a4*/1", "&/*@>1b12b3*/y_n", "&/*@>1b12c3*/PMSM_to_BLDC_mod1_DW./*@>1b12c2*/BitShift_p"], 4, 1, 6, 1, 6, 11),"/*@]*/")>\
+%assign ss = ::CompiledModel.System[4]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+    /* {E!d64}End of Outputs for SubSystem: '<S36>/Bit Shift' */
+
+%endif
+    /* {S!d66}Outputs for Atomic SubSystem: '<S36>/Bit Shift1' */
+    /* {S!d98}Constant: '<S36>/Constant1' */
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[6], "Output",1)
+%if SLibCG_SystemFcnArgAccessed("PMSM_to_BLDC_mod1_BitShift4",6,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[1ae1ea*/",SLibCGIRGenReusableSysCall("PMSM_to_BLDC_mod1_BitShift4", ["%<_modelSS>", "/*@>1b1304*/2", "&/*@>1b1313*/y_o", "&/*@>1b1323*/PMSM_to_BLDC_mod1_DW./*@>1b1322*/BitShift1"], 6, 1, 6, 1, 6, 11),"/*@]*/")>\
+%assign ss = ::CompiledModel.System[6]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+    /* {E!d66}End of Outputs for SubSystem: '<S36>/Bit Shift1' */
+
+%endif
+    /* {S!d100}S-Function (sfix_bitop): '<S36>/Bitwise OR' */
+    /*@>1acc2d*/PMSM_to_BLDC_mod1_B./*@>1b0f0c*/BitwiseOR/*@>198156*/ = /*@>1abd9a*/(uint16_T)(/*@>1a4f63*/y_n/*@>1a54f3*/ | /*@>1a4f65*/y_o/*@>1a54f2*/ | /*@>1acde7*/PMSM_to_BLDC_mod1_ConstB./*@>1b0f2d*/BitwiseAND);
+%if !WHITE_SPACE(tlcOutputsFcnOfS9B2)
+    /* {S!d102}ToAsyncQueueBlock generated from: '<S36>/Bitwise OR' */
+%<SLibCG_DumpSSCode("/*@[1ae1cd*/",tlcOutputsFcnOfS9B2,"/*@]*/")>\
+%endif
+    /* {S!d104}DataTypeConversion: '<S36>/Data Type Conversion' */
+    /*@>1acc39*/PMSM_to_BLDC_mod1_B./*@>1b0f0f*/DataTypeConversion/*@>1980e4*/ = /*@>1acc3f*/PMSM_to_BLDC_mod1_B./*@>1b0f12*/BitwiseOR;
+    /*@>1ab7cb*/srUpdateBC(/*@>1acf46*/PMSM_to_BLDC_mod1_DW./*@>1b0f75*/Control_Reg1_read_SubsysRanBC);
+} else /*@>1977eb*/if (/*@>1acf76*/PMSM_to_BLDC_mod1_DW./*@>1b0f84*/Control_Reg1_read_MODE) {
+    /* {S!d106}Disable for DataTypeConversion: '<S36>/Data Type Conversion' incorporates:
+ *  Outport: '<S36>/Out1'
+ */
+    /*@>1accab*/PMSM_to_BLDC_mod1_B./*@>1b0f24*/DataTypeConversion/*@>1980bb*/ = /*@>1b0dac*/0U;
+    /*@>1acf7c*/PMSM_to_BLDC_mod1_DW./*@>1b0f87*/Control_Reg1_read_MODE/*@>1977ee*/ = /*@>1a4f22*/false;
+}
+/* {E!d59}End of Outputs for SubSystem: '<S35>/Control_Reg1_read' */
+
+/* {S!d108}MATLABSystem: '<S35>/SPI Controller Transfer' */
+/*@>1a4f91*/y_n/*@>1981c6*/ = /*@>1ab7cd*/MW_STM32_SPI_SetFormat(/*@>1acf4c*/PMSM_to_BLDC_mod1_DW./*@>1b0f78*/obj_a.MW_SPI_HANDLE, /*@>1a4f8f*/2U, /*@>1a4f8e*/3840U, /*@>1a4f88*/MW_SPI_MODE_3);
+/*@>1981e9*/if (/*@>1a4f8b*/y_n/*@>1981ca*/ == /*@>1b0dae*/0) {
+    /*@>1a4fa4*/portNameLoc/*@>1981e1*/ = /*@>1a4f9b*/GPIOC;
+    /*@>1ab7cf*/LL_GPIO_ResetOutputPin(/*@>1a4fa2*/portNameLoc, /*@>1a4f9a*/16384U);
+    /*@>1ab7d1*/MW_SPI_ControllerWriteRead_Databits(/*@>1acf52*/PMSM_to_BLDC_mod1_DW./*@>1b0f7b*/obj_a.MW_SPI_HANDLE, &/*@>1acc51*/PMSM_to_BLDC_mod1_B./*@>1b0f15*/DataTypeConversion, &/*@>1acc57*/PMSM_to_BLDC_mod1_B./*@>1b0f18*/SPIControllerTransfer, /*@>1a74c1*/1, /*@>1a4fab*/1U, /*@>1a74c4*/1, /*@>1a4f98*/10U);
+    /*@>1ab7d3*/LL_GPIO_SetOutputPin(/*@>1a4f9d*/portNameLoc, /*@>1a4f94*/16384U);
+}
+/* {E!d108}End of MATLABSystem: '<S35>/SPI Controller Transfer' */
+
+/* {S!d110}S-Function (sfix_bitop): '<S35>/Bitwise AND' incorporates:
+ *  Constant: '<S35>/Constant'
+ */
+/*@>1acc5d*/PMSM_to_BLDC_mod1_B./*@>1b0f1b*/BitwiseAND/*@>19810f*/ = /*@>1abd9e*/(uint16_T)(/*@>1acc63*/PMSM_to_BLDC_mod1_B./*@>1b0f1e*/SPIControllerTransfer/*@>1a76c7*/ & /*@>1b0db0*/32767);
+%if !WHITE_SPACE(tlcOutputsFcnOfS11B19)
+/* {S!d112}Scope: '<S35>/Scope' */
+%<SLibCG_DumpSSCode("/*@[1ae1d1*/",tlcOutputsFcnOfS11B19,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS11B20)
+/* {S!d114}Scope: '<S35>/Scope1' */
+%<SLibCG_DumpSSCode("/*@[1ae1d4*/",tlcOutputsFcnOfS11B20,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS11B21)
+/* {S!d116}ToAsyncQueueBlock generated from: '<S35>/Bitwise AND' */
+%<SLibCG_DumpSSCode("/*@[1ae1d6*/",tlcOutputsFcnOfS11B21,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS11B22)
+/* {S!d118}ToAsyncQueueBlock generated from: '<S35>/Control_Reg1_read' */
+%<SLibCG_DumpSSCode("/*@[1ae1d8*/",tlcOutputsFcnOfS11B22,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS11B23)
+/* {S!d120}ToAsyncQueueBlock generated from: '<S35>/SPI Controller Transfer' */
+%<SLibCG_DumpSSCode("/*@[1ae1da*/",tlcOutputsFcnOfS11B23,"/*@]*/")>\
+%endif
+/* {S!d122}Logic: '<S3>/AND1' incorporates:
+ *  Constant: '<S33>/Constant'
+ *  Constant: '<S34>/Constant'
+ *  Delay: '<S3>/Delay'
+ *  RelationalOperator: '<S33>/Compare'
+ *  RelationalOperator: '<S34>/Compare'
+ */
+/*@>1acc8d*/PMSM_to_BLDC_mod1_B./*@>1b0f21*/AND1/*@>1972d0*/ = ((/*@>1acf64*/PMSM_to_BLDC_mod1_DW./*@>1b0f7e*/Delay_DSTATE_b/*@>19dc00*/ >= /*@>1a4ff4*/21.0)/*@>1972cf*/ && (/*@>1acf6a*/PMSM_to_BLDC_mod1_DW./*@>1b0f81*/Delay_DSTATE_b/*@>19dc05*/ <= /*@>1a4ff5*/25.0));
+%if !WHITE_SPACE(tlcOutputsFcnOfS11B24)
+/* {S!d124}Scope: '<S3>/Scope' */
+%<SLibCG_DumpSSCode("/*@[1ae1de*/",tlcOutputsFcnOfS11B24,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS11B25)
+/* {S!d126}ToAsyncQueueBlock generated from: '<S3>/AND1' */
+%<SLibCG_DumpSSCode("/*@[1ae1e0*/",tlcOutputsFcnOfS11B25,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcOutputsFcnOfS11B26)
+/* {S!d128}ToAsyncQueueBlock generated from: '<S3>/AND' */
+%<SLibCG_DumpSSCode("/*@[1ae1e2*/",tlcOutputsFcnOfS11B26,"/*@]*/")>\
+%endif
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedOutput1LocalVars", localVarDecl)>
+%assign ::GlobalCurrentTID = []
+%endif
+%endfunction
+%function OutputsFcnProtoTypeForTID(block, system, tid) Output
+%if tid == 0
+%assign ::GlobalCurrentTID = 0
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Outputs0(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(2, 2, fcnProtoType)>
+%assign ::GlobalCurrentTID = []
+%endif
+%if tid == 1
+%assign ::GlobalCurrentTID = 1
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Outputs1(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(2, 3, fcnProtoType)>
+%assign ::GlobalCurrentTID = []
+%endif
+%endfunction

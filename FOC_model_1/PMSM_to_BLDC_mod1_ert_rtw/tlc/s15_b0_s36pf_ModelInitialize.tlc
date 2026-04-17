@@ -1,0 +1,245 @@
+%implements s15_b0_s36pf_ModelInitialize "C"
+
+%function ModelInitialize(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign _modelSS = ""
+
+%assign tlcSetupRuntimeResourcesFcnOfS11B9 = OpaqueTLCBlockFcn("SetupRuntimeResources", 11, 9, 2, 5, 0)
+%assign tlcSetupRuntimeResourcesFcnOfS11B10 = OpaqueTLCBlockFcn("SetupRuntimeResources", 11, 10, 2, 5, 1)
+%assign tlcSetupRuntimeResourcesFcnOfS11B14 = OpaqueTLCBlockFcn("SetupRuntimeResources", 11, 14, 2, 5, 2)
+%assign tlcSetupRuntimeResourcesFcnOfS11B15 = OpaqueTLCBlockFcn("SetupRuntimeResources", 11, 15, 2, 5, 3)
+%assign tlcSetupRuntimeResourcesFcnOfS11B16 = OpaqueTLCBlockFcn("SetupRuntimeResources", 11, 16, 2, 5, 4)
+%assign tlcSetupRuntimeResourcesFcnOfS11B19 = OpaqueTLCBlockFcn("SetupRuntimeResources", 11, 19, 2, 5, 5)
+%assign tlcSetupRuntimeResourcesFcnOfS11B20 = OpaqueTLCBlockFcn("SetupRuntimeResources", 11, 20, 2, 5, 6)
+%assign tlcSetupRuntimeResourcesFcnOfS11B21 = OpaqueTLCBlockFcn("SetupRuntimeResources", 11, 21, 2, 5, 7)
+%assign tlcSetupRuntimeResourcesFcnOfS11B22 = OpaqueTLCBlockFcn("SetupRuntimeResources", 11, 22, 2, 5, 8)
+%assign tlcSetupRuntimeResourcesFcnOfS11B23 = OpaqueTLCBlockFcn("SetupRuntimeResources", 11, 23, 2, 5, 9)
+%assign tlcSetupRuntimeResourcesFcnOfS11B24 = OpaqueTLCBlockFcn("SetupRuntimeResources", 11, 24, 2, 5, 10)
+%assign tlcSetupRuntimeResourcesFcnOfS11B25 = OpaqueTLCBlockFcn("SetupRuntimeResources", 11, 25, 2, 5, 11)
+%assign tlcSetupRuntimeResourcesFcnOfS11B26 = OpaqueTLCBlockFcn("SetupRuntimeResources", 11, 26, 2, 5, 12)
+%assign tlcStartFcnOfS11B10 = OpaqueTLCBlockFcn("Start", 11, 10, 2, 5, 13)
+%assign tlcStartFcnOfS11B15 = OpaqueTLCBlockFcn("Start", 11, 15, 2, 5, 14)
+%assign tlcStartFcnOfS11B16 = OpaqueTLCBlockFcn("Start", 11, 16, 2, 5, 15)
+%assign tlcStartFcnOfS11B21 = OpaqueTLCBlockFcn("Start", 11, 21, 2, 5, 16)
+%assign tlcStartFcnOfS11B22 = OpaqueTLCBlockFcn("Start", 11, 22, 2, 5, 17)
+%assign tlcStartFcnOfS11B23 = OpaqueTLCBlockFcn("Start", 11, 23, 2, 5, 18)
+%assign tlcStartFcnOfS11B25 = OpaqueTLCBlockFcn("Start", 11, 25, 2, 5, 19)
+%assign tlcStartFcnOfS11B26 = OpaqueTLCBlockFcn("Start", 11, 26, 2, 5, 20)
+%assign tlcSetupRuntimeResourcesFcnOfS7B2 = OpaqueTLCBlockFcn("SetupRuntimeResources", 7, 2, 2, 5, 21)
+%assign tlcStartFcnOfS7B2 = OpaqueTLCBlockFcn("Start", 7, 2, 2, 5, 22)
+%assign tlcSetupRuntimeResourcesFcnOfS9B2 = OpaqueTLCBlockFcn("SetupRuntimeResources", 9, 2, 2, 5, 23)
+%assign tlcStartFcnOfS9B2 = OpaqueTLCBlockFcn("Start", 9, 2, 2, 5, 24)
+%<SLibInsertAsyncTaskInitializeCode(system)>
+%<SLibWriteMachineInitialize()>
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS11B9)
+/* {S!d196}SetupRuntimeResources for Scope: '<S1>/Scope' */
+%<SLibCG_DumpSSCode("/*@[1ae32a*/",tlcSetupRuntimeResourcesFcnOfS11B9,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS11B10)
+/* {S!d198}SetupRuntimeResources for ToAsyncQueueBlock generated from: '<S1>/Compare To Constant' */
+%<SLibCG_DumpSSCode("/*@[1ae32c*/",tlcSetupRuntimeResourcesFcnOfS11B10,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS11B14)
+/* {S!d200}SetupRuntimeResources for Scope: '<S2>/Scope1' */
+%<SLibCG_DumpSSCode("/*@[1ae32f*/",tlcSetupRuntimeResourcesFcnOfS11B14,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS11B15)
+/* {S!d202}SetupRuntimeResources for ToAsyncQueueBlock generated from: '<S2>/Ctrl_Reg_1' */
+%<SLibCG_DumpSSCode("/*@[1ae331*/",tlcSetupRuntimeResourcesFcnOfS11B15,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS11B16)
+/* {S!d204}SetupRuntimeResources for ToAsyncQueueBlock generated from: '<S2>/SPI Transmit1' */
+%<SLibCG_DumpSSCode("/*@[1ae333*/",tlcSetupRuntimeResourcesFcnOfS11B16,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS11B19)
+/* {S!d206}SetupRuntimeResources for Scope: '<S35>/Scope' */
+%<SLibCG_DumpSSCode("/*@[1ae337*/",tlcSetupRuntimeResourcesFcnOfS11B19,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS11B20)
+/* {S!d208}SetupRuntimeResources for Scope: '<S35>/Scope1' */
+%<SLibCG_DumpSSCode("/*@[1ae33a*/",tlcSetupRuntimeResourcesFcnOfS11B20,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS11B21)
+/* {S!d210}SetupRuntimeResources for ToAsyncQueueBlock generated from: '<S35>/Bitwise AND' */
+%<SLibCG_DumpSSCode("/*@[1ae33c*/",tlcSetupRuntimeResourcesFcnOfS11B21,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS11B22)
+/* {S!d212}SetupRuntimeResources for ToAsyncQueueBlock generated from: '<S35>/Control_Reg1_read' */
+%<SLibCG_DumpSSCode("/*@[1ae33e*/",tlcSetupRuntimeResourcesFcnOfS11B22,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS11B23)
+/* {S!d214}SetupRuntimeResources for ToAsyncQueueBlock generated from: '<S35>/SPI Controller Transfer' */
+%<SLibCG_DumpSSCode("/*@[1ae340*/",tlcSetupRuntimeResourcesFcnOfS11B23,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS11B24)
+/* {S!d216}SetupRuntimeResources for Scope: '<S3>/Scope' */
+%<SLibCG_DumpSSCode("/*@[1ae344*/",tlcSetupRuntimeResourcesFcnOfS11B24,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS11B25)
+/* {S!d218}SetupRuntimeResources for ToAsyncQueueBlock generated from: '<S3>/AND1' */
+%<SLibCG_DumpSSCode("/*@[1ae346*/",tlcSetupRuntimeResourcesFcnOfS11B25,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS11B26)
+/* {S!d220}SetupRuntimeResources for ToAsyncQueueBlock generated from: '<S3>/AND' */
+%<SLibCG_DumpSSCode("/*@[1ae348*/",tlcSetupRuntimeResourcesFcnOfS11B26,"/*@]*/")>\
+%endif
+%<SLibCGIRDumpSystemUserCode(11, "Start", "Header")>\
+%<SLibCGIRDumpSystemUserCode(11, "Start", "Body")>\
+/* {S!d222}Start for Probe: '<S11>/Probe' */
+/*@>1acd89*/PMSM_to_BLDC_mod1_B./*@>1b1827*/Probe/*@>198518*/[/*@>1a52db*/0]/*@>19851b*/ = /*@>1a52da*/0.001;
+/*@>1acd8f*/PMSM_to_BLDC_mod1_B./*@>1b182a*/Probe/*@>19851e*/[/*@>1a52dd*/1]/*@>198521*/ = /*@>1a52dc*/0.0;
+/* {S!d224}Start for InitialCondition: '<S12>/Initial' */
+/*@>1acff4*/PMSM_to_BLDC_mod1_DW./*@>1b182d*/Initial_FirstOutputTime/*@>198452*/ = /*@>1a5260*/true;
+/* {S!d226}Start for InitialCondition: '<S16>/Initial' */
+/*@>1acffa*/PMSM_to_BLDC_mod1_DW./*@>1b1830*/Initial_FirstOutputTime_e/*@>198456*/ = /*@>1a5265*/true;
+%if !WHITE_SPACE(tlcStartFcnOfS11B10)
+/* {S!d228}Start for ToAsyncQueueBlock generated from: '<S1>/Compare To Constant' */
+%<SLibCG_DumpSSCode("/*@[1ae34c*/",tlcStartFcnOfS11B10,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS11B15)
+/* {S!d230}Start for ToAsyncQueueBlock generated from: '<S2>/Ctrl_Reg_1' */
+%<SLibCG_DumpSSCode("/*@[1ae34e*/",tlcStartFcnOfS11B15,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS11B16)
+/* {S!d232}Start for ToAsyncQueueBlock generated from: '<S2>/SPI Transmit1' */
+%<SLibCG_DumpSSCode("/*@[1ae350*/",tlcStartFcnOfS11B16,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS11B21)
+/* {S!d234}Start for ToAsyncQueueBlock generated from: '<S35>/Bitwise AND' */
+%<SLibCG_DumpSSCode("/*@[1ae352*/",tlcStartFcnOfS11B21,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS11B22)
+/* {S!d236}Start for ToAsyncQueueBlock generated from: '<S35>/Control_Reg1_read' */
+%<SLibCG_DumpSSCode("/*@[1ae354*/",tlcStartFcnOfS11B22,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS11B23)
+/* {S!d238}Start for ToAsyncQueueBlock generated from: '<S35>/SPI Controller Transfer' */
+%<SLibCG_DumpSSCode("/*@[1ae356*/",tlcStartFcnOfS11B23,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS11B25)
+/* {S!d240}Start for ToAsyncQueueBlock generated from: '<S3>/AND1' */
+%<SLibCG_DumpSSCode("/*@[1ae358*/",tlcStartFcnOfS11B25,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS11B26)
+/* {S!d242}Start for ToAsyncQueueBlock generated from: '<S3>/AND' */
+%<SLibCG_DumpSSCode("/*@[1ae35a*/",tlcStartFcnOfS11B26,"/*@]*/")>\
+%endif
+%<SLibCGIRDumpSystemUserCode(11, "Start", "Trailer")>\
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS7B2)
+/* {S!d183}SystemInitialize for Enabled SubSystem: '<S2>/Ctrl_Reg_1' */
+/* {S!d244}SetupRuntimeResources for ToAsyncQueueBlock generated from: '<S26>/Bitwise AND' */
+%<SLibCG_DumpSSCode("/*@[1ae35d*/",tlcSetupRuntimeResourcesFcnOfS7B2,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS7B2)
+/* {S!d246}Start for ToAsyncQueueBlock generated from: '<S26>/Bitwise AND' */
+%<SLibCG_DumpSSCode("/*@[1ae35f*/",tlcStartFcnOfS7B2,"/*@]*/")>\
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[4], "SystemInitialize",0)
+/* {S!d184}SystemInitialize for Atomic SubSystem: '<S26>/Bit Shift' */
+%if SLibCG_SystemFcnArgAccessed("PMSM_to_BLDC__BitShift_Init",4,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[1ae364*/",SLibCGIRGenReusableSysCall("PMSM_to_BLDC__BitShift_Init", ["%<_modelSS>", "&/*@>1b1b88*/PMSM_to_BLDC_mod1_DW./*@>1b1b87*/BitShift"], 4, 0, 4, 0, 19, 11),"/*@]*/")>\
+%assign ss = ::CompiledModel.System[4]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+/* {E!d184}End of SystemInitialize for SubSystem: '<S26>/Bit Shift' */
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[6], "SystemInitialize",0)
+
+/* {S!d186}SystemInitialize for Atomic SubSystem: '<S26>/Bit Shift4' */
+%if SLibCG_SystemFcnArgAccessed("PMSM_to_BLDC_BitShift4_Init",6,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[1ae365*/",SLibCGIRGenReusableSysCall("PMSM_to_BLDC_BitShift4_Init", ["%<_modelSS>", "&/*@>1b1bc6*/PMSM_to_BLDC_mod1_DW./*@>1b1bc5*/BitShift4"], 6, 0, 4, 0, 19, 11),"/*@]*/")>\
+%assign ss = ::CompiledModel.System[6]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+/* {E!d186}End of SystemInitialize for SubSystem: '<S26>/Bit Shift4' */
+/* {E!d183}End of SystemInitialize for SubSystem: '<S2>/Ctrl_Reg_1' */
+
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS9B2)
+/* {S!d189}SystemInitialize for Enabled SubSystem: '<S35>/Control_Reg1_read' */
+/* {S!d248}SetupRuntimeResources for ToAsyncQueueBlock generated from: '<S36>/Bitwise OR' */
+%<SLibCG_DumpSSCode("/*@[1ae361*/",tlcSetupRuntimeResourcesFcnOfS9B2,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS9B2)
+/* {S!d250}Start for ToAsyncQueueBlock generated from: '<S36>/Bitwise OR' */
+%<SLibCG_DumpSSCode("/*@[1ae363*/",tlcStartFcnOfS9B2,"/*@]*/")>\
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[4], "SystemInitialize",0)
+/* {S!d190}SystemInitialize for Atomic SubSystem: '<S36>/Bit Shift' */
+%if SLibCG_SystemFcnArgAccessed("PMSM_to_BLDC__BitShift_Init",4,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[1ae366*/",SLibCGIRGenReusableSysCall("PMSM_to_BLDC__BitShift_Init", ["%<_modelSS>", "&/*@>1b1c1e*/PMSM_to_BLDC_mod1_DW./*@>1b1c1d*/BitShift_p"], 4, 1, 4, 0, 19, 11),"/*@]*/")>\
+%assign ss = ::CompiledModel.System[4]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+/* {E!d190}End of SystemInitialize for SubSystem: '<S36>/Bit Shift' */
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[6], "SystemInitialize",0)
+
+/* {S!d192}SystemInitialize for Atomic SubSystem: '<S36>/Bit Shift1' */
+%if SLibCG_SystemFcnArgAccessed("PMSM_to_BLDC_BitShift4_Init",6,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[1ae367*/",SLibCGIRGenReusableSysCall("PMSM_to_BLDC_BitShift4_Init", ["%<_modelSS>", "&/*@>1b1c5c*/PMSM_to_BLDC_mod1_DW./*@>1b1c5b*/BitShift1"], 6, 1, 4, 0, 19, 11),"/*@]*/")>\
+%assign ss = ::CompiledModel.System[6]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+/* {E!d192}End of SystemInitialize for SubSystem: '<S36>/Bit Shift1' */
+/* {E!d189}End of SystemInitialize for SubSystem: '<S35>/Control_Reg1_read' */
+
+%endif
+/* {S!d252}Start for MATLABSystem: '<S21>/Digital Port Write' */
+/*@>1ad018*/PMSM_to_BLDC_mod1_DW./*@>1b183f*/obj_c./*@>1b180c*/matlabCodegenIsDeleted/*@>198614*/ = /*@>1a5327*/false;
+/*@>1ad01e*/PMSM_to_BLDC_mod1_DW./*@>1b1842*/obj_c./*@>1b1809*/isInitialized/*@>19860e*/ = /*@>1b1734*/1;
+/*@>1ad024*/PMSM_to_BLDC_mod1_DW./*@>1b1845*/obj_c./*@>1b1806*/isSetupComplete/*@>19860b*/ = /*@>1a5324*/true;
+/* {S!d254}Start for MATLABSystem: '<S2>/SPI Transmit1' */
+/*@>1ad02a*/PMSM_to_BLDC_mod1_DW./*@>1b1848*/obj./*@>1b1818*/matlabCodegenIsDeleted/*@>19864d*/ = /*@>1a533a*/false;
+/*@>1ad030*/PMSM_to_BLDC_mod1_DW./*@>1b184b*/obj./*@>1b1815*/isSetupComplete/*@>19864a*/ = /*@>1a5336*/false;
+/*@>1ad036*/PMSM_to_BLDC_mod1_DW./*@>1b184e*/obj./*@>1b1812*/isInitialized/*@>198647*/ = /*@>1b1737*/1;
+/*@[1ae95a*/%<(SLibCGCallSubFcn("PMSM_to_B_SPIDrvBlock_setupImpl", ["&/*@>1b1c6d*/PMSM_to_BLDC_mod1_DW./*@>1b1c6c*/obj"], 2, 5, 0))>/*@]*/;
+/*@>1ad042*/PMSM_to_BLDC_mod1_DW./*@>1b1854*/obj./*@>1b180f*/isSetupComplete/*@>198644*/ = /*@>1a5334*/true;
+/* {S!d256}Start for MATLABSystem: '<S35>/SPI Controller Transfer' */
+/*@>1ad048*/PMSM_to_BLDC_mod1_DW./*@>1b1857*/obj_a./*@>1b1824*/matlabCodegenIsDeleted/*@>198687*/ = /*@>1a534d*/false;
+/*@>1ad04e*/PMSM_to_BLDC_mod1_DW./*@>1b185a*/obj_a./*@>1b1821*/isSetupComplete/*@>198684*/ = /*@>1a5349*/false;
+/*@>1ad054*/PMSM_to_BLDC_mod1_DW./*@>1b185d*/obj_a./*@>1b181e*/isInitialized/*@>198681*/ = /*@>1b173a*/1;
+/*@[1ae971*/%<(SLibCGCallSubFcn("PMSM_to_SPIDrvBlock_setupImpl_o", ["&/*@>1b1c7e*/PMSM_to_BLDC_mod1_DW./*@>1b1c7d*/obj_a"], 2, 5, 1))>/*@]*/;
+/*@>1ad060*/PMSM_to_BLDC_mod1_DW./*@>1b1863*/obj_a./*@>1b181b*/isSetupComplete/*@>19867e*/ = /*@>1a5347*/true;
+%<SLibInsertInitPeriodicCStatesFcn(system)>
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function ModelInitializeFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ModelInitialize(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(2, 5, fcnProtoType)>
+%endfunction
