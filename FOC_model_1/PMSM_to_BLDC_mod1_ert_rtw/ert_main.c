@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'PMSM_to_BLDC_mod1'.
  *
- * Model version                  : 4.592
+ * Model version                  : 4.632
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Mon Apr 20 17:13:24 2026
+ * C/C++ source code generated on : Tue Apr 21 17:19:39 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -27,6 +27,8 @@ volatile int IsrOverrun = 0;
 static boolean_T OverrunFlag = 0;
 void rt_OneStep(void)
 {
+  extmodeSimulationTime_T currentTime = (extmodeSimulationTime_T) 0;
+
   /* Check for overrun. Protect OverrunFlag against preemption */
   if (OverrunFlag++) {
     IsrOverrun = 1;
@@ -35,9 +37,13 @@ void rt_OneStep(void)
   }
 
   __enable_irq();
+  currentTime = (extmodeSimulationTime_T) PMSM_to_BLDC_mod1_M->Timing.taskTime0;
   PMSM_to_BLDC_mod1_step();
 
   /* Get model outputs here */
+
+  /* Trigger External Mode event */
+  extmodeEvent(0, currentTime);
   __disable_irq();
   OverrunFlag--;
 }
@@ -46,7 +52,7 @@ volatile boolean_T stopRequested;
 volatile boolean_T runModel;
 int main(int argc, char **argv)
 {
-  float modelBaseRate = 0.001;
+  float modelBaseRate = 0.01;
   float systemClock = 100.0;
   extmodeErrorCode_T errorCode = EXTMODE_SUCCESS;
 
