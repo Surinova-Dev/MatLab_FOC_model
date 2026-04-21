@@ -12,11 +12,11 @@ function [taskInfo, numtask, isDeploymentDiagram]=coder_instr_task_info()
             taskInfo(2).samplePeriod = 1.0;
             taskInfo(2).sampleOffset = 0.0;
 
-                taskInfo(2).taskPrio = 41;
+                taskInfo(2).taskPrio = 40;
 
                 taskInfo(2).taskName = ['SubRate' '1'];
             taskInfo(2).entryPoints = {};
-            taskInfo(2).nonFcnCallPartitionName = 'D2';
+            taskInfo(2).nonFcnCallPartitionName = 'D1';
 
 
 
