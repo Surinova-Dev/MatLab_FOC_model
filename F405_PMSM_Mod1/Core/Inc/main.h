@@ -28,6 +28,7 @@ extern "C" {
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_hal.h"
+
 #include "stm32f4xx_ll_adc.h"
 #include "stm32f4xx_ll_dma.h"
 #include "stm32f4xx_ll_rcc.h"
@@ -64,14 +65,6 @@ extern "C" {
 
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
-void MX_GPIO_Init(void);
-void MX_DMA_Init(void);
-void MX_ADC1_Init(void);
-void MX_USART2_UART_Init(void);
-void MX_ADC2_Init(void);
-void MX_TIM8_Init(void);
-void MX_ADC3_Init(void);
-void MX_SPI3_Init(void);
 
 /* USER CODE BEGIN EFP */
 

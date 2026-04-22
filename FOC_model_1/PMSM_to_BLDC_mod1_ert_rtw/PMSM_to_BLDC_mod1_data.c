@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'PMSM_to_BLDC_mod1'.
  *
- * Model version                  : 4.632
+ * Model version                  : 4.665
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Tue Apr 21 17:19:39 2026
+ * C/C++ source code generated on : Wed Apr 22 17:47:26 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -21,8 +21,8 @@
 
 /* Invariant block signals (default storage) */
 const ConstB_PMSM_to_BLDC_mod1_T PMSM_to_BLDC_mod1_ConstB = {
-  1360U,                               /* '<S5>/Bitwise OR' */
-  4U                                   /* '<S4>/Bitwise AND' */
+  0U,                                  /* '<S9>/Bitwise AND' */
+  0U                                   /* '<S8>/Bitwise AND' */
 };
 
 /*

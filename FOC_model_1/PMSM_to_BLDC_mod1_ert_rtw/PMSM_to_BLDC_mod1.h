@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'PMSM_to_BLDC_mod1'.
  *
- * Model version                  : 4.632
+ * Model version                  : 4.665
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Tue Apr 21 17:19:39 2026
+ * C/C++ source code generated on : Wed Apr 22 17:47:26 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -25,8 +25,7 @@
 #include "rtw_extmode.h"
 #include "sysran_types.h"
 #include "math.h"
-#include "MW_SPI.h"
-#include "mw_stm32_spi_ll.h"
+#include "ext_mode.h"
 #include "main.h"
 #include "mw_stm32_utils.h"
 #endif                                 /* PMSM_to_BLDC_mod1_COMMON_INCLUDES_ */
@@ -75,16 +74,26 @@
 #define rtmGetTPtr(rtm)                (&(rtm)->Timing.taskTime0)
 #endif
 
-/* Block states (default storage) for system '<S4>/Bit Shift' */
+/* user code (top of header file) */
+#include "main.h"
+#include "SPI_code.h"
+#include "spi.h"
+#include "dma.h"
+#include "gpio.h"
+#include "tim.h"
+#include "adc.h"
+#include "usart.h"
+
+/* Block states (default storage) for system '<S8>/Bit Shift' */
 typedef struct {
-  int32_T sfEvent;                     /* '<S6>/bit_shift' */
-  boolean_T doneDoubleBufferReInit;    /* '<S6>/bit_shift' */
+  int32_T sfEvent;                     /* '<S10>/bit_shift' */
+  boolean_T doneDoubleBufferReInit;    /* '<S10>/bit_shift' */
 } DW_BitShift_PMSM_to_BLDC_mod1_T;
 
-/* Block states (default storage) for system '<S4>/Bit Shift1' */
+/* Block states (default storage) for system '<S8>/Bit Shift1' */
 typedef struct {
-  int32_T sfEvent;                     /* '<S7>/bit_shift' */
-  boolean_T doneDoubleBufferReInit;    /* '<S7>/bit_shift' */
+  int32_T sfEvent;                     /* '<S11>/bit_shift' */
+  boolean_T doneDoubleBufferReInit;    /* '<S11>/bit_shift' */
 } DW_BitShift1_PMSM_to_BLDC_mod_T;
 
 /* Block signals (default storage) */
@@ -96,44 +105,57 @@ typedef struct {
   real_T read2;                        /* '<Root>/Chart' */
   real_T spi_write1;                   /* '<Root>/Chart' */
   real_T spi_write2;                   /* '<Root>/Chart' */
-  uint16_T ctrl_reg1;                  /* '<S5>/Bitwise AND' */
-  uint16_T BitwiseOR;                  /* '<S4>/Bitwise OR' */
-  uint16_T DataTypeConversion;         /* '<S4>/Data Type Conversion' */
-  boolean_T AND1;                      /* '<S2>/AND1' */
-  boolean_T AND;                       /* '<S2>/AND' */
+  uint16_T DataTypeConversion;         /* '<S18>/Data Type Conversion' */
+  uint16_T Delay;                      /* '<S9>/Delay' */
+  uint16_T CCaller;                    /* '<S9>/C Caller' */
+  uint16_T Delay_n;                    /* '<S8>/Delay' */
+  uint16_T CCaller_h;                  /* '<S8>/C Caller' */
+  uint16_T BitwiseOR;                  /* '<S8>/Bitwise OR' */
+  boolean_T AND1;                      /* '<S4>/AND1' */
+  boolean_T AND;                       /* '<S4>/AND' */
 } B_PMSM_to_BLDC_mod1_T;
 
 /* Block states (default storage) for system '<Root>' */
 typedef struct {
-  stm32cube_blocks_SPIControlle_T obj; /* '<S5>/SPI Transmit' */
-  stm32cube_blocks_SPIControlle_T obj_j;/* '<S4>/SPI Transmit' */
-  stm32cube_blocks_DigitalPortW_T obj_o;/* '<S16>/Digital Port Write' */
+  stm32cube_blocks_DigitalPortW_T obj; /* '<S7>/Digital Port Write' */
   real_T CS_val;                       /* '<Root>/Chart' */
   struct {
     void *LoggedData[7];
-  } Scope2_PWORK;                      /* '<Root>/Scope2' */
+  } Scope_PWORK;                       /* '<Root>/Scope' */
 
   struct {
     void *LoggedData[2];
-  } Scope_PWORK;                       /* '<S2>/Scope' */
+  } Scope_PWORK_b;                     /* '<S3>/Scope' */
+
+  struct {
+    void *LoggedData[2];
+  } Scope1_PWORK;                      /* '<S3>/Scope1' */
+
+  struct {
+    void *LoggedData[2];
+  } Scope_PWORK_m;                     /* '<S4>/Scope' */
 
   uint32_T is_c3_PMSM_to_BLDC_mod1;    /* '<Root>/Chart' */
-  uint16_T temporalCounter_i1;         /* '<Root>/Chart' */
-  int8_T Ctrl_Reg_1_SubsysRanBC;       /* '<S2>/Ctrl_Reg_1' */
-  int8_T Control_Reg1_read_SubsysRanBC;/* '<S2>/Control_Reg1_read' */
+  uint16_T Delay_DSTATE;               /* '<S9>/Delay' */
+  uint16_T Delay_DSTATE_i;             /* '<S8>/Delay' */
+  int8_T Ctrl_Reg_1_SubsysRanBC;       /* '<S4>/Ctrl_Reg_1' */
+  int8_T Control_Reg_2_SubsysRanBC;    /* '<S4>/Control_Reg_2' */
+  int8_T Control_Reg_2_read_SubsysRanBC;/* '<S3>/Control_Reg_2_read' */
+  int8_T Control_Reg1_read_SubsysRanBC;/* '<S3>/Control_Reg1_read' */
   uint8_T is_active_c3_PMSM_to_BLDC_mod1;/* '<Root>/Chart' */
-  boolean_T Ctrl_Reg_1_MODE;           /* '<S2>/Ctrl_Reg_1' */
-  boolean_T Control_Reg1_read_MODE;    /* '<S2>/Control_Reg1_read' */
-  DW_BitShift1_PMSM_to_BLDC_mod_T BitShift4;/* '<S5>/Bit Shift4' */
-  DW_BitShift_PMSM_to_BLDC_mod1_T BitShift_m;/* '<S5>/Bit Shift' */
-  DW_BitShift1_PMSM_to_BLDC_mod_T BitShift1;/* '<S4>/Bit Shift1' */
-  DW_BitShift_PMSM_to_BLDC_mod1_T BitShift;/* '<S4>/Bit Shift' */
+  uint8_T temporalCounter_i1;          /* '<Root>/Chart' */
+  boolean_T Control_Reg_2_read_MODE;   /* '<S3>/Control_Reg_2_read' */
+  boolean_T Control_Reg1_read_MODE;    /* '<S3>/Control_Reg1_read' */
+  DW_BitShift1_PMSM_to_BLDC_mod_T BitShift1_m;/* '<S9>/Bit Shift1' */
+  DW_BitShift_PMSM_to_BLDC_mod1_T BitShift_b;/* '<S9>/Bit Shift' */
+  DW_BitShift1_PMSM_to_BLDC_mod_T BitShift1;/* '<S8>/Bit Shift1' */
+  DW_BitShift_PMSM_to_BLDC_mod1_T BitShift;/* '<S8>/Bit Shift' */
 } DW_PMSM_to_BLDC_mod1_T;
 
 /* Invariant block signals (default storage) */
 typedef struct {
-  const uint16_T BitwiseOR;            /* '<S5>/Bitwise OR' */
-  const uint16_T BitwiseAND;           /* '<S4>/Bitwise AND' */
+  const uint16_T BitwiseAND;           /* '<S9>/Bitwise AND' */
+  const uint16_T BitwiseAND_b;         /* '<S8>/Bitwise AND' */
 } ConstB_PMSM_to_BLDC_mod1_T;
 
 /* Real-time Model Data Structure */
@@ -169,6 +191,11 @@ struct tag_RTM_PMSM_to_BLDC_mod1_T {
     time_T taskTime0;
     uint32_T clockTick0;
     time_T stepSize0;
+    uint32_T clockTick1;
+    struct {
+      uint16_T TID[2];
+    } TaskCounters;
+
     time_T tFinal;
     boolean_T stopRequestedFlag;
   } Timing;
@@ -194,7 +221,8 @@ extern volatile boolean_T runModel;
 /*-
  * These blocks were eliminated from the model due to optimizations:
  *
- * Block '<S5>/Data Type Conversion2' : Eliminate redundant data type conversion
+ * Block '<S8>/Data Type Conversion' : Eliminate redundant data type conversion
+ * Block '<S19>/Data Type Conversion1' : Eliminate redundant data type conversion
  */
 
 /*-
@@ -213,21 +241,24 @@ extern volatile boolean_T runModel;
  *
  * '<Root>' : 'PMSM_to_BLDC_mod1'
  * '<S1>'   : 'PMSM_to_BLDC_mod1/Chart'
- * '<S2>'   : 'PMSM_to_BLDC_mod1/Subsystem2'
- * '<S3>'   : 'PMSM_to_BLDC_mod1/Subsystem3'
- * '<S4>'   : 'PMSM_to_BLDC_mod1/Subsystem2/Control_Reg1_read'
- * '<S5>'   : 'PMSM_to_BLDC_mod1/Subsystem2/Ctrl_Reg_1'
- * '<S6>'   : 'PMSM_to_BLDC_mod1/Subsystem2/Control_Reg1_read/Bit Shift'
- * '<S7>'   : 'PMSM_to_BLDC_mod1/Subsystem2/Control_Reg1_read/Bit Shift1'
- * '<S8>'   : 'PMSM_to_BLDC_mod1/Subsystem2/Control_Reg1_read/Bit Shift/bit_shift'
- * '<S9>'   : 'PMSM_to_BLDC_mod1/Subsystem2/Control_Reg1_read/Bit Shift1/bit_shift'
- * '<S10>'  : 'PMSM_to_BLDC_mod1/Subsystem2/Ctrl_Reg_1/Bit Shift'
- * '<S11>'  : 'PMSM_to_BLDC_mod1/Subsystem2/Ctrl_Reg_1/Bit Shift4'
- * '<S12>'  : 'PMSM_to_BLDC_mod1/Subsystem2/Ctrl_Reg_1/Bit Shift/bit_shift'
- * '<S13>'  : 'PMSM_to_BLDC_mod1/Subsystem2/Ctrl_Reg_1/Bit Shift4/bit_shift'
- * '<S14>'  : 'PMSM_to_BLDC_mod1/Subsystem3/Digital Port Write'
- * '<S15>'  : 'PMSM_to_BLDC_mod1/Subsystem3/Digital Port Write/ECSoC'
- * '<S16>'  : 'PMSM_to_BLDC_mod1/Subsystem3/Digital Port Write/ECSoC/ECSimCodegen'
+ * '<S2>'   : 'PMSM_to_BLDC_mod1/Subsystem3'
+ * '<S3>'   : 'PMSM_to_BLDC_mod1/Subsystem4'
+ * '<S4>'   : 'PMSM_to_BLDC_mod1/Subsystem5'
+ * '<S5>'   : 'PMSM_to_BLDC_mod1/Subsystem3/Digital Port Write'
+ * '<S6>'   : 'PMSM_to_BLDC_mod1/Subsystem3/Digital Port Write/ECSoC'
+ * '<S7>'   : 'PMSM_to_BLDC_mod1/Subsystem3/Digital Port Write/ECSoC/ECSimCodegen'
+ * '<S8>'   : 'PMSM_to_BLDC_mod1/Subsystem4/Control_Reg1_read'
+ * '<S9>'   : 'PMSM_to_BLDC_mod1/Subsystem4/Control_Reg_2_read'
+ * '<S10>'  : 'PMSM_to_BLDC_mod1/Subsystem4/Control_Reg1_read/Bit Shift'
+ * '<S11>'  : 'PMSM_to_BLDC_mod1/Subsystem4/Control_Reg1_read/Bit Shift1'
+ * '<S12>'  : 'PMSM_to_BLDC_mod1/Subsystem4/Control_Reg1_read/Bit Shift/bit_shift'
+ * '<S13>'  : 'PMSM_to_BLDC_mod1/Subsystem4/Control_Reg1_read/Bit Shift1/bit_shift'
+ * '<S14>'  : 'PMSM_to_BLDC_mod1/Subsystem4/Control_Reg_2_read/Bit Shift'
+ * '<S15>'  : 'PMSM_to_BLDC_mod1/Subsystem4/Control_Reg_2_read/Bit Shift1'
+ * '<S16>'  : 'PMSM_to_BLDC_mod1/Subsystem4/Control_Reg_2_read/Bit Shift/bit_shift'
+ * '<S17>'  : 'PMSM_to_BLDC_mod1/Subsystem4/Control_Reg_2_read/Bit Shift1/bit_shift'
+ * '<S18>'  : 'PMSM_to_BLDC_mod1/Subsystem5/Control_Reg_2'
+ * '<S19>'  : 'PMSM_to_BLDC_mod1/Subsystem5/Ctrl_Reg_1'
  */
 #endif                                 /* PMSM_to_BLDC_mod1_h_ */
 

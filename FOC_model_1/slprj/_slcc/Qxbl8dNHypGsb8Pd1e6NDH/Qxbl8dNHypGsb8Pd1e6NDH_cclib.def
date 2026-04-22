@@ -1,0 +1,5 @@
+EXPORTS
+    SPI_ReadReg_Qxbl8dNHypGsb8Pd1e6NDH @1
+    SPI_WriteReg_Qxbl8dNHypGsb8Pd1e6NDH @2
+    get_checksum_source_info @3
+    get_dll_checksum_Qxbl8dNHypGsb8Pd1e6NDH @4

@@ -1,8 +1,15 @@
-mw_stm32_spi_ll.c.o
 xcp_ext_mode.c.o
 PMSM_to_BLDC_mod1.c.o
 PMSM_to_BLDC_mod1_data.c.o
 ert_main.c.o
+SPI_code.c.o
+stm32f4xx_hal_spi.c.o
+spi.c.o
+adc.c.o
+dma.c.o
+gpio.c.o
+tim.c.o
+usart.c.o
 xcp_ext_common.c.o
 xcp_ext_classic_trigger.c.o
 xcp.c.o
