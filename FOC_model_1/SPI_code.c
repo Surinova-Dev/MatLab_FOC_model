@@ -5,13 +5,17 @@
 /* PC simulation stubs */
 void SPI_WriteReg(uint16_t data) { (void)data; }
 uint16_t SPI_ReadReg(uint16_t addr) { (void)addr; return 0; }
+void SPI_Init(void){};
 
 #else
 #include "main.h"
 #include "stm32f4xx_hal.h"
 #include "stm32f4xx_hal_spi.h"   
 
-
+void SPI_Init(void) {
+    MX_SPI3_Init();
+    
+}
 void SPI_WriteReg(uint16_t data) {
     // 1. Pull CS Low (GPIOC Pin 14)
     LL_GPIO_ResetOutputPin(GPIOC, LL_GPIO_PIN_14);
@@ -19,13 +23,13 @@ void SPI_WriteReg(uint16_t data) {
     LL_mDelay(10); 
     
     // 2. Wait for TX buffer to be empty
- //   while (!LL_SPI_IsActiveFlag_TXE(SPI3));
+  // while (!LL_SPI_IsActiveFlag_TXE(SPI3));
     
     // 3. Transmit 16-bit data
     LL_SPI_TransmitData16(SPI3, data);
     
     // 4. Wait for transfer to complete (Busy flag)
- //   while (LL_SPI_IsActiveFlag_BSY(SPI3));
+   // while (LL_SPI_IsActiveFlag_BSY(SPI3));
     
     LL_mDelay(100);
     
@@ -39,10 +43,6 @@ uint16_t SPI_ReadReg(uint16_t data) {
     LL_GPIO_ResetOutputPin(GPIOC, LL_GPIO_PIN_14);
     LL_mDelay(10);
     
-    // --- Transmit Address / Receive Data ---
-    
-    // Ensure TX is empty
-  //  while (!LL_SPI_IsActiveFlag_TXE(SPI3));
     LL_SPI_TransmitData16(SPI3, data);
     LL_mDelay(10);
     LL_GPIO_SetOutputPin(GPIOC, LL_GPIO_PIN_14);
@@ -51,8 +51,8 @@ uint16_t SPI_ReadReg(uint16_t data) {
   //  while (!LL_SPI_IsActiveFlag_RXNE(SPI3));
     LL_GPIO_ResetOutputPin(GPIOC, LL_GPIO_PIN_14);
     LL_mDelay(10);
-    LL_SPI_TransmitData16(SPI3, addr);
-    LL_mDelay(10);
+   // LL_SPI_TransmitData16(SPI3, addr);
+ //   LL_mDelay(10);
     rxData = LL_SPI_ReceiveData16(SPI3);
     
     // Wait until SPI is not busy

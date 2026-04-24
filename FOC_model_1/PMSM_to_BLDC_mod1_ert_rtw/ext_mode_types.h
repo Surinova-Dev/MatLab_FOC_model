@@ -7,9 +7,9 @@
  *
  * Code generation for model "PMSM_to_BLDC_mod1".
  *
- * Model version              : 4.665
+ * Model version              : 4.695
  * Simulink Coder version : 25.2 (R2025b) 28-Jul-2025
- * C source code generated on : Wed Apr 22 17:47:26 2026
+ * C source code generated on : Fri Apr 24 16:35:02 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M

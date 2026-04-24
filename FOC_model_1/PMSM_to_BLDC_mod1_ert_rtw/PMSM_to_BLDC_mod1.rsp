@@ -1,3 +1,4 @@
+mw_stm32_spi_ll.c.o
 xcp_ext_mode.c.o
 PMSM_to_BLDC_mod1.c.o
 PMSM_to_BLDC_mod1_data.c.o

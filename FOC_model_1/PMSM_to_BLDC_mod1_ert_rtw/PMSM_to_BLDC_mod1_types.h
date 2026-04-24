@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'PMSM_to_BLDC_mod1'.
  *
- * Model version                  : 4.665
+ * Model version                  : 4.695
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Wed Apr 22 17:47:26 2026
+ * C/C++ source code generated on : Fri Apr 24 16:35:02 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -20,6 +20,28 @@
 #ifndef PMSM_to_BLDC_mod1_types_h_
 #define PMSM_to_BLDC_mod1_types_h_
 #include "rtwtypes.h"
+#include "mw_stm32_spi_ll.h"
+#ifndef struct_tag_mOVAabJjflwVpJ1RH3zpfC
+#define struct_tag_mOVAabJjflwVpJ1RH3zpfC
+
+struct tag_mOVAabJjflwVpJ1RH3zpfC
+{
+  boolean_T matlabCodegenIsDeleted;
+  int32_T isInitialized;
+  boolean_T isSetupComplete;
+  STM32_SPI_Struct_T * MW_SPI_HANDLE;
+  STM32_SPI_Struct_T MW_SPI_BlockStruct;
+};
+
+#endif                                 /* struct_tag_mOVAabJjflwVpJ1RH3zpfC */
+
+#ifndef typedef_stm32cube_blocks_SPIControlle_T
+#define typedef_stm32cube_blocks_SPIControlle_T
+
+typedef struct tag_mOVAabJjflwVpJ1RH3zpfC stm32cube_blocks_SPIControlle_T;
+
+#endif                             /* typedef_stm32cube_blocks_SPIControlle_T */
+
 #ifndef struct_tag_92DzsjXuaF7c99tFkgTmuB
 #define struct_tag_92DzsjXuaF7c99tFkgTmuB
 
@@ -38,6 +60,27 @@ struct tag_92DzsjXuaF7c99tFkgTmuB
 typedef struct tag_92DzsjXuaF7c99tFkgTmuB stm32cube_blocks_DigitalPortW_T;
 
 #endif                             /* typedef_stm32cube_blocks_DigitalPortW_T */
+
+#ifndef struct_tag_AkYSLo56SBzQIYxVc5esmB
+#define struct_tag_AkYSLo56SBzQIYxVc5esmB
+
+struct tag_AkYSLo56SBzQIYxVc5esmB
+{
+  boolean_T matlabCodegenIsDeleted;
+  int32_T isInitialized;
+  boolean_T isSetupComplete;
+  STM32_SPI_Struct_T * MW_SPI_HANDLE;
+  STM32_SPI_Struct_T MW_SPI_BlockStruct;
+};
+
+#endif                                 /* struct_tag_AkYSLo56SBzQIYxVc5esmB */
+
+#ifndef typedef_stm32cube_blocks_SPIControl_o_T
+#define typedef_stm32cube_blocks_SPIControl_o_T
+
+typedef struct tag_AkYSLo56SBzQIYxVc5esmB stm32cube_blocks_SPIControl_o_T;
+
+#endif                             /* typedef_stm32cube_blocks_SPIControl_o_T */
 
 /* Forward declaration for rtModel */
 typedef struct tag_RTM_PMSM_to_BLDC_mod1_T RT_MODEL_PMSM_to_BLDC_mod1_T;
