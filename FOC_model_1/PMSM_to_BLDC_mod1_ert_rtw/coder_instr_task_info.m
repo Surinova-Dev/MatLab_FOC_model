@@ -9,7 +9,7 @@ function [taskInfo, numtask, isDeploymentDiagram]=coder_instr_task_info()
             taskInfo(1).entryPoints = {};
             taskInfo(1).nonFcnCallPartitionName = 'D1';
 
-            taskInfo(2).samplePeriod = 1.0;
+            taskInfo(2).samplePeriod = 0.1;
             taskInfo(2).sampleOffset = 0.0;
 
                 taskInfo(2).taskPrio = 40;

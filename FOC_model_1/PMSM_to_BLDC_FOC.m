@@ -39,3 +39,5 @@ ctrl_reg1 = 0x02;
 ctrl_reg2 = 0x03;
 stat_reg1 = 0x00;
 stat_reg2 = 0x01;
+reg1_check = uint16(0x1550);
+reg2_check = uint16(0x1804);
