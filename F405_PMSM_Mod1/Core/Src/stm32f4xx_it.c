@@ -202,7 +202,7 @@ __attribute__((weak)) void SysTick_Handler(void)
 /**
   * @brief This function handles DMA1 stream0 global interrupt.
   */
-__attribute__((weak)) void DMA1_Stream0_IRQHandler(void)
+void DMA1_Stream0_IRQHandler(void)
 {
   /* USER CODE BEGIN DMA1_Stream0_IRQn 0 */
 
@@ -215,7 +215,7 @@ __attribute__((weak)) void DMA1_Stream0_IRQHandler(void)
 /**
   * @brief This function handles DMA1 stream5 global interrupt.
   */
-__attribute__((weak)) void DMA1_Stream5_IRQHandler(void)
+void DMA1_Stream5_IRQHandler(void)
 {
   /* USER CODE BEGIN DMA1_Stream5_IRQn 0 */
 
@@ -228,7 +228,7 @@ __attribute__((weak)) void DMA1_Stream5_IRQHandler(void)
 /**
   * @brief This function handles DMA1 stream6 global interrupt.
   */
-__attribute__((weak)) void DMA1_Stream6_IRQHandler(void)
+void DMA1_Stream6_IRQHandler(void)
 {
   /* USER CODE BEGIN DMA1_Stream6_IRQn 0 */
 
@@ -255,7 +255,7 @@ void TIM1_UP_TIM10_IRQHandler(void)
 /**
   * @brief This function handles DMA1 stream7 global interrupt.
   */
-__attribute__((weak)) void DMA1_Stream7_IRQHandler(void)
+void DMA1_Stream7_IRQHandler(void)
 {
   /* USER CODE BEGIN DMA1_Stream7_IRQn 0 */
 

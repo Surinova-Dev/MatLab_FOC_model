@@ -7,7 +7,7 @@
 %endfunction
 %function ChartDataMap(block, system) void
   %createrecord ChartDataElements {\
-    NumChartData   6 \
+    NumChartData   4 \
     ChartDataDefaults {\
       RecordType   "ChartData"\
       Dimensions   []\
@@ -21,34 +21,18 @@
       SrcLocation  ""\
     }\
     ChartData {\
-      Name         "t"\
-      Description  "ChartLocal"\
-      SFName       ""\
-      Path         "t"\
-      SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "sfEvent"\
-      Description  "ActiveChartEvent"\
+      Name         "is_active_c3_PMSM_to_BLDC_mod1"\
+      Description  "StateIsActive"\
       SFName       ""\
       Path         ""\
       SrcLocation  ""\
     }\
     ChartData {\
-      Name         "is_active_c3_PMSM_to_BLDC_mod1"\
-      Description  "StateIsActive"\
-      SFName       "is_active_c3_PMSM_to_BLDC_mod1"\
-      Path         "is_active_c3_PMSM_to_BLDC_mod1"\
-      SrcLocation  ""\
-      IsTestPoint  1\
-    }\
-    ChartData {\
       Name         "is_c3_PMSM_to_BLDC_mod1"\
       Description  "StateActiveChild"\
-      SFName       "is_c3_PMSM_to_BLDC_mod1"\
-      Path         "is_c3_PMSM_to_BLDC_mod1"\
+      SFName       ""\
+      Path         ""\
       SrcLocation  ""\
-      IsTestPoint  1\
     }\
     ChartData {\
       Name         "temporalCounter_i1"\

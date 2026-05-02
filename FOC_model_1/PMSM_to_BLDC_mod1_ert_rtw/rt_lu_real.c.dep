@@ -1,0 +1,6 @@
+rt_lu_real.c.o: \
+ C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/FOC_MO~1/PMSM_to_BLDC_mod1_ert_rtw/rt_lu_real.c \
+ C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/FOC_MO~1/PMSM_to_BLDC_mod1_ert_rtw/rt_matrixlib.h \
+ C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/FOC_MO~1/PMSM_to_BLDC_mod1_ert_rtw/rtwtypes.h
+C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/FOC_MO~1/PMSM_to_BLDC_mod1_ert_rtw/rt_matrixlib.h:
+C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/FOC_MO~1/PMSM_to_BLDC_mod1_ert_rtw/rtwtypes.h:

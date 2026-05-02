@@ -1,0 +1,24 @@
+ssc_sli_d3d59c3a.c.o: \
+ C:/PROGRA~1/MATLAB/R2025b/extern/physmod/win64/ssc_sli/src/ssc_sli_d3d59c3a.c \
+ C:/Program\ Files/MATLAB/R2025b/extern/physmod/win64/pm/include/pm_std.h \
+ C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/FOC_model_1/PMSM_to_BLDC_mod1_ert_rtw/rtwtypes.h \
+ C:/Program\ Files/MATLAB/R2025b/extern/physmod/win64/pm/include/pm_inline.h \
+ C:/Program\ Files/MATLAB/R2025b/extern/physmod/win64/pm/include/pm_types.h \
+ C:/Program\ Files/MATLAB/R2025b/extern/physmod/win64/pm/include/pm_std.h \
+ C:/Program\ Files/MATLAB/R2025b/extern/physmod/win64/pm/include/pm_vector.h \
+ C:/Program\ Files/MATLAB/R2025b/extern/physmod/win64/pm_st/include/ne_std.h \
+ C:/Program\ Files/MATLAB/R2025b/extern/physmod/win64/pm_st/include/ne_std_fwd.h \
+ C:/Program\ Files/MATLAB/R2025b/extern/physmod/win64/ssc_dae/include/ssc_dae_fwd.h \
+ C:/Program\ Files/MATLAB/R2025b/extern/physmod/win64/ssc_core/include/ne_initer_fwd.h \
+ C:/Program\ Files/MATLAB/R2025b/extern/physmod/win64/ssc_core/include/ne_stiffness_fwd.h
+C:/Program\ Files/MATLAB/R2025b/extern/physmod/win64/pm/include/pm_std.h:
+C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/FOC_model_1/PMSM_to_BLDC_mod1_ert_rtw/rtwtypes.h:
+C:/Program\ Files/MATLAB/R2025b/extern/physmod/win64/pm/include/pm_inline.h:
+C:/Program\ Files/MATLAB/R2025b/extern/physmod/win64/pm/include/pm_types.h:
+C:/Program\ Files/MATLAB/R2025b/extern/physmod/win64/pm/include/pm_std.h:
+C:/Program\ Files/MATLAB/R2025b/extern/physmod/win64/pm/include/pm_vector.h:
+C:/Program\ Files/MATLAB/R2025b/extern/physmod/win64/pm_st/include/ne_std.h:
+C:/Program\ Files/MATLAB/R2025b/extern/physmod/win64/pm_st/include/ne_std_fwd.h:
+C:/Program\ Files/MATLAB/R2025b/extern/physmod/win64/ssc_dae/include/ssc_dae_fwd.h:
+C:/Program\ Files/MATLAB/R2025b/extern/physmod/win64/ssc_core/include/ne_initer_fwd.h:
+C:/Program\ Files/MATLAB/R2025b/extern/physmod/win64/ssc_core/include/ne_stiffness_fwd.h:
