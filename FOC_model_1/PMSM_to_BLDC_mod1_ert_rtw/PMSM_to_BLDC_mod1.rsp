@@ -1,3 +1,4 @@
+mw_stm32_spi_ll.c.o
 PMSM_to_BLDC_mod1_5da39267_1_ds.c.o
 PMSM_to_BLDC_mod1_5da39267_1_ds_dxf_p.c.o
 PMSM_to_BLDC_mod1_5da39267_1_ds_tdxf_p.c.o
@@ -70,3 +71,4 @@ syscalls.c.o
 sysmem.c.o
 startup_stm32f405rgtx.s.o
 stm_timer_ll.c.o
+stm_adc_ll.c.o

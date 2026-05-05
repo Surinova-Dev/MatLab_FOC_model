@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'PMSM_to_BLDC_mod1'.
  *
- * Model version                  : 4.843
+ * Model version                  : 4.884
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Sat May  2 12:34:52 2026
+ * C/C++ source code generated on : Tue May  5 18:45:38 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -44,7 +44,7 @@ volatile boolean_T stopRequested;
 volatile boolean_T runModel;
 int main(int argc, char **argv)
 {
-  float modelBaseRate = 0.001;
+  float modelBaseRate = 0.0001;
   float systemClock = 144.0;
 
   /* Initialize variables */

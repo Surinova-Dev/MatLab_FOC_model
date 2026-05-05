@@ -1,5 +1,5 @@
 /* Simscape target specific file.
- * This file is generated for the Simscape network associated with the solver block 'PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Solver Configuration'.
+ * This file is generated for the Simscape network associated with the solver block 'PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Solver Configuration'.
  */
 /* PMSM_to_BLDC_mod1_5da39267_1_ds.c - body for module PMSM_to_BLDC_mod1_5da39267_1_ds */
 
@@ -578,1034 +578,1035 @@ static void rtpmap(const NeDynamicSystem * ds, const PmIntVector* inl, const
                    PmRealVector* outr);
 static NeEquationData s_equation_data[17] = { { "", 0U, 8,
     NE_EQUATION_DOMAIN_TIME,
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Mass",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Mass",
     2U, 0U, TRUE, 1.0, "1", }, { "", 0U, 8, NE_EQUATION_DOMAIN_TIME,
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
     1U, 2U, TRUE, 1.0, "1", }, { "", 0U, 8, NE_EQUATION_DOMAIN_TIME,
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
     2U, 3U, TRUE, 1.0, "1", }, { "", 0U, 8, NE_EQUATION_DOMAIN_TIME,
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     3U, 5U, TRUE, 1.0, "1", }, { "", 0U, 8, NE_EQUATION_DOMAIN_TIME,
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     3U, 8U, TRUE, 1.0, "1", }, { "", 0U, 8, NE_EQUATION_DOMAIN_TIME,
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     3U, 11U, TRUE, 1.0, "1", }, { "", 0U, 8, NE_EQUATION_DOMAIN_TIME,
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     3U, 14U, TRUE, 1.0, "1", }, { "", 0U, 8, NE_EQUATION_DOMAIN_TIME,
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     3U, 17U, TRUE, 1.0, "1", }, { "", 0U, 8, NE_EQUATION_DOMAIN_TIME,
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     3U, 20U, TRUE, 1.0, "1", }, { "", 0U, 8, NE_EQUATION_DOMAIN_TIME,
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
     1U, 23U, TRUE, 1.0, "1", }, { "", 0U, 8, NE_EQUATION_DOMAIN_TIME,
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
     1U, 24U, TRUE, 1.0, "1", }, { "", 0U, 8, NE_EQUATION_DOMAIN_TIME,
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
     7U, 25U, FALSE, 1.0, "1", }, { "", 0U, 8, NE_EQUATION_DOMAIN_TIME,
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
     3U, 32U, FALSE, 1.0, "1", }, { "", 0U, 8, NE_EQUATION_DOMAIN_TIME,
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
     3U, 35U, FALSE, 1.0, "1", }, { "", 0U, 8, NE_EQUATION_DOMAIN_TIME,
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
     3U, 38U, FALSE, 1.0, "1", }, { "", 0U, 8, NE_EQUATION_DOMAIN_TIME,
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
     1U, 41U, TRUE, 1.0, "1", }, { "", 0U, 8, NE_EQUATION_DOMAIN_TIME,
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
     1U, 42U, TRUE, 1.0, "1", } };
 
 static NeCERData *s_cer_data = NULL;
 static NeICRData s_icr_data[1] = { { "", 0U, 0,
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
     1U, 0U, } };
 
 static NeVariableData s_variable_data[17] = { {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Mass.v", 0U, 0,
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Mass",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Mass.v", 0U, 0,
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Mass",
     1.0, "1", 0.0, TRUE, FALSE, { 1, "1x1" }, NE_INIT_MODE_MANDATORY, "Velocity",
   }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.torque_ref",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.torque_ref",
     0U, 0,
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
     1.0, "1", 0.0, TRUE, FALSE, { 1, "1x1" }, NE_INIT_MODE_NONE,
     "Demanded torque", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.w",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.w",
     0U, 0,
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
     1.0, "1", 0.0, TRUE, FALSE, { 1, "1x1" }, NE_INIT_MODE_MANDATORY,
     "Angular velocity", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q2.ideal_switch.v",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q2.ideal_switch.v",
     0U, 0,
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     1.0, "1", 0.0, FALSE, FALSE, { 1, "1x1" }, NE_INIT_MODE_NONE, "v", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q4.ideal_switch.v",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q4.ideal_switch.v",
     0U, 0,
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     1.0, "1", 0.0, FALSE, FALSE, { 1, "1x1" }, NE_INIT_MODE_NONE, "v", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q6.ideal_switch.v",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q6.ideal_switch.v",
     0U, 0,
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     1.0, "1", 0.0, FALSE, FALSE, { 1, "1x1" }, NE_INIT_MODE_NONE, "v", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q2.i",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q2.i",
     0U, 0,
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     1.0, "1", 0.0, FALSE, FALSE, { 1, "1x1" }, NE_INIT_MODE_NONE, "i", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q4.i",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q4.i",
     0U, 0,
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     1.0, "1", 0.0, FALSE, FALSE, { 1, "1x1" }, NE_INIT_MODE_NONE, "i", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q6.i",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q6.i",
     0U, 0,
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     1.0, "1", 0.0, FALSE, FALSE, { 1, "1x1" }, NE_INIT_MODE_NONE, "i", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.i",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.i",
     0U, 0,
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
     1.0, "1", 0.0, FALSE, FALSE, { 1, "1x1" }, NE_INIT_MODE_NONE, "Current", },
-    { "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Mass.f", 0U, 0,
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Mass",
+    { "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Mass.f", 0U, 0,
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Mass",
     1.0, "1", 0.0, FALSE, FALSE, { 1, "1x1" }, NE_INIT_MODE_NONE, "Force", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.isSwitchedOff",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.isSwitchedOff",
     0U, 0,
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
     1.0, "1", 0.0, FALSE, FALSE, { 1, "1x1" }, NE_INIT_MODE_NONE, "Switch state",
   }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.power_dissipated",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.power_dissipated",
     0U, 0,
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
     1.0, "1", 0.0, FALSE, FALSE, { 1, "1x1" }, NE_INIT_MODE_NONE,
     "Power dissipated", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.torqueLimit",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.torqueLimit",
     0U, 0,
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
     1.0, "1", 0.0, FALSE, FALSE, { 1, "1x1" }, NE_INIT_MODE_NONE,
     "Maximum torque magnitude", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.torque_elec",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.torque_elec",
     0U, 0,
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
     1.0, "1", 0.0, FALSE, FALSE, { 1, "1x1" }, NE_INIT_MODE_NONE,
     "Electrical torque", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.damperG.w", 0U,
-    0,
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.damperG.w",
+    0U, 0,
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
     1.0, "1", 0.0, FALSE, FALSE, { 1, "1x1" }, NE_INIT_MODE_NONE,
     "Rotational velocity", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.damperW.w", 0U,
-    0,
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.damperW.w",
+    0U, 0,
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
     1.0, "1", 0.0, FALSE, FALSE, { 1, "1x1" }, NE_INIT_MODE_NONE,
     "Rotational velocity", } };
 
 static NeVariableData *s_discrete_data = NULL;
 static NeObservableData s_observable_data[208] = { {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.G.V",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.G.V",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 12, "1x12" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "V", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.G1",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.G1",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "G1", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.G1n.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.G1n.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.G1p.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.G1p.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.G2",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.G2",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "G2", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.G2n.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.G2n.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.G2p.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.G2p.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.G3",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.G3",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "G3", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.G3n.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.G3n.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.G3p.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.G3p.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.G4",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.G4",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "G4", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.G4n.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.G4n.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.G4p.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.G4p.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.G5",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.G5",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "G5", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.G5n.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.G5n.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.G5p.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.G5p.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.G6",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.G6",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "G6", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.G6n.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.G6n.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.G6p.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.G6p.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.I",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.I",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 12, "1x12" }, "A", 1.0, "A", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "I", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.i1n",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.i1n",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "A", 1.0, "A", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "i1n", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.i1p",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.i1p",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "A", 1.0, "A", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "i1p", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.i2n",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.i2n",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "A", 1.0, "A", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "i2n", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.i2p",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.i2p",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "A", 1.0, "A", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "i2p", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.i3n",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.i3n",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "A", 1.0, "A", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "i3n", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.i3p",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.i3p",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "A", 1.0, "A", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "i3p", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.i4n",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.i4n",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "A", 1.0, "A", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "i4n", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.i4p",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.i4p",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "A", 1.0, "A", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "i4p", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.i5n",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.i5n",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "A", 1.0, "A", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "i5n", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.i5p",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.i5p",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "A", 1.0, "A", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "i5p", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.i6n",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.i6n",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "A", 1.0, "A", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "i6n", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.i6p",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.i6p",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "A", 1.0, "A", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "i6p", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.p.V",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.demux_gates.p.V",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 12, "1x12" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "V", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.H.T",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.H.T",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "K", 1.0, "K", NE_NOMINAL_SOURCE_DERIVED, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Temperature", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.N.V",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.N.V",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 3, "1x3" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "V", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q1.A.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q1.A.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q1.G",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q1.G",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "G", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q1.G_elec.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q1.G_elec.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q1.K.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q1.K.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q1.i",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q1.i",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "A", 1.0, "A", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "i", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q1.ideal_switch.i",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q1.ideal_switch.i",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "A", 1.0, "A", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "i", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q1.ideal_switch.n.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q1.ideal_switch.n.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q1.ideal_switch.p.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q1.ideal_switch.p.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q1.ideal_switch.power_dissipated",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q1.ideal_switch.power_dissipated",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "W", 1.0, "kW", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Power dissipated", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q1.ideal_switch.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q1.ideal_switch.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "v", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q1.ideal_switch.vT",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q1.ideal_switch.vT",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "PS", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q1.power_dissipated",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q1.power_dissipated",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "W", 1.0, "kW", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Power dissipated", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q1.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q1.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "v", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q1.vT",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q1.vT",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "vT", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q2.A.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q2.A.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q2.G",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q2.G",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "G", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q2.G_elec.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q2.G_elec.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q2.K.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q2.K.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q2.i",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q2.i",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "A", 1.0, "A", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "i", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q2.ideal_switch.i",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q2.ideal_switch.i",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "A", 1.0, "A", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "i", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q2.ideal_switch.n.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q2.ideal_switch.n.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q2.ideal_switch.p.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q2.ideal_switch.p.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q2.ideal_switch.power_dissipated",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q2.ideal_switch.power_dissipated",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "W", 1.0, "kW", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Power dissipated", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q2.ideal_switch.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q2.ideal_switch.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "v", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q2.ideal_switch.vT",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q2.ideal_switch.vT",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "PS", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q2.power_dissipated",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q2.power_dissipated",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "W", 1.0, "kW", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Power dissipated", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q2.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q2.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "v", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q2.vT",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q2.vT",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "vT", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q3.A.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q3.A.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q3.G",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q3.G",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "G", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q3.G_elec.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q3.G_elec.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q3.K.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q3.K.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q3.i",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q3.i",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "A", 1.0, "A", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "i", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q3.ideal_switch.i",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q3.ideal_switch.i",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "A", 1.0, "A", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "i", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q3.ideal_switch.n.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q3.ideal_switch.n.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q3.ideal_switch.p.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q3.ideal_switch.p.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q3.ideal_switch.power_dissipated",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q3.ideal_switch.power_dissipated",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "W", 1.0, "kW", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Power dissipated", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q3.ideal_switch.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q3.ideal_switch.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "v", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q3.ideal_switch.vT",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q3.ideal_switch.vT",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "PS", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q3.power_dissipated",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q3.power_dissipated",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "W", 1.0, "kW", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Power dissipated", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q3.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q3.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "v", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q3.vT",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q3.vT",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "vT", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q4.A.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q4.A.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q4.G",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q4.G",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "G", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q4.G_elec.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q4.G_elec.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q4.K.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q4.K.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q4.i",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q4.i",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "A", 1.0, "A", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "i", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q4.ideal_switch.i",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q4.ideal_switch.i",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "A", 1.0, "A", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "i", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q4.ideal_switch.n.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q4.ideal_switch.n.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q4.ideal_switch.p.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q4.ideal_switch.p.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q4.ideal_switch.power_dissipated",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q4.ideal_switch.power_dissipated",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "W", 1.0, "kW", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Power dissipated", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q4.ideal_switch.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q4.ideal_switch.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "v", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q4.ideal_switch.vT",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q4.ideal_switch.vT",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "PS", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q4.power_dissipated",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q4.power_dissipated",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "W", 1.0, "kW", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Power dissipated", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q4.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q4.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "v", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q4.vT",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q4.vT",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "vT", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q5.A.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q5.A.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q5.G",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q5.G",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "G", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q5.G_elec.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q5.G_elec.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q5.K.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q5.K.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q5.i",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q5.i",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "A", 1.0, "A", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "i", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q5.ideal_switch.i",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q5.ideal_switch.i",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "A", 1.0, "A", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "i", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q5.ideal_switch.n.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q5.ideal_switch.n.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q5.ideal_switch.p.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q5.ideal_switch.p.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q5.ideal_switch.power_dissipated",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q5.ideal_switch.power_dissipated",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "W", 1.0, "kW", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Power dissipated", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q5.ideal_switch.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q5.ideal_switch.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "v", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q5.ideal_switch.vT",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q5.ideal_switch.vT",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "PS", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q5.power_dissipated",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q5.power_dissipated",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "W", 1.0, "kW", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Power dissipated", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q5.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q5.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "v", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q5.vT",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q5.vT",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "vT", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q6.A.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q6.A.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q6.G",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q6.G",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "G", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q6.G_elec.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q6.G_elec.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q6.K.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q6.K.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q6.i",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q6.i",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "A", 1.0, "A", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "i", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q6.ideal_switch.i",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q6.ideal_switch.i",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "A", 1.0, "A", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "i", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q6.ideal_switch.n.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q6.ideal_switch.n.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q6.ideal_switch.p.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q6.ideal_switch.p.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q6.ideal_switch.power_dissipated",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q6.ideal_switch.power_dissipated",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "W", 1.0, "kW", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Power dissipated", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q6.ideal_switch.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q6.ideal_switch.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "v", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q6.ideal_switch.vT",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q6.ideal_switch.vT",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "PS", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q6.power_dissipated",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q6.power_dissipated",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "W", 1.0, "kW", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Power dissipated", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q6.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q6.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "v", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q6.vT",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q6.vT",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "vT", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.a.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.a.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.b.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.b.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.c.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.c.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.n.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.n.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.p.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.p.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.phase_splitter.I",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.phase_splitter.I",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 3, "1x3" }, "A", 1.0, "A", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "I", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.phase_splitter.N.V",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.phase_splitter.N.V",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 3, "1x3" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "V", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.phase_splitter.a.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.phase_splitter.a.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.phase_splitter.b.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.phase_splitter.b.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.phase_splitter.c.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.phase_splitter.c.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.phase_splitter.i_a",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.phase_splitter.i_a",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "A", 1.0, "A", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "i_a", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.phase_splitter.i_b",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.phase_splitter.i_b",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "A", 1.0, "A", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "i_b", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.phase_splitter.i_c",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.phase_splitter.i_c",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     { 1, "1x1" }, "A", 1.0, "A", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "i_c", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.DC_Voltage_Source.i",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/DC Voltage Source",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.DC_Voltage_Source.i",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/DC Voltage Source",
     { 1, "1x1" }, "A", 1.0, "A", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Current", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.DC_Voltage_Source.n.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/DC Voltage Source",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.DC_Voltage_Source.n.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/DC Voltage Source",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.DC_Voltage_Source.p.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/DC Voltage Source",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.DC_Voltage_Source.p.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/DC Voltage Source",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.DC_Voltage_Source.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/DC Voltage Source",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.DC_Voltage_Source.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/DC Voltage Source",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Electrical_Reference.V.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Electrical Reference",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Electrical_Reference.V.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Electrical Reference",
     { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Mass.M.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Mass",
-      { 1, "1x1" }, "m/s", 1.0, "m/s", NE_NOMINAL_SOURCE_DERIVED,
-    NE_INIT_MODE_NONE, FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE,
-    "Velocity", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Mass.N.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Mass",
-      { 1, "1x1" }, "m/s", 1.0, "m/s", NE_NOMINAL_SOURCE_DERIVED,
-    NE_INIT_MODE_NONE, FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE,
-    "Velocity", }, { "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Mass.f",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Mass",
-      { 1, "1x1" }, "N", 1.0, "N", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
-    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Force", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Mass.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Mass",
-      { 1, "1x1" }, "m/s", 1.0, "m/s", NE_NOMINAL_SOURCE_DERIVED,
-    NE_INIT_MODE_MANDATORY, FALSE, TRUE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE,
-    "Velocity", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Mechanical_Rotational_Reference.W.w",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Mechanical Rotational Reference",
-    { 1, "1x1" }, "rad/s", 1.0, "1/s", NE_NOMINAL_SOURCE_DERIVED,
-    NE_INIT_MODE_NONE, TRUE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE,
-    "Rotational velocity", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.F",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
-    { 1, "1x1" }, "1", 1.0, "1", NE_NOMINAL_SOURCE_DERIVED, NE_INIT_MODE_NONE,
-    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "OFF", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.Omega",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
-    { 1, "1x1" }, "rad/s", 1.0, "1/s", NE_NOMINAL_SOURCE_DERIVED,
-    NE_INIT_MODE_NONE, FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "w", },
-    {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.R.w",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
-    { 1, "1x1" }, "rad/s", 1.0, "1/s", NE_NOMINAL_SOURCE_DERIVED,
-    NE_INIT_MODE_NONE, FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE,
-    "Rotational velocity", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.Tr",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
-    { 1, "1x1" }, "N*m", 1.0, "N*m", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
-    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Tr", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.Vm.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
-    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
-    TRUE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.Vp.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
-    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
-    TRUE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.faultExtTrigger",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
-    { 1, "1x1" }, "1", 1.0, "1", NE_NOMINAL_SOURCE_DERIVED, NE_INIT_MODE_NONE,
-    TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "OFF", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.faulted",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
-    { 1, "1x1" }, "1", 1.0, "1", NE_NOMINAL_SOURCE_DERIVED, NE_INIT_MODE_NONE,
-    TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Faulted flag", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.isSwitchedOff",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
-    { 1, "1x1" }, "1", 1.0, "1", NE_NOMINAL_SOURCE_DERIVED, NE_INIT_MODE_NONE,
-    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Switch state", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.C.w",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
-    { 1, "1x1" }, "rad/s", 1.0, "1/s", NE_NOMINAL_SOURCE_DERIVED,
-    NE_INIT_MODE_NONE, TRUE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE,
-    "Rotational velocity", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.i",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
-    { 1, "1x1" }, "A", 1.0, "A", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
-    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Current", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.power_dissipated",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
-    { 1, "1x1" }, "W", 1.0, "kW", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
-    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Power dissipated", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.t",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
-    { 1, "1x1" }, "N*m", 1.0, "N*m", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
-    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Torque", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.torqueLimit",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
-    { 1, "1x1" }, "N*m", 1.0, "N*m", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
-    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Maximum torque magnitude",
-  }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.torqueLimitContinuous",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
-    { 1, "1x1" }, "N*m", 1.0, "N*m", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
-    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE,
-    "Calculated continuous torque limit (always positive)", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.torque_elec",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
-    { 1, "1x1" }, "N*m", 1.0, "N*m", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
-    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Electrical torque", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.torque_ref",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
-    { 1, "1x1" }, "N*m", 1.0, "N*m", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
-    FALSE, TRUE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Demanded torque", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
-    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
-    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.w",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
-    { 1, "1x1" }, "rpm", 1.0, "1/s", NE_NOMINAL_SOURCE_DERIVED,
-    NE_INIT_MODE_MANDATORY, FALSE, TRUE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE,
-    "Angular velocity", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level_Omega0",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/PS-Simulink\nConverter1",
-    { 1, "1x1" }, "rad/s", 1.0, "1/s", NE_NOMINAL_SOURCE_DERIVED,
-    NE_INIT_MODE_NONE, FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE,
-    "Motor_Drive_System_Level_Omega0", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter1_output0",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Simulink-PS\nConverter1",
-    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_FIXED, NE_INIT_MODE_NONE,
-    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE,
-    "Simulink_PS_Converter1_output0", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter2_output0",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Simulink-PS\nConverter2",
-    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_FIXED, NE_INIT_MODE_NONE,
-    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE,
-    "Simulink_PS_Converter2_output0", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter3_output0",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Simulink-PS\nConverter3",
-    { 1, "1x1" }, "N*m", 1.0, "N*m", NE_NOMINAL_SOURCE_FIXED, NE_INIT_MODE_NONE,
-    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE,
-    "Simulink_PS_Converter3_output0", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter4_output0",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Simulink-PS\nConverter4",
-    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_FIXED, NE_INIT_MODE_NONE,
-    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE,
-    "Simulink_PS_Converter4_output0", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter5_output0",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Simulink-PS\nConverter5",
-    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_FIXED, NE_INIT_MODE_NONE,
-    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE,
-    "Simulink_PS_Converter5_output0", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter6_output0",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Simulink-PS\nConverter6",
-    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_FIXED, NE_INIT_MODE_NONE,
-    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE,
-    "Simulink_PS_Converter6_output0", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter7_output0",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Simulink-PS\nConverter7",
-    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_FIXED, NE_INIT_MODE_NONE,
-    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE,
-    "Simulink_PS_Converter7_output0", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Six_Pulse_Gate_Multiplexer.GaH.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Six-Pulse Gate Multiplexer",
-    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
-    TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Six_Pulse_Gate_Multiplexer.GaH_ps",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Six-Pulse Gate Multiplexer",
-    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
-    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Ga(H)", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Six_Pulse_Gate_Multiplexer.GaL.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Six-Pulse Gate Multiplexer",
-    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
-    TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Six_Pulse_Gate_Multiplexer.GaL_ps",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Six-Pulse Gate Multiplexer",
-    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
-    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Ga(L)", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Six_Pulse_Gate_Multiplexer.GbH.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Six-Pulse Gate Multiplexer",
-    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
-    TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Six_Pulse_Gate_Multiplexer.GbH_ps",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Six-Pulse Gate Multiplexer",
-    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
-    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Gb(H)", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Six_Pulse_Gate_Multiplexer.GbL.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Six-Pulse Gate Multiplexer",
-    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
-    TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Six_Pulse_Gate_Multiplexer.GbL_ps",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Six-Pulse Gate Multiplexer",
-    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
-    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Gb(L)", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Six_Pulse_Gate_Multiplexer.GcH.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Six-Pulse Gate Multiplexer",
-    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
-    TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Six_Pulse_Gate_Multiplexer.GcH_ps",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Six-Pulse Gate Multiplexer",
-    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
-    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Gc(H)", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Six_Pulse_Gate_Multiplexer.GcL.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Six-Pulse Gate Multiplexer",
-    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
-    TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Six_Pulse_Gate_Multiplexer.GcL_ps",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Six-Pulse Gate Multiplexer",
-    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
-    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Gc(L)", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Six_Pulse_Gate_Multiplexer.I",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Six-Pulse Gate Multiplexer",
-    { 12, "1x12" }, "A", 1.0, "A", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
-    TRUE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "I", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Six_Pulse_Gate_Multiplexer.L.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Six-Pulse Gate Multiplexer",
-    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
-    TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Six_Pulse_Gate_Multiplexer.a.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Six-Pulse Gate Multiplexer",
-    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
-    TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Six_Pulse_Gate_Multiplexer.b.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Six-Pulse Gate Multiplexer",
-    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
-    TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Six_Pulse_Gate_Multiplexer.c.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Six-Pulse Gate Multiplexer",
-    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
-    TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Six_Pulse_Gate_Multiplexer.p.V",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Six-Pulse Gate Multiplexer",
-    { 12, "1x12" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
-    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "V", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Wheel_and_Axle.A.w",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Wheel and Axle",
-    { 1, "1x1" }, "rad/s", 1.0, "1/s", NE_NOMINAL_SOURCE_DERIVED,
-    NE_INIT_MODE_NONE, FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE,
-    "Rotational velocity", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Wheel_and_Axle.P.v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Wheel and Axle",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Mass.M.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Mass",
     { 1, "1x1" }, "m/s", 1.0, "m/s", NE_NOMINAL_SOURCE_DERIVED,
     NE_INIT_MODE_NONE, FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE,
     "Velocity", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Wheel_and_Axle.f",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Wheel and Axle",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Mass.N.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Mass",
+    { 1, "1x1" }, "m/s", 1.0, "m/s", NE_NOMINAL_SOURCE_DERIVED,
+    NE_INIT_MODE_NONE, FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE,
+    "Velocity", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Mass.f",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Mass",
     { 1, "1x1" }, "N", 1.0, "N", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Force", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Wheel_and_Axle.t",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Wheel and Axle",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Mass.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Mass",
+    { 1, "1x1" }, "m/s", 1.0, "m/s", NE_NOMINAL_SOURCE_DERIVED,
+    NE_INIT_MODE_MANDATORY, FALSE, TRUE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE,
+    "Velocity", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Mechanical_Rotational_Reference.W.w",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Mechanical Rotational Reference",
+    { 1, "1x1" }, "rad/s", 1.0, "1/s", NE_NOMINAL_SOURCE_DERIVED,
+    NE_INIT_MODE_NONE, TRUE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE,
+    "Rotational velocity", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.F",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    { 1, "1x1" }, "1", 1.0, "1", NE_NOMINAL_SOURCE_DERIVED, NE_INIT_MODE_NONE,
+    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "OFF", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.Omega",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    { 1, "1x1" }, "rad/s", 1.0, "1/s", NE_NOMINAL_SOURCE_DERIVED,
+    NE_INIT_MODE_NONE, FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "w", },
+    {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.R.w",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    { 1, "1x1" }, "rad/s", 1.0, "1/s", NE_NOMINAL_SOURCE_DERIVED,
+    NE_INIT_MODE_NONE, FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE,
+    "Rotational velocity", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.Tr",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    { 1, "1x1" }, "N*m", 1.0, "N*m", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
+    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Tr", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.Vm.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
+    TRUE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Voltage", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.Vp.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
+    TRUE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Voltage", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.faultExtTrigger",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    { 1, "1x1" }, "1", 1.0, "1", NE_NOMINAL_SOURCE_DERIVED, NE_INIT_MODE_NONE,
+    TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "OFF", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.faulted",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    { 1, "1x1" }, "1", 1.0, "1", NE_NOMINAL_SOURCE_DERIVED, NE_INIT_MODE_NONE,
+    TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Faulted flag", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.isSwitchedOff",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    { 1, "1x1" }, "1", 1.0, "1", NE_NOMINAL_SOURCE_DERIVED, NE_INIT_MODE_NONE,
+    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Switch state", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.C.w",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    { 1, "1x1" }, "rad/s", 1.0, "1/s", NE_NOMINAL_SOURCE_DERIVED,
+    NE_INIT_MODE_NONE, TRUE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE,
+    "Rotational velocity", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.i",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    { 1, "1x1" }, "A", 1.0, "A", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
+    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Current", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.power_dissipated",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    { 1, "1x1" }, "W", 1.0, "kW", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
+    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Power dissipated", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.t",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
     { 1, "1x1" }, "N*m", 1.0, "N*m", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Torque", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.G.w",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.torqueLimit",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    { 1, "1x1" }, "N*m", 1.0, "N*m", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
+    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Maximum torque magnitude",
+  }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.torqueLimitContinuous",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    { 1, "1x1" }, "N*m", 1.0, "N*m", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
+    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE,
+    "Calculated continuous torque limit (always positive)", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.torque_elec",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    { 1, "1x1" }, "N*m", 1.0, "N*m", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
+    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Electrical torque", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.torque_ref",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    { 1, "1x1" }, "N*m", 1.0, "N*m", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
+    FALSE, TRUE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Demanded torque", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
+    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Voltage", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level.w",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    { 1, "1x1" }, "rpm", 1.0, "1/s", NE_NOMINAL_SOURCE_DERIVED,
+    NE_INIT_MODE_MANDATORY, FALSE, TRUE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE,
+    "Angular velocity", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level_Omega0",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/PS-Simulink\nConverter1",
+    { 1, "1x1" }, "rad/s", 1.0, "1/s", NE_NOMINAL_SOURCE_DERIVED,
+    NE_INIT_MODE_NONE, FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE,
+    "Motor_Drive_System_Level_Omega0", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter1_output0",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Simulink-PS\nConverter1",
+    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_FIXED, NE_INIT_MODE_NONE,
+    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE,
+    "Simulink_PS_Converter1_output0", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter2_output0",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Simulink-PS\nConverter2",
+    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_FIXED, NE_INIT_MODE_NONE,
+    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE,
+    "Simulink_PS_Converter2_output0", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter3_output0",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Simulink-PS\nConverter3",
+    { 1, "1x1" }, "N*m", 1.0, "N*m", NE_NOMINAL_SOURCE_FIXED, NE_INIT_MODE_NONE,
+    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE,
+    "Simulink_PS_Converter3_output0", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter4_output0",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Simulink-PS\nConverter4",
+    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_FIXED, NE_INIT_MODE_NONE,
+    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE,
+    "Simulink_PS_Converter4_output0", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter5_output0",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Simulink-PS\nConverter5",
+    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_FIXED, NE_INIT_MODE_NONE,
+    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE,
+    "Simulink_PS_Converter5_output0", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter6_output0",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Simulink-PS\nConverter6",
+    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_FIXED, NE_INIT_MODE_NONE,
+    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE,
+    "Simulink_PS_Converter6_output0", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter7_output0",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Simulink-PS\nConverter7",
+    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_FIXED, NE_INIT_MODE_NONE,
+    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE,
+    "Simulink_PS_Converter7_output0", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Six_Pulse_Gate_Multiplexer.GaH.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Six-Pulse Gate Multiplexer",
+    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
+    TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Six_Pulse_Gate_Multiplexer.GaH_ps",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Six-Pulse Gate Multiplexer",
+    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
+    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Ga(H)", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Six_Pulse_Gate_Multiplexer.GaL.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Six-Pulse Gate Multiplexer",
+    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
+    TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Six_Pulse_Gate_Multiplexer.GaL_ps",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Six-Pulse Gate Multiplexer",
+    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
+    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Ga(L)", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Six_Pulse_Gate_Multiplexer.GbH.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Six-Pulse Gate Multiplexer",
+    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
+    TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Six_Pulse_Gate_Multiplexer.GbH_ps",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Six-Pulse Gate Multiplexer",
+    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
+    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Gb(H)", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Six_Pulse_Gate_Multiplexer.GbL.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Six-Pulse Gate Multiplexer",
+    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
+    TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Six_Pulse_Gate_Multiplexer.GbL_ps",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Six-Pulse Gate Multiplexer",
+    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
+    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Gb(L)", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Six_Pulse_Gate_Multiplexer.GcH.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Six-Pulse Gate Multiplexer",
+    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
+    TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Six_Pulse_Gate_Multiplexer.GcH_ps",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Six-Pulse Gate Multiplexer",
+    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
+    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Gc(H)", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Six_Pulse_Gate_Multiplexer.GcL.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Six-Pulse Gate Multiplexer",
+    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
+    TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Six_Pulse_Gate_Multiplexer.GcL_ps",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Six-Pulse Gate Multiplexer",
+    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
+    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Gc(L)", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Six_Pulse_Gate_Multiplexer.I",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Six-Pulse Gate Multiplexer",
+    { 12, "1x12" }, "A", 1.0, "A", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
+    TRUE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "I", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Six_Pulse_Gate_Multiplexer.L.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Six-Pulse Gate Multiplexer",
+    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
+    TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Six_Pulse_Gate_Multiplexer.a.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Six-Pulse Gate Multiplexer",
+    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
+    TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Six_Pulse_Gate_Multiplexer.b.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Six-Pulse Gate Multiplexer",
+    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
+    TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Six_Pulse_Gate_Multiplexer.c.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Six-Pulse Gate Multiplexer",
+    { 1, "1x1" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
+    TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Voltage", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Six_Pulse_Gate_Multiplexer.p.V",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Six-Pulse Gate Multiplexer",
+    { 12, "1x12" }, "V", 1.0, "V", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
+    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "V", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Wheel_and_Axle.A.w",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Wheel and Axle",
     { 1, "1x1" }, "rad/s", 1.0, "1/s", NE_NOMINAL_SOURCE_DERIVED,
     NE_INIT_MODE_NONE, FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE,
     "Rotational velocity", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.H.T",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Wheel_and_Axle.P.v",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Wheel and Axle",
+    { 1, "1x1" }, "m/s", 1.0, "m/s", NE_NOMINAL_SOURCE_DERIVED,
+    NE_INIT_MODE_NONE, FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE,
+    "Velocity", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Wheel_and_Axle.f",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Wheel and Axle",
+    { 1, "1x1" }, "N", 1.0, "N", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
+    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Force", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Wheel_and_Axle.t",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Wheel and Axle",
+    { 1, "1x1" }, "N*m", 1.0, "N*m", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
+    FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Torque", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.G.w",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
+    { 1, "1x1" }, "rad/s", 1.0, "1/s", NE_NOMINAL_SOURCE_DERIVED,
+    NE_INIT_MODE_NONE, FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE,
+    "Rotational velocity", }, {
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.H.T",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
     { 1, "1x1" }, "K", 1.0, "K", NE_NOMINAL_SOURCE_DERIVED, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE, "Temperature", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.W.w",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.W.w",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
     { 1, "1x1" }, "rad/s", 1.0, "1/s", NE_NOMINAL_SOURCE_DERIVED,
     NE_INIT_MODE_NONE, FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE,
     "Rotational velocity", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.temperature",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.temperature",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
     { 1, "1x1" }, "K", 1.0, "K", NE_NOMINAL_SOURCE_DERIVED,
     NE_INIT_MODE_MANDATORY, TRUE, FALSE, NE_FREQTIME_TYPE_TIME, FALSE, TRUE,
     "Temperature", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.damperG.C.w",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.damperG.C.w",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
     { 1, "1x1" }, "rad/s", 1.0, "1/s", NE_NOMINAL_SOURCE_DERIVED,
     NE_INIT_MODE_NONE, TRUE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE,
     "Rotational velocity", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.damperG.R.w",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.damperG.R.w",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
     { 1, "1x1" }, "rad/s", 1.0, "1/s", NE_NOMINAL_SOURCE_DERIVED,
     NE_INIT_MODE_NONE, FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE,
     "Rotational velocity", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.damperG.t",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.damperG.t",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
     { 1, "1x1" }, "N*m", 1.0, "N*m", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Torque", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.damperG.w",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.damperG.w",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
     { 1, "1x1" }, "rad/s", 1.0, "1/s", NE_NOMINAL_SOURCE_DERIVED,
     NE_INIT_MODE_NONE, FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE,
     "Rotational velocity", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.damperG.power_dissipated",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.damperG.power_dissipated",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
     { 1, "1x1" }, "kg*m^2/s^3", 1.0, "kg*m^2/s^3", NE_NOMINAL_SOURCE_NONE,
     NE_INIT_MODE_NONE, FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, FALSE,
     "power_dissipated", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.damperW.C.w",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.damperW.C.w",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
     { 1, "1x1" }, "rad/s", 1.0, "1/s", NE_NOMINAL_SOURCE_DERIVED,
     NE_INIT_MODE_NONE, TRUE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE,
     "Rotational velocity", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.damperW.R.w",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.damperW.R.w",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
     { 1, "1x1" }, "rad/s", 1.0, "1/s", NE_NOMINAL_SOURCE_DERIVED,
     NE_INIT_MODE_NONE, FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE,
     "Rotational velocity", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.damperW.t",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.damperW.t",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
     { 1, "1x1" }, "N*m", 1.0, "N*m", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     TRUE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Torque", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.damperW.w",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.damperW.w",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
     { 1, "1x1" }, "rad/s", 1.0, "1/s", NE_NOMINAL_SOURCE_DERIVED,
     NE_INIT_MODE_NONE, FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE,
     "Rotational velocity", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.damperW.power_dissipated",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.damperW.power_dissipated",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
     { 1, "1x1" }, "kg*m^2/s^3", 1.0, "kg*m^2/s^3", NE_NOMINAL_SOURCE_NONE,
     NE_INIT_MODE_NONE, FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, FALSE,
     "power_dissipated", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.gear_trq",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.gear_trq",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
     { 1, "1x1" }, "N*m", 1.0, "N*m", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Gear torque", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.power_dissipated",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.power_dissipated",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
     { 1, "1x1" }, "J/s", 1.0, "J/s", NE_NOMINAL_SOURCE_NONE, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, FALSE,
     "Heat generated from friction", }, {
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.worm_trq",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Worm_Gear.worm_trq",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Worm Gear",
     { 1, "1x1" }, "N*m", 1.0, "N*m", NE_NOMINAL_SOURCE_MODEL, NE_INIT_MODE_NONE,
     FALSE, FALSE, NE_FREQTIME_TYPE_TIME, TRUE, TRUE, "Worm torque", } };
 
 static NeModeData *s_major_mode_data = NULL;
 static NeZCData s_zc_data[11] = { {
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     1U, 0U,
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q1.ideal_switch",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q1.ideal_switch",
     "ee.semiconductors.ideal.switch_equation", NE_ZC_TYPE_FALSE, }, {
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     1U, 1U,
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q2.ideal_switch",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q2.ideal_switch",
     "ee.semiconductors.ideal.switch_equation", NE_ZC_TYPE_FALSE, }, {
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     1U, 2U,
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q3.ideal_switch",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q3.ideal_switch",
     "ee.semiconductors.ideal.switch_equation", NE_ZC_TYPE_FALSE, }, {
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     1U, 3U,
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q4.ideal_switch",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q4.ideal_switch",
     "ee.semiconductors.ideal.switch_equation", NE_ZC_TYPE_FALSE, }, {
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     1U, 4U,
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q5.ideal_switch",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q5.ideal_switch",
     "ee.semiconductors.ideal.switch_equation", NE_ZC_TYPE_FALSE, }, {
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Converter (Three-Phase)",
     1U, 5U,
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q6.ideal_switch",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Converter_Three_Phase.Q6.ideal_switch",
     "ee.semiconductors.ideal.switch_equation", NE_ZC_TYPE_FALSE, }, {
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
     1U, 6U,
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level",
     "ee.electromech.motor_and_drive_base_all", NE_ZC_TYPE_FALSE, }, {
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
     1U, 7U,
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level",
     "ee.electromech.motor_and_drive_base", NE_ZC_TYPE_FALSE, }, {
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
     1U, 8U,
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level",
     "ee.electromech.motor_and_drive_base", NE_ZC_TYPE_FALSE, }, {
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
     1U, 9U,
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level",
     "ee.electromech.motor_and_drive_base", NE_ZC_TYPE_FALSE, }, {
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
     1U, 10U,
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level",
     "ee.electromech.motor_and_drive_base", NE_ZC_TYPE_FALSE, } };
 
 static NeRange s_range[11] = { { "ee.semiconductors.ideal.switch_equation", 1U,
@@ -1627,21 +1628,21 @@ static NeRange s_range[11] = { { "ee.semiconductors.ideal.switch_equation", 1U,
     NE_RANGE_TYPE_PROTECTED, } };
 
 static NeAssertData s_assert_data[3] = { {
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
     1U, 0U,
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level",
     "ee.electromech.motor_and_drive_base", FALSE,
     "Servomotor DC voltage supply must be greater than zero.",
     "physmod:simscape:compiler:patterns:checks:GreaterThanZero", }, {
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
     1U, 1U,
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level",
     "ee.electromech.motor_and_drive_base", FALSE,
     "In divide, the denominator must be nonzero.",
     "physmod:common:mf:expr:analyze:RequireDenominatorNonzero", }, {
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Motor & Drive (System Level)",
     1U, 2U,
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level",
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level",
     "ee.electromech.motor_and_drive_base", FALSE,
     "In divide, the denominator must be nonzero.",
     "physmod:common:mf:expr:analyze:RequireDenominatorNonzero", } };
@@ -1727,7 +1728,7 @@ static NeParameterData *s_logical_parameter_data = NULL;
 static NeParameterData *s_integer_parameter_data = NULL;
 static NeParameterData *s_index_parameter_data = NULL;
 static NeParameterData s_real_parameter_data[1] = { { "RTP_57D1A14D_v",
-    "PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Mass",
+    "PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Mass",
     "", 0U, 1U, TRUE, } };
 
 static real_T s_constant_table0[12] = { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
@@ -3778,62 +3779,62 @@ NeDynamicSystem *PMSM_to_BLDC_mod1_5da39267_1_dae_ds(PmAllocator *allocator)
   /* setup ios */
   ds->mNumIo[SSC_INPUT_IO_TYPE] = 7;
   input_info[0].identifier =
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter1_output0";
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter1_output0";
   input_info[0].size.numElements = 1;
   input_info[0].size.encodedDimensions = "1x1";
   input_info[0].name =
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter1_output0";
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter1_output0";
   input_info[0].unit = "V";
   input_info[1].identifier =
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter2_output0";
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter2_output0";
   input_info[1].size.numElements = 1;
   input_info[1].size.encodedDimensions = "1x1";
   input_info[1].name =
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter2_output0";
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter2_output0";
   input_info[1].unit = "V";
   input_info[2].identifier =
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter3_output0";
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter3_output0";
   input_info[2].size.numElements = 1;
   input_info[2].size.encodedDimensions = "1x1";
   input_info[2].name =
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter3_output0";
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter3_output0";
   input_info[2].unit = "N*m";
   input_info[3].identifier =
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter4_output0";
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter4_output0";
   input_info[3].size.numElements = 1;
   input_info[3].size.encodedDimensions = "1x1";
   input_info[3].name =
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter4_output0";
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter4_output0";
   input_info[3].unit = "V";
   input_info[4].identifier =
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter5_output0";
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter5_output0";
   input_info[4].size.numElements = 1;
   input_info[4].size.encodedDimensions = "1x1";
   input_info[4].name =
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter5_output0";
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter5_output0";
   input_info[4].unit = "V";
   input_info[5].identifier =
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter6_output0";
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter6_output0";
   input_info[5].size.numElements = 1;
   input_info[5].size.encodedDimensions = "1x1";
   input_info[5].name =
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter6_output0";
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter6_output0";
   input_info[5].unit = "V";
   input_info[6].identifier =
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter7_output0";
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter7_output0";
   input_info[6].size.numElements = 1;
   input_info[6].size.encodedDimensions = "1x1";
   input_info[6].name =
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter7_output0";
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Simulink_PS_Converter7_output0";
   input_info[6].unit = "V";
   ds->mIo[SSC_INPUT_IO_TYPE] = input_info;
   ds->mNumIo[SSC_OUTPUT_IO_TYPE] = 1;
   output_info[0].identifier =
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level_Omega0";
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level_Omega0";
   output_info[0].size.numElements = 1;
   output_info[0].size.encodedDimensions = "1x1";
   output_info[0].name =
-    "Subsystem.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level_Omega0";
+    "Subsystem.FOC.Inverter.Simulation.Simscape_Plantmodel.Motor_Drive_System_Level_Omega0";
   output_info[0].unit = "rad/s";
   ds->mIo[SSC_OUTPUT_IO_TYPE] = output_info;
 

@@ -1,5 +1,5 @@
 /* Simscape target specific file.
- * This file is generated for the Simscape network associated with the solver block 'PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Solver Configuration'.
+ * This file is generated for the Simscape network associated with the solver block 'PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Solver Configuration'.
  */
 
 #include "ne_ds.h"
@@ -13,7 +13,7 @@
 int32_T PMSM_to_BLDC_mod1_5da39267_1_ds_dxf(const NeDynamicSystem *LC, const
   NeDynamicSystemInput *t61, NeDsMethodOutput *out)
 {
-  real_T intermediate_der31;
+  real_T intermediate_der30;
   real_T t4;
   real_T t40;
   real_T t5;
@@ -22,7 +22,7 @@ int32_T PMSM_to_BLDC_mod1_5da39267_1_ds_dxf(const NeDynamicSystem *LC, const
   t40 = t61->mX.mX[9ULL] * -0.037 + 48.0;
   intrm_sf_mf_2 = (t61->mX.mX[11ULL] < 0.5);
   t4 = fabs(t61->mX.mX[2ULL]);
-  intermediate_der31 = t61->mX.mX[14ULL] * 1.7324959486708411;
+  intermediate_der30 = t61->mX.mX[14ULL] * 1.7324959486708411;
   if (t61->mX.mX[2ULL] != t61->mX.mX[2ULL]) {
     t5 = t61->mX.mX[2ULL];
   } else if (t61->mX.mX[2ULL] > 0.0) {
@@ -123,7 +123,7 @@ int32_T PMSM_to_BLDC_mod1_5da39267_1_ds_dxf(const NeDynamicSystem *LC, const
   }
 
   if (intrm_sf_mf_2) {
-    out->mDXF.mX[22ULL] = -((t61->mX.mX[2ULL] * 0.001 + intermediate_der31) /
+    out->mDXF.mX[22ULL] = -((t61->mX.mX[2ULL] * 0.001 + intermediate_der30) /
       (t40 == 0.0 ? 1.0E-16 : t40) * 1000.0);
   } else {
     out->mDXF.mX[22ULL] = 0.0;
@@ -135,7 +135,7 @@ int32_T PMSM_to_BLDC_mod1_5da39267_1_ds_dxf(const NeDynamicSystem *LC, const
   out->mDXF.mX[11ULL] = t61->mM.mX[1ULL] != 0 ? -0.001 : -1.0;
   out->mDXF.mX[13ULL] = t61->mM.mX[4ULL] != 0 ? -0.001 : -1.0;
   out->mDXF.mX[15ULL] = t61->mM.mX[6ULL] != 0 ? -0.001 : -1.0;
-  out->mDXF.mX[23ULL] = intrm_sf_mf_2 ? -intermediate_der31 : 0.0;
+  out->mDXF.mX[23ULL] = intrm_sf_mf_2 ? -intermediate_der30 : 0.0;
   out->mDXF.mX[18ULL] = 1.0;
   out->mDXF.mX[20ULL] = 1.0;
   out->mDXF.mX[21ULL] = 1.0;

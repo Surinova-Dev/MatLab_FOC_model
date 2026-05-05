@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'PMSM_to_BLDC_mod1'.
  *
- * Model version                  : 4.843
+ * Model version                  : 4.884
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Sat May  2 12:34:52 2026
+ * C/C++ source code generated on : Tue May  5 18:45:38 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -21,31 +21,37 @@
 
 /* Invariant block signals (default storage) */
 const ConstB_PMSM_to_BLDC_mod1_T PMSM_to_BLDC_mod1_ConstB = {
-  1.0,                                 /* '<S24>/Constant3' */
-  0.0,                                 /* '<S25>/Constant3' */
-  48.0,                                /* '<S318>/Switch' */
-  4200.0,                              /* '<S323>/Gain' */
-  0.0,                                 /* '<S338>/Index Vector' */
-  0.0018,                              /* '<S340>/Index Vector' */
-  0.0018,                              /* '<S341>/Index Vector' */
-  0.0018,                              /* '<S341>/Index Vector1' */
-  0.0018,                              /* '<S342>/Index Vector' */
-  0.0,                                 /* '<S339>/Index Vector' */
-  0.0018,                              /* '<S343>/Index Vector' */
-  0.0018,                              /* '<S344>/Index Vector' */
-  0.0018,                              /* '<S344>/Index Vector1' */
-  0.0018,                              /* '<S345>/Index Vector' */
-  39666.666666666672,                  /* '<S345>/Product' */
-  0.0018,                              /* '<S346>/Index Vector' */
-  0U                                   /* '<S206>/Data Type Conversion' */
+  1.0,                                 /* '<S76>/Constant3' */
+  0.0,                                 /* '<S77>/Constant3' */
+  48.0,                                /* '<S370>/Switch' */
+  4200.0,                              /* '<S375>/Gain' */
+  0.0,                                 /* '<S390>/Index Vector' */
+  0.0018,                              /* '<S392>/Index Vector' */
+  0.0018,                              /* '<S393>/Index Vector' */
+  0.0018,                              /* '<S393>/Index Vector1' */
+  0.0018,                              /* '<S394>/Index Vector' */
+  0.0,                                 /* '<S391>/Index Vector' */
+  0.0018,                              /* '<S395>/Index Vector' */
+  0.0018,                              /* '<S396>/Index Vector' */
+  0.0018,                              /* '<S396>/Index Vector1' */
+  0.0018,                              /* '<S397>/Index Vector' */
+  39666.666666666672,                  /* '<S397>/Product' */
+  0.0018,                              /* '<S398>/Index Vector' */
+  0U,                                  /* '<S258>/Data Type Conversion' */
+  0U,                                  /* '<S46>/Bitwise AND' */
+  0U,                                  /* '<S45>/Bitwise AND' */
+  0U,                                  /* '<S39>/Bitwise AND' */
+  0U,                                  /* '<S33>/Bitwise AND' */
+  1360U,                               /* '<S20>/Bitwise AND' */
+  4U                                   /* '<S19>/Bitwise AND' */
 };
 
 /* Constant parameters (default storage) */
 const ConstP_PMSM_to_BLDC_mod1_T PMSM_to_BLDC_mod1_ConstP = {
   /* Pooled Parameter (Expression: dlgSett.sin_table)
    * Referenced by:
-   *   '<S141>/sine_table_values'
-   *   '<S167>/sine_table_values'
+   *   '<S193>/sine_table_values'
+   *   '<S219>/sine_table_values'
    */
   { 0.0, 0.0078539008887113342, 0.015707317311820675, 0.02355976483361015,
     0.031410759078128292, 0.03925981575906861, 0.047106450709642658,
@@ -381,7 +387,7 @@ const ConstP_PMSM_to_BLDC_mod1_T PMSM_to_BLDC_mod1_ConstP = {
     0.99987663248166059, 0.99996915764478966, 1.0, 0.99996915764478966 },
 
   /* Computed Parameter: sine_table_values_Value
-   * Referenced by: '<S306>/sine_table_values'
+   * Referenced by: '<S358>/sine_table_values'
    */
   { 0.0F, 0.00785390101F, 0.0157073177F, 0.023559764F, 0.0314107575F,
     0.0392598175F, 0.0471064523F, 0.0549501814F, 0.0627905205F, 0.070626989F,

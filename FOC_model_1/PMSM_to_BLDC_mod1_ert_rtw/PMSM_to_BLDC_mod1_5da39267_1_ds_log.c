@@ -1,5 +1,5 @@
 /* Simscape target specific file.
- * This file is generated for the Simscape network associated with the solver block 'PMSM_to_BLDC_mod1/Subsystem/Inverter/Simulation/Simscape_Plantmodel/Solver Configuration'.
+ * This file is generated for the Simscape network associated with the solver block 'PMSM_to_BLDC_mod1/Subsystem/FOC/Inverter/Simulation/Simscape_Plantmodel/Solver Configuration'.
  */
 
 #include "ne_ds.h"
@@ -14,22 +14,23 @@ int32_T PMSM_to_BLDC_mod1_5da39267_1_ds_log(const NeDynamicSystem *LC, const
   NeDynamicSystemInput *t19, NeDsMethodOutput *out)
 {
   real_T
-    Subsystem_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_G_V
+    Subsystem_FOC_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_G_V
     [12];
   real_T t1[12];
   real_T
-    Subsystem_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q1_ideal_switch_power_dissipated;
+    Subsystem_FOC_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q1_ideal_switch_power_dissipated;
   real_T
-    Subsystem_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q2_ideal_switch_power_dissipated;
+    Subsystem_FOC_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q2_ideal_switch_power_dissipated;
   real_T
-    Subsystem_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q3_ideal_switch_power_dissipated;
+    Subsystem_FOC_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q3_ideal_switch_power_dissipated;
   real_T
-    Subsystem_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q4_ideal_switch_power_dissipated;
+    Subsystem_FOC_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q4_ideal_switch_power_dissipated;
   real_T
-    Subsystem_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q5_ideal_switch_power_dissipated;
+    Subsystem_FOC_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q5_ideal_switch_power_dissipated;
   real_T
-    Subsystem_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q6_ideal_switch_power_dissipated;
-  real_T Subsystem_Inverter_Simulation_Simscape_Plantmodel_Worm_Gear_gear_trq;
+    Subsystem_FOC_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q6_ideal_switch_power_dissipated;
+  real_T
+    Subsystem_FOC_Inverter_Simulation_Simscape_Plantmodel_Worm_Gear_gear_trq;
   size_t t7;
   (void)LC;
   t1[0ULL] = t19->mU.mX[0ULL];
@@ -45,27 +46,27 @@ int32_T PMSM_to_BLDC_mod1_5da39267_1_ds_log(const NeDynamicSystem *LC, const
   t1[10ULL] = t19->mU.mX[6ULL];
   t1[11ULL] = 0.0;
   for (t7 = 0ULL; t7 < 12ULL; t7++) {
-    Subsystem_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_G_V[t7]
-      = t1[t7];
+    Subsystem_FOC_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_G_V
+      [t7] = t1[t7];
   }
 
-  Subsystem_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q1_ideal_switch_power_dissipated
+  Subsystem_FOC_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q1_ideal_switch_power_dissipated
     = t19->mX.mX[6ULL] * (-t19->mX.mX[3ULL] + 48.0) * 0.001;
-  Subsystem_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q2_ideal_switch_power_dissipated
+  Subsystem_FOC_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q2_ideal_switch_power_dissipated
     = t19->mX.mX[3ULL] * t19->mX.mX[6ULL] * 0.001;
-  Subsystem_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q3_ideal_switch_power_dissipated
+  Subsystem_FOC_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q3_ideal_switch_power_dissipated
     = t19->mX.mX[7ULL] * (-t19->mX.mX[4ULL] + 48.0) * 0.001;
-  Subsystem_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q4_ideal_switch_power_dissipated
+  Subsystem_FOC_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q4_ideal_switch_power_dissipated
     = t19->mX.mX[4ULL] * t19->mX.mX[7ULL] * 0.001;
-  Subsystem_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q5_ideal_switch_power_dissipated
+  Subsystem_FOC_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q5_ideal_switch_power_dissipated
     = t19->mX.mX[8ULL] * (-t19->mX.mX[5ULL] + 48.0) * 0.001;
-  Subsystem_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q6_ideal_switch_power_dissipated
+  Subsystem_FOC_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q6_ideal_switch_power_dissipated
     = t19->mX.mX[5ULL] * t19->mX.mX[8ULL] * 0.001;
-  Subsystem_Inverter_Simulation_Simscape_Plantmodel_Worm_Gear_gear_trq =
+  Subsystem_FOC_Inverter_Simulation_Simscape_Plantmodel_Worm_Gear_gear_trq =
     t19->mX.mX[10ULL] * -0.05;
   for (t7 = 0ULL; t7 < 12ULL; t7++) {
     out->mLOG.mX[t7] =
-      Subsystem_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_G_V
+      Subsystem_FOC_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_G_V
       [t7];
   }
 
@@ -83,7 +84,7 @@ int32_T PMSM_to_BLDC_mod1_5da39267_1_ds_log(const NeDynamicSystem *LC, const
   out->mLOG.mX[23ULL] = t19->mU.mX[6ULL];
   for (t7 = 0ULL; t7 < 12ULL; t7++) {
     out->mLOG.mX[t7 + 24ULL] =
-      Subsystem_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_G_V
+      Subsystem_FOC_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_G_V
       [t7];
   }
 
@@ -96,12 +97,12 @@ int32_T PMSM_to_BLDC_mod1_5da39267_1_ds_log(const NeDynamicSystem *LC, const
   out->mLOG.mX[42ULL] = t19->mX.mX[6ULL];
   out->mLOG.mX[43ULL] = t19->mX.mX[3ULL];
   out->mLOG.mX[44ULL] =
-    Subsystem_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q1_ideal_switch_power_dissipated
+    Subsystem_FOC_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q1_ideal_switch_power_dissipated
     * 1000.0;
   out->mLOG.mX[45ULL] = -t19->mX.mX[3ULL] + 48.0;
   out->mLOG.mX[46ULL] = t19->mU.mX[0ULL];
   out->mLOG.mX[47ULL] =
-    Subsystem_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q1_ideal_switch_power_dissipated
+    Subsystem_FOC_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q1_ideal_switch_power_dissipated
     * 1000.0;
   out->mLOG.mX[48ULL] = -t19->mX.mX[3ULL] + 48.0;
   out->mLOG.mX[49ULL] = t19->mU.mX[0ULL];
@@ -111,12 +112,12 @@ int32_T PMSM_to_BLDC_mod1_5da39267_1_ds_log(const NeDynamicSystem *LC, const
   out->mLOG.mX[53ULL] = t19->mX.mX[6ULL];
   out->mLOG.mX[54ULL] = t19->mX.mX[3ULL];
   out->mLOG.mX[55ULL] =
-    Subsystem_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q2_ideal_switch_power_dissipated
+    Subsystem_FOC_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q2_ideal_switch_power_dissipated
     * 1000.0;
   out->mLOG.mX[56ULL] = t19->mX.mX[3ULL];
   out->mLOG.mX[57ULL] = t19->mU.mX[1ULL];
   out->mLOG.mX[58ULL] =
-    Subsystem_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q2_ideal_switch_power_dissipated
+    Subsystem_FOC_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q2_ideal_switch_power_dissipated
     * 1000.0;
   out->mLOG.mX[59ULL] = t19->mX.mX[3ULL];
   out->mLOG.mX[60ULL] = t19->mU.mX[1ULL];
@@ -126,12 +127,12 @@ int32_T PMSM_to_BLDC_mod1_5da39267_1_ds_log(const NeDynamicSystem *LC, const
   out->mLOG.mX[64ULL] = t19->mX.mX[7ULL];
   out->mLOG.mX[65ULL] = t19->mX.mX[4ULL];
   out->mLOG.mX[66ULL] =
-    Subsystem_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q3_ideal_switch_power_dissipated
+    Subsystem_FOC_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q3_ideal_switch_power_dissipated
     * 1000.0;
   out->mLOG.mX[67ULL] = -t19->mX.mX[4ULL] + 48.0;
   out->mLOG.mX[68ULL] = t19->mU.mX[3ULL];
   out->mLOG.mX[69ULL] =
-    Subsystem_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q3_ideal_switch_power_dissipated
+    Subsystem_FOC_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q3_ideal_switch_power_dissipated
     * 1000.0;
   out->mLOG.mX[70ULL] = -t19->mX.mX[4ULL] + 48.0;
   out->mLOG.mX[71ULL] = t19->mU.mX[3ULL];
@@ -141,12 +142,12 @@ int32_T PMSM_to_BLDC_mod1_5da39267_1_ds_log(const NeDynamicSystem *LC, const
   out->mLOG.mX[75ULL] = t19->mX.mX[7ULL];
   out->mLOG.mX[76ULL] = t19->mX.mX[4ULL];
   out->mLOG.mX[77ULL] =
-    Subsystem_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q4_ideal_switch_power_dissipated
+    Subsystem_FOC_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q4_ideal_switch_power_dissipated
     * 1000.0;
   out->mLOG.mX[78ULL] = t19->mX.mX[4ULL];
   out->mLOG.mX[79ULL] = t19->mU.mX[4ULL];
   out->mLOG.mX[80ULL] =
-    Subsystem_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q4_ideal_switch_power_dissipated
+    Subsystem_FOC_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q4_ideal_switch_power_dissipated
     * 1000.0;
   out->mLOG.mX[81ULL] = t19->mX.mX[4ULL];
   out->mLOG.mX[82ULL] = t19->mU.mX[4ULL];
@@ -156,12 +157,12 @@ int32_T PMSM_to_BLDC_mod1_5da39267_1_ds_log(const NeDynamicSystem *LC, const
   out->mLOG.mX[86ULL] = t19->mX.mX[8ULL];
   out->mLOG.mX[87ULL] = t19->mX.mX[5ULL];
   out->mLOG.mX[88ULL] =
-    Subsystem_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q5_ideal_switch_power_dissipated
+    Subsystem_FOC_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q5_ideal_switch_power_dissipated
     * 1000.0;
   out->mLOG.mX[89ULL] = -t19->mX.mX[5ULL] + 48.0;
   out->mLOG.mX[90ULL] = t19->mU.mX[5ULL];
   out->mLOG.mX[91ULL] =
-    Subsystem_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q5_ideal_switch_power_dissipated
+    Subsystem_FOC_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q5_ideal_switch_power_dissipated
     * 1000.0;
   out->mLOG.mX[92ULL] = -t19->mX.mX[5ULL] + 48.0;
   out->mLOG.mX[93ULL] = t19->mU.mX[5ULL];
@@ -171,12 +172,12 @@ int32_T PMSM_to_BLDC_mod1_5da39267_1_ds_log(const NeDynamicSystem *LC, const
   out->mLOG.mX[97ULL] = t19->mX.mX[8ULL];
   out->mLOG.mX[98ULL] = t19->mX.mX[5ULL];
   out->mLOG.mX[99ULL] =
-    Subsystem_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q6_ideal_switch_power_dissipated
+    Subsystem_FOC_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q6_ideal_switch_power_dissipated
     * 1000.0;
   out->mLOG.mX[100ULL] = t19->mX.mX[5ULL];
   out->mLOG.mX[101ULL] = t19->mU.mX[6ULL];
   out->mLOG.mX[102ULL] =
-    Subsystem_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q6_ideal_switch_power_dissipated
+    Subsystem_FOC_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_Q6_ideal_switch_power_dissipated
     * 1000.0;
   out->mLOG.mX[103ULL] = t19->mX.mX[5ULL];
   out->mLOG.mX[104ULL] = t19->mU.mX[6ULL];
@@ -225,7 +226,7 @@ int32_T PMSM_to_BLDC_mod1_5da39267_1_ds_log(const NeDynamicSystem *LC, const
   out->mLOG.mX[146ULL] = t19->mU.mX[6ULL];
   for (t7 = 0ULL; t7 < 12ULL; t7++) {
     out->mLOG.mX[t7 + 147ULL] =
-      Subsystem_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_G_V
+      Subsystem_FOC_Inverter_Simulation_Simscape_Plantmodel_Converter_Three_Phase_G_V
       [t7];
   }
 
@@ -242,10 +243,11 @@ int32_T PMSM_to_BLDC_mod1_5da39267_1_ds_log(const NeDynamicSystem *LC, const
   out->mLOG.mX[169ULL] = t19->mX.mX[16ULL];
   out->mLOG.mX[170ULL] = 0.0;
   out->mLOG.mX[171ULL] =
-    Subsystem_Inverter_Simulation_Simscape_Plantmodel_Worm_Gear_gear_trq;
+    Subsystem_FOC_Inverter_Simulation_Simscape_Plantmodel_Worm_Gear_gear_trq;
   out->mLOG.mX[172ULL] = 0.0;
   out->mLOG.mX[173ULL] =
-    Subsystem_Inverter_Simulation_Simscape_Plantmodel_Worm_Gear_gear_trq * -0.04;
+    Subsystem_FOC_Inverter_Simulation_Simscape_Plantmodel_Worm_Gear_gear_trq *
+    -0.04;
   (void)LC;
   (void)out;
   return 0;
