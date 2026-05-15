@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'PMSM_to_BLDC_mod1'.
  *
- * Model version                  : 4.830
+ * Model version                  : 4.837
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Tue Apr 28 19:01:54 2026
+ * C/C++ source code generated on : Fri May 15 17:04:09 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -98,27 +98,31 @@ typedef struct {
   boolean_T doneDoubleBufferReInit;    /* '<S20>/bit_shift' */
 } DW_BitShift1_PMSM_to_BLDC_mod_T;
 
+/* Block states (default storage) for system '<S31>/SPI Receive' */
+typedef struct {
+  stm32cube_blocks_SPIControlle_T obj; /* '<S31>/SPI Receive' */
+  boolean_T objisempty;                /* '<S31>/SPI Receive' */
+} DW_SPIReceive_PMSM_to_BLDC_mo_T;
+
 /* Block states (default storage) for system '<S31>/SPI Transmit' */
 typedef struct {
-  stm32cube_blocks_SPIControlle_T obj; /* '<S31>/SPI Transmit' */
+  stm32cube_blocks_SPIControl_d_T obj; /* '<S31>/SPI Transmit' */
   boolean_T objisempty;                /* '<S31>/SPI Transmit' */
 } DW_SPITransmit_PMSM_to_BLDC_m_T;
 
 /* Block signals for system '<S32>/SPI Receive' */
 typedef struct {
   uint16_T SPIReceive;                 /* '<S32>/SPI Receive' */
-} B_SPIReceive_PMSM_to_BLDC_mod_T;
+} B_SPIReceive_PMSM_to_BLDC_m_c_T;
 
 /* Block states (default storage) for system '<S32>/SPI Receive' */
 typedef struct {
-  stm32cube_blocks_SPIControl_b_T obj; /* '<S32>/SPI Receive' */
+  stm32cube_blocks_SPIControlle_T obj; /* '<S32>/SPI Receive' */
   boolean_T objisempty;                /* '<S32>/SPI Receive' */
-} DW_SPIReceive_PMSM_to_BLDC_mo_T;
+} DW_SPIReceive_PMSM_to_BLDC__f_T;
 
 /* Block signals (default storage) */
 typedef struct {
-  real_T Constant2;                    /* '<S5>/Constant2' */
-  real_T Constant3;                    /* '<S5>/Constant3' */
   real_T Gain1;                        /* '<S7>/Gain1' */
   real_T Gain;                         /* '<S6>/Gain' */
   real_T En_State;                     /* '<Root>/Chart' */
@@ -126,6 +130,8 @@ typedef struct {
   real_T Ctrl_flag1;                   /* '<Root>/Chart' */
   real_T spi_write1;                   /* '<Root>/Chart' */
   real_T spi_write2;                   /* '<Root>/Chart' */
+  real_T Ib_flag;                      /* '<Root>/Chart' */
+  real_T Ic_flag;                      /* '<Root>/Chart' */
   real_T spi_write3;                   /* '<Root>/Chart' */
   real_T spi_write4;                   /* '<Root>/Chart' */
   uint16_T BitwiseOR;                  /* '<S37>/Bitwise OR' */
@@ -133,36 +139,32 @@ typedef struct {
   uint16_T BitwiseOR_e;                /* '<S18>/Bitwise OR' */
   uint16_T BitwiseOR_n;                /* '<S17>/Bitwise OR' */
   uint16_T DataTypeConversion;         /* '<S17>/Data Type Conversion' */
+  boolean_T Delay;                     /* '<Root>/Delay' */
+  boolean_T Delay1;                    /* '<Root>/Delay1' */
   boolean_T AND1;                      /* '<S4>/AND1' */
   boolean_T AND;                       /* '<S4>/AND' */
   boolean_T Compare;                   /* '<S28>/Compare' */
   boolean_T Compare_g;                 /* '<S27>/Compare' */
-  B_SPIReceive_PMSM_to_BLDC_mod_T SPIReceive_pna;/* '<S32>/SPI Receive' */
-  B_SPIReceive_PMSM_to_BLDC_mod_T SPIReceive_pn;/* '<S32>/SPI Receive' */
+  B_SPIReceive_PMSM_to_BLDC_m_c_T SPIReceive_pnae;/* '<S32>/SPI Receive' */
+  B_SPIReceive_PMSM_to_BLDC_m_c_T SPIReceive_pn;/* '<S32>/SPI Receive' */
 } B_PMSM_to_BLDC_mod1_T;
 
 /* Block states (default storage) for system '<Root>' */
 typedef struct {
-  stm32cube_blocks_SPIControl_b_T obj; /* '<S31>/SPI Receive' */
-  stm32cube_blocks_SPIControl_b_T obj_g;/* '<S18>/SPI Receive' */
-  stm32cube_blocks_SPIControl_b_T obj_gk;/* '<S17>/SPI Receive' */
-  stm32cube_blocks_SPIControlle_T obj_k;/* '<S37>/SPI Transmit' */
-  stm32cube_blocks_SPIControlle_T obj_n;/* '<S18>/SPI Transmit' */
-  stm32cube_blocks_SPIControlle_T obj_j;/* '<S17>/SPI Transmit' */
+  stm32cube_blocks_SPIControlle_T obj; /* '<S18>/SPI Receive' */
+  stm32cube_blocks_SPIControlle_T obj_g;/* '<S17>/SPI Receive' */
+  stm32cube_blocks_SPIControl_d_T obj_n;/* '<S18>/SPI Transmit' */
+  stm32cube_blocks_SPIControl_d_T obj_j;/* '<S17>/SPI Transmit' */
   stm32cube_blocks_AnalogInput__T obj_o;/* '<S13>/Analog to Digital Converter' */
   stm32cube_blocks_AnalogInput__T obj_d;/* '<S10>/Analog to Digital Converter' */
   stm32cube_blocks_DigitalPortW_T obj_ow;/* '<S16>/Digital Port Write' */
   real_T CS_val;                       /* '<Root>/Chart' */
   struct {
     void *LoggedData[2];
-  } Scope1_PWORK;                      /* '<S5>/Scope1' */
-
-  struct {
-    void *LoggedData[2];
   } Scope_PWORK;                       /* '<S4>/Scope' */
 
   struct {
-    void *LoggedData[6];
+    void *LoggedData[8];
   } Scope_PWORK_e;                     /* '<Root>/Scope' */
 
   struct {
@@ -173,8 +175,18 @@ typedef struct {
     void *LoggedData[2];
   } Scope2_PWORK;                      /* '<S5>/Scope2' */
 
+  struct {
+    void *LoggedData;
+  } Scope_PWORK_i;                     /* '<S37>/Scope' */
+
+  struct {
+    void *LoggedData;
+  } Scope_PWORK_ic;                    /* '<S31>/Scope' */
+
   uint32_T is_c3_PMSM_to_BLDC_mod1;    /* '<Root>/Chart' */
   uint16_T temporalCounter_i1;         /* '<Root>/Chart' */
+  boolean_T Delay_DSTATE;              /* '<Root>/Delay' */
+  boolean_T Delay1_DSTATE;             /* '<Root>/Delay1' */
   int8_T Subsystem1_SubsysRanBC;       /* '<S30>/Subsystem1' */
   int8_T Subsystem_SubsysRanBC;        /* '<S30>/Subsystem' */
   int8_T Subsystem1_SubsysRanBC_n;     /* '<S29>/Subsystem1' */
@@ -191,12 +203,15 @@ typedef struct {
   boolean_T Ctrl_Reg_1_MODE;           /* '<S4>/Ctrl_Reg_1' */
   boolean_T Control_Reg2_MODE;         /* '<S4>/Control_Reg2' */
   DW_SPITransmit_PMSM_to_BLDC_m_T SPITransmit_pnae;/* '<S31>/SPI Transmit' */
-  DW_SPIReceive_PMSM_to_BLDC_mo_T SPIReceive_pna;/* '<S32>/SPI Receive' */
+  DW_SPIReceive_PMSM_to_BLDC__f_T SPIReceive_pnae;/* '<S32>/SPI Receive' */
+  DW_SPITransmit_PMSM_to_BLDC_m_T SPITransmit_pna;/* '<S31>/SPI Transmit' */
+  DW_SPIReceive_PMSM_to_BLDC_mo_T SPIReceive_pna;/* '<S31>/SPI Receive' */
   DW_BitShift1_PMSM_to_BLDC_mod_T BitShift1_m;/* '<S37>/Bit Shift1' */
   DW_BitShift_PMSM_to_BLDC_mod1_T BitShift_b;/* '<S37>/Bit Shift' */
   DW_SPITransmit_PMSM_to_BLDC_m_T SPITransmit_pn;/* '<S31>/SPI Transmit' */
-  DW_SPIReceive_PMSM_to_BLDC_mo_T SPIReceive_pn;/* '<S32>/SPI Receive' */
+  DW_SPIReceive_PMSM_to_BLDC__f_T SPIReceive_pn;/* '<S32>/SPI Receive' */
   DW_SPITransmit_PMSM_to_BLDC_m_T SPITransmit_p;/* '<S31>/SPI Transmit' */
+  DW_SPIReceive_PMSM_to_BLDC_mo_T SPIReceive_p;/* '<S31>/SPI Receive' */
   DW_BitShift1_PMSM_to_BLDC_mod_T BitShift1_p;/* '<S31>/Bit Shift1' */
   DW_BitShift_PMSM_to_BLDC_mod1_T BitShift_hq;/* '<S31>/Bit Shift' */
   DW_BitShift1_PMSM_to_BLDC_mod_T BitShift1_d;/* '<S18>/Bit Shift1' */

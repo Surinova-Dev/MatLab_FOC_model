@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'PMSM_to_BLDC_mod1'.
  *
- * Model version                  : 4.830
+ * Model version                  : 4.837
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Tue Apr 28 19:01:54 2026
+ * C/C++ source code generated on : Fri May 15 17:04:09 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -22,27 +22,6 @@
 #include "rtwtypes.h"
 #include "mw_stm32_spi_ll.h"
 #include "stm_adc_ll.h"
-#ifndef struct_tag_AkYSLo56SBzQIYxVc5esmB
-#define struct_tag_AkYSLo56SBzQIYxVc5esmB
-
-struct tag_AkYSLo56SBzQIYxVc5esmB
-{
-  boolean_T matlabCodegenIsDeleted;
-  int32_T isInitialized;
-  boolean_T isSetupComplete;
-  STM32_SPI_Struct_T * MW_SPI_HANDLE;
-  STM32_SPI_Struct_T MW_SPI_BlockStruct;
-};
-
-#endif                                 /* struct_tag_AkYSLo56SBzQIYxVc5esmB */
-
-#ifndef typedef_stm32cube_blocks_SPIControlle_T
-#define typedef_stm32cube_blocks_SPIControlle_T
-
-typedef struct tag_AkYSLo56SBzQIYxVc5esmB stm32cube_blocks_SPIControlle_T;
-
-#endif                             /* typedef_stm32cube_blocks_SPIControlle_T */
-
 #ifndef struct_tag_mOVAabJjflwVpJ1RH3zpfC
 #define struct_tag_mOVAabJjflwVpJ1RH3zpfC
 
@@ -57,12 +36,33 @@ struct tag_mOVAabJjflwVpJ1RH3zpfC
 
 #endif                                 /* struct_tag_mOVAabJjflwVpJ1RH3zpfC */
 
-#ifndef typedef_stm32cube_blocks_SPIControl_b_T
-#define typedef_stm32cube_blocks_SPIControl_b_T
+#ifndef typedef_stm32cube_blocks_SPIControlle_T
+#define typedef_stm32cube_blocks_SPIControlle_T
 
-typedef struct tag_mOVAabJjflwVpJ1RH3zpfC stm32cube_blocks_SPIControl_b_T;
+typedef struct tag_mOVAabJjflwVpJ1RH3zpfC stm32cube_blocks_SPIControlle_T;
 
-#endif                             /* typedef_stm32cube_blocks_SPIControl_b_T */
+#endif                             /* typedef_stm32cube_blocks_SPIControlle_T */
+
+#ifndef struct_tag_AkYSLo56SBzQIYxVc5esmB
+#define struct_tag_AkYSLo56SBzQIYxVc5esmB
+
+struct tag_AkYSLo56SBzQIYxVc5esmB
+{
+  boolean_T matlabCodegenIsDeleted;
+  int32_T isInitialized;
+  boolean_T isSetupComplete;
+  STM32_SPI_Struct_T * MW_SPI_HANDLE;
+  STM32_SPI_Struct_T MW_SPI_BlockStruct;
+};
+
+#endif                                 /* struct_tag_AkYSLo56SBzQIYxVc5esmB */
+
+#ifndef typedef_stm32cube_blocks_SPIControl_d_T
+#define typedef_stm32cube_blocks_SPIControl_d_T
+
+typedef struct tag_AkYSLo56SBzQIYxVc5esmB stm32cube_blocks_SPIControl_d_T;
+
+#endif                             /* typedef_stm32cube_blocks_SPIControl_d_T */
 
 #ifndef struct_tag_92DzsjXuaF7c99tFkgTmuB
 #define struct_tag_92DzsjXuaF7c99tFkgTmuB

@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'PMSM_to_BLDC_mod1'.
  *
- * Model version                  : 4.830
+ * Model version                  : 4.837
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Tue Apr 28 19:01:54 2026
+ * C/C++ source code generated on : Fri May 15 17:04:09 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -41,17 +41,23 @@ extern void PMSM_to_BLDC_mo_BitShift1_Reset(DW_BitShift1_PMSM_to_BLDC_mod_T
   *localDW);
 extern void PMSM_to_BLDC_mod1_BitShift1(uint16_T rtu_u, uint16_T *rty_y,
   DW_BitShift1_PMSM_to_BLDC_mod_T *localDW);
+extern void PMSM_to_BLDC_mo_SPIReceive_Init(DW_SPIReceive_PMSM_to_BLDC_mo_T
+  *localDW);
+extern void PMSM_to_BLDC_mod1_SPIReceive(DW_SPIReceive_PMSM_to_BLDC_mo_T
+  *localDW);
 extern void PMSM_to_BLDC_m_SPITransmit_Init(DW_SPITransmit_PMSM_to_BLDC_m_T
   *localDW);
 extern void PMSM_to_BLDC_mod1_SPITransmit(uint16_T rtu_0,
   DW_SPITransmit_PMSM_to_BLDC_m_T *localDW);
-extern void PMSM_to_BLDC_mo_SPIReceive_Init(DW_SPIReceive_PMSM_to_BLDC_mo_T
+extern void PMSM_to_BLDC__SPIReceive_e_Init(DW_SPIReceive_PMSM_to_BLDC__f_T
   *localDW);
-extern void PMSM_to_BLDC_mod1_SPIReceive(B_SPIReceive_PMSM_to_BLDC_mod_T *localB,
-  DW_SPIReceive_PMSM_to_BLDC_mo_T *localDW);
+extern void PMSM_to_BLDC_mod1_SPIReceive_p(B_SPIReceive_PMSM_to_BLDC_m_c_T
+  *localB, DW_SPIReceive_PMSM_to_BLDC__f_T *localDW);
+extern void PMSM_to_BLDC_mo_SPIReceive_Term(DW_SPIReceive_PMSM_to_BLDC_mo_T
+  *localDW);
 extern void PMSM_to_BLDC_m_SPITransmit_Term(DW_SPITransmit_PMSM_to_BLDC_m_T
   *localDW);
-extern void PMSM_to_BLDC_mo_SPIReceive_Term(DW_SPIReceive_PMSM_to_BLDC_mo_T
+extern void PMSM_to_BLDC__SPIReceive_m_Term(DW_SPIReceive_PMSM_to_BLDC__f_T
   *localDW);
 
 #endif                                 /* PMSM_to_BLDC_mod1_private_h_ */
