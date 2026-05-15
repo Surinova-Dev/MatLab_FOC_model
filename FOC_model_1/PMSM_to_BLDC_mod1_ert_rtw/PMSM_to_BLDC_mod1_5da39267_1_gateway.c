@@ -16,7 +16,7 @@ void PMSM_to_BLDC_mod1_5da39267_1_gateway(void)
 {
   NeModelParameters modelparams = { (enum NeSolverTypeTag)1, 0.001, 0.001, 0.001,
     FALSE, FALSE, (enum NeModifyAbsTolTag)0, 0.0001, 0.0, FALSE, FALSE, FALSE, (
-    enum SscLoggingSettingTag)0, 699887660.0, TRUE, FALSE, FALSE };
+    enum SscLoggingSettingTag)0, 700747201.0, TRUE, FALSE, FALSE };
 
   NeSolverParameters solverparams = { TRUE, TRUE, FALSE, FALSE, FALSE, FALSE,
     TRUE, FALSE, FALSE, 0.001, 0.001, 1e-09, FALSE, FALSE, 100U, FALSE, 1U, (

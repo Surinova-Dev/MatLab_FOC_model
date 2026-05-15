@@ -215,7 +215,7 @@ __attribute__((weak)) void DMA1_Stream0_IRQHandler(void)
 /**
   * @brief This function handles DMA1 stream5 global interrupt.
   */
-void DMA1_Stream5_IRQHandler(void)
+__attribute__((weak)) void DMA1_Stream5_IRQHandler(void)
 {
   /* USER CODE BEGIN DMA1_Stream5_IRQn 0 */
 
@@ -228,7 +228,7 @@ void DMA1_Stream5_IRQHandler(void)
 /**
   * @brief This function handles DMA1 stream6 global interrupt.
   */
-void DMA1_Stream6_IRQHandler(void)
+__attribute__((weak)) void DMA1_Stream6_IRQHandler(void)
 {
   /* USER CODE BEGIN DMA1_Stream6_IRQn 0 */
 
