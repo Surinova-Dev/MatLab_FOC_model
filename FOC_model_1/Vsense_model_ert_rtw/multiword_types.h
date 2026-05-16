@@ -3,13 +3,13 @@
  * course requirements at degree granting institutions only.  Not for
  * government, commercial, or other organizational use.
  *
- * File: rtGetNaN.h
+ * File: multiword_types.h
  *
- * Code generated for Simulink model 'PMSM_to_BLDC_mod1'.
+ * Code generated for Simulink model 'Vsense_model'.
  *
- * Model version                  : 4.888
+ * Model version                  : 4.1
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Fri May 15 17:50:01 2026
+ * C/C++ source code generated on : Sat May 16 12:18:37 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -17,15 +17,17 @@
  * Validation result: Not run
  */
 
-#ifndef rtGetNaN_h_
-#define rtGetNaN_h_
-#include "rt_nonfinite.h"
+#ifndef MULTIWORD_TYPES_H
+#define MULTIWORD_TYPES_H
 #include "rtwtypes.h"
 
-extern real_T rtGetNaN(void);
-extern real32_T rtGetNaNF(void);
+/*
+ * Definitions supporting external data access
+ */
+typedef int64_T chunk_T;
+typedef uint64_T uchunk_T;
 
-#endif                                 /* rtGetNaN_h_ */
+#endif                                 /* MULTIWORD_TYPES_H */
 
 /*
  * File trailer for generated code.

@@ -3,8 +3,6 @@ xcp_ext_mode.c.o
 PMSM_to_BLDC_mod1.c.o
 PMSM_to_BLDC_mod1_data.c.o
 ert_main.c.o
-rtGetNaN.c.o
-rt_nonfinite.c.o
 SPI_code.c.o
 stm32f4xx_hal_spi.c.o
 spi.c.o
