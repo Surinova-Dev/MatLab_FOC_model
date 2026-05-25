@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__matlab__model_overview",
+      "mcp__matlab__model_read",
+      "mcp__matlab__model_edit",
+      "mcp__matlab__evaluate_matlab_code"
+    ]
+  }
+}

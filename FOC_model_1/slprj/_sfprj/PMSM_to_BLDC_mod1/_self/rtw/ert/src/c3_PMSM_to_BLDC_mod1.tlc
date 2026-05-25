@@ -7,7 +7,7 @@
 %endfunction
 %function ChartDataMap(block, system) void
   %createrecord ChartDataElements {\
-    NumChartData   6 \
+    NumChartData   7 \
     ChartDataDefaults {\
       RecordType   "ChartData"\
       Dimensions   []\
@@ -21,37 +21,42 @@
       SrcLocation  ""\
     }\
     ChartData {\
-      Name         "t"\
+      Name         "Drv_ok"\
       Description  "ChartLocal"\
       SFName       ""\
-      Path         "t"\
-      SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "sfEvent"\
-      Description  "ActiveChartEvent"\
-      SFName       ""\
-      Path         ""\
+      Path         "Drv_ok"\
       SrcLocation  ""\
     }\
     ChartData {\
       Name         "is_active_c3_PMSM_to_BLDC_mod1"\
       Description  "StateIsActive"\
-      SFName       "is_active_c3_PMSM_to_BLDC_mod1"\
-      Path         "is_active_c3_PMSM_to_BLDC_mod1"\
+      SFName       ""\
+      Path         ""\
       SrcLocation  ""\
-      IsTestPoint  1\
     }\
     ChartData {\
-      Name         "is_c3_PMSM_to_BLDC_mod1"\
+      Name         "is_Test2"\
       Description  "StateActiveChild"\
-      SFName       "is_c3_PMSM_to_BLDC_mod1"\
-      Path         "is_c3_PMSM_to_BLDC_mod1"\
+      SFName       ""\
+      Path         "SPI_Check.Test2"\
       SrcLocation  ""\
-      IsTestPoint  1\
+    }\
+    ChartData {\
+      Name         "is_Test"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "SPInit.Test"\
+      SrcLocation  ""\
     }\
     ChartData {\
       Name         "temporalCounter_i1"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i2"\
       Description  "TemporalCounter"\
       SFName       ""\
       Path         ""\

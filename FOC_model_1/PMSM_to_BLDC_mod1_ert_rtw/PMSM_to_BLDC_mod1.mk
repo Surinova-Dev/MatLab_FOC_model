@@ -2,7 +2,7 @@
 ## Makefile generated for component 'PMSM_to_BLDC_mod1'. 
 ## 
 ## Makefile     : PMSM_to_BLDC_mod1.mk
-## Generated on : Sat May 16 12:13:30 2026
+## Generated on : Sat May 23 15:46:57 2026
 ## Final product: $(RELATIVE_PATH_TO_ANCHOR)/PMSM_to_BLDC_mod1.elf
 ## Product type : executable
 ## 
@@ -151,44 +151,45 @@ RUN                 =
 # "Faster Builds" Build Configuration
 #----------------------------------------
 
+ARFLAGS              = ruvs
+ASFLAGS              = -MMD -MP -MF"$(@:%.s.o=%.s.dep)" -MT"$@"  \
+                       -Wall \
+                       -x assembler-with-cpp \
+                       $(ASFLAGS_ADDITIONAL) \
+                       $(DEFINES) \
+                       $(INCLUDES) \
+                       -c
+OBJCOPYFLAGS_BIN     = -O binary $(PRODUCT) $(PRODUCT_BIN)
+CFLAGS               = $(FDATASECTIONS_FLG) \
+                       -Wall \
+                       -c \
+                       -MMD -MP -MF"$(@:%.c.o=%.c.dep)" -MT"$@"  \
+                       -O0
+CPPFLAGS             = -std=gnu++14 \
+                       -fno-rtti \
+                       -fno-exceptions \
+                       $(FDATASECTIONS_FLG) \
+                       -Wall \
+                       -c \
+                       -MMD -MP -MF"$(@:%.cpp.o=%.cpp.dep)" -MT"$@"  \
+                       -O0
+CPP_LDFLAGS          = -Wl,--gc-sections \
+                       -Wl,-Map="$(PRODUCT_NAME).map"
+CPP_SHAREDLIB_LDFLAGS  =
+DOWNLOAD_FLAGS       =
+EXESIZE_FLAGS        = $(PRODUCT)
+EXECUTE_FLAGS        =
+OBJCOPYFLAGS_HEX     = -O ihex $(PRODUCT) $(PRODUCT_HEX)
+LDFLAGS              = -Wl,--gc-sections \
+                       -Wl,-Map="$(PRODUCT_NAME).map"
 MEX_CPPFLAGS         =
 MEX_CPPLDFLAGS       =
 MEX_CFLAGS           =
 MEX_LDFLAGS          =
+MAKE_FLAGS           = -f $(MAKEFILE)
+SHAREDLIB_LDFLAGS    =
 
 
-
-#---------------------------
-# Model-Specific Options
-#---------------------------
-
-ASFLAGS = -MMD -MP -MF"$(@:%.s.o=%.s.dep)" -MT"$@"  -Wall -x assembler-with-cpp $(ASFLAGS_ADDITIONAL) $(DEFINES) $(INCLUDES) -c
-
-CFLAGS = $(FDATASECTIONS_FLG) -Wall -c -MMD -MP -MF"$(@:%.c.o=%.c.dep)" -MT"$@"  -O0 -g
-
-LDFLAGS = -Wl,--gc-sections -Wl,-Map="$(PRODUCT_NAME).map" -g
-
-SHAREDLIB_LDFLAGS = -g
-
-CPPFLAGS = -std=gnu++14 -fno-rtti -fno-exceptions $(FDATASECTIONS_FLG) -Wall -c -MMD -MP -MF"$(@:%.cpp.o=%.cpp.dep)" -MT"$@"  -O0 -g
-
-CPP_LDFLAGS = -Wl,--gc-sections -Wl,-Map="$(PRODUCT_NAME).map" -g
-
-CPP_SHAREDLIB_LDFLAGS = -g
-
-ARFLAGS = ruvs
-
-OBJCOPYFLAGS_BIN = -O binary $(PRODUCT) $(PRODUCT_BIN)
-
-OBJCOPYFLAGS_HEX = -O ihex $(PRODUCT) $(PRODUCT_HEX)
-
-EXESIZE_FLAGS = $(PRODUCT)
-
-DOWNLOAD_FLAGS = 
-
-EXECUTE_FLAGS = 
-
-MAKE_FLAGS = -f $(MAKEFILE)
 
 ###########################################################################
 ## OUTPUT INFO
@@ -210,12 +211,12 @@ INCLUDES = $(INCLUDES_BUILDINFO)
 ## DEFINES
 ###########################################################################
 
-DEFINES_ = -DMW_SPI3 -D__MW_TARGET_USE_HARDWARE_RESOURCES_H__ -DUSE_FULL_LL_DRIVER -DSTM32F405xx -DUSE_HAL_DRIVER -DMW_TIMEBASESOURCE=TIM1 -DMW_CONNECTIVITY_UART=USART2_BASE -DMW_CONNECTIVITY_RX_DMA=DMA1 -DMW_USART2_RX_DMA_STREAM=5 -DMW_USART2_RX_DMA_ENABLED=DMA1_Stream5_IRQHandler -DMW_CONNECTIVITY_RX_DMAStream=LL_DMA_STREAM_5 -DMW_USART2_TX_DMA_STREAM=6 -DMW_CONNECTIVITY_TX_DMA=DMA1 -DMW_USART2_TX_DMA_ENABLED=DMA1_Stream6_IRQHandler -DMW_CONNECTIVITY_TX_DMAStream=LL_DMA_STREAM_6 -DMW_CONNECTIVITY_TX_BUFFER=GET_USART2_TRANSMIT_BUFFER -DMW_USART2_TRANSMIT_BUFFER_SIZE=1024 -DMW_CONNECTIVITY_RX_BUFFER=GET_USART2_RECEIVE_BUFFER -DMW_USART2_RECEIVE_BUFFER_SIZE=1024 -DMW_USART2_ENABLED=1 -DMW_GPIO_BIT_SHIFT=0
-DEFINES_BUILD_ARGS = -DCLASSIC_INTERFACE=0 -DALLOCATIONFCN=0 -DTERMFCN=1 -DONESTEPFCN=1 -DMAT_FILE=0 -DMULTI_INSTANCE_CODE=0 -DEXT_MODE=1 -DINTEGER_CODE=0 -DMT=0
+DEFINES_ = -DMW_SPI3 -D__MW_TARGET_USE_HARDWARE_RESOURCES_H__ -DUSE_FULL_LL_DRIVER -DSTM32F405xx -DUSE_HAL_DRIVER -DMW_TIMEBASESOURCE=TIM1 -DMW_GPIO_BIT_SHIFT=0
+DEFINES_BUILD_ARGS = -DCLASSIC_INTERFACE=0 -DALLOCATIONFCN=0 -DTERMFCN=1 -DONESTEPFCN=1 -DMAT_FILE=0 -DMULTI_INSTANCE_CODE=0 -DINTEGER_CODE=0 -DMT=0
 DEFINES_CUSTOM = 
-DEFINES_OPTS = -DXCP_DAQ_SUPPORT -DXCP_CALIBRATION_SUPPORT -DXCP_TIMESTAMP_SUPPORT -DXCP_TIMESTAMP_BASED_ON_SIMULATION_TIME -DXCP_SET_MTA_SUPPORT -DEXTMODE_XCP_TRIGGER_SUPPORT -DINTERNAL_XCP_MEM_BLOCK_1_SIZE=224 -DINTERNAL_XCP_MEM_BLOCK_1_NUMBER=1 -DINTERNAL_XCP_MEM_BLOCK_2_SIZE=168 -DINTERNAL_XCP_MEM_BLOCK_2_NUMBER=7 -DINTERNAL_XCP_MEM_BLOCK_3_SIZE=112 -DINTERNAL_XCP_MEM_BLOCK_3_NUMBER=7 -DINTERNAL_XCP_MEM_RESERVED_POOLS_TOTAL_SIZE=3085 -DINTERNAL_XCP_MEM_RESERVED_POOLS_NUMBER=8 -DXCP_MEM_DAQ_RESERVED_POOL_BLOCKS_NUMBER=3 -DXCP_MEM_DAQ_RESERVED_POOLS_NUMBER=4 -DXCP_MIN_EVENT_NO_RESERVED_POOL=4 -DXCP_MAX_CTO_SIZE=255 -DXCP_MAX_DTO_SIZE=65532 -DXCP_MAX_ODT_ENTRY_SIZE=255 -DEXTMODE_STATIC -DEXTMODE_STATIC_SIZE=2048 -DON_TARGET_WAIT_FOR_START=1 -DTID01EQ=0
-DEFINES_SKIPFORSIL = -DXCP_CUSTOM_PLATFORM -D__FPU_PRESENT=1U -D__FPU_USED=1U -DEXTMODE_DISABLE_ARGS_PROCESSING -DSTACK_SIZE=512 -DRT
-DEFINES_STANDARD = -DMODEL=PMSM_to_BLDC_mod1 -DNUMST=4 -DNCSTATES=0 -DHAVESTDIO -DMODEL_HAS_DYNAMICALLY_LOADED_SFCNS=0
+DEFINES_OPTS = -DTID01EQ=1
+DEFINES_SKIPFORSIL = -DXCP_CUSTOM_PLATFORM -DXCP_MEM_DAQ_RESERVED_POOL_BLOCKS_NUMBER=10 -D__FPU_PRESENT=1U -D__FPU_USED=1U -DSTACK_SIZE=512 -DRT
+DEFINES_STANDARD = -DMODEL=PMSM_to_BLDC_mod1 -DNUMST=6 -DNCSTATES=4 -DHAVESTDIO -DMODEL_HAS_DYNAMICALLY_LOADED_SFCNS=0
 DEFINES_STM32DEVICEDRIVERBLOCKS = -DMW_SPI3_ENABLED=1 -DMW_SPI3_VAR=mw_spi3 -DMW_TIM8_ENABLED=1 -DMW_ADC2_ENABLED=1 -DMW_ADC2_VAR=mw_adc2 -DMW_ADC1_ENABLED=1 -DMW_ADC1_VAR=mw_adc1 -DMW_ADC3_ENABLED=1 -DMW_ADC3_VAR=mw_adc3
 
 DEFINES = $(DEFINES_) $(DEFINES_BUILD_ARGS) $(DEFINES_CUSTOM) $(DEFINES_OPTS) $(DEFINES_SKIPFORSIL) $(DEFINES_STANDARD) $(DEFINES_STM32DEVICEDRIVERBLOCKS)
@@ -224,7 +225,7 @@ DEFINES = $(DEFINES_) $(DEFINES_BUILD_ARGS) $(DEFINES_CUSTOM) $(DEFINES_OPTS) $(
 ## SOURCE FILES
 ###########################################################################
 
-SRCS = C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/shared/supportpackages/stm32/src/mw_stm32_spi_ll.c $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/ext_mode/src/xcp_ext_mode.c $(START_DIR)/PMSM_to_BLDC_mod1_ert_rtw/PMSM_to_BLDC_mod1.c $(START_DIR)/PMSM_to_BLDC_mod1_ert_rtw/PMSM_to_BLDC_mod1_data.c $(START_DIR)/SPI_code.c C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/ST0D6C~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Core/Src/spi.c C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Core/Src/adc.c C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Core/Src/dma.c C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Core/Src/gpio.c C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Core/Src/tim.c C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Core/Src/usart.c $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/ext_mode/src/xcp_ext_common.c $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/ext_mode/src/xcp_ext_classic_trigger.c $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/protocol/src/xcp.c $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/protocol/src/xcp_standard.c $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/protocol/src/xcp_daq.c $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/protocol/src/xcp_calibration.c $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/transport/src/xcp_fifo.c $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/transport/src/xcp_transport.c $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/platform/default/xcp_mem_default.c $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/platform/default/xcp_drv_rtiostream.c $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/common/xcp_utils.c $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/transport/src/xcp_frame_serial.c $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/ext_mode/src/xcp_ext_param_default_serial.c C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/shared/supportpackages/stm32/src/overrideHALDelay.c C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/shared/supportpackages/stm32/src/platform_timer.c $(MATLAB_ROOT)/toolbox/target/shared/armcortexmbase/scheduler/src/SysTickScheduler.c $(MATLAB_ROOT)/toolbox/target/shared/armcortexmbase/scheduler/src/m3m4m4f_multitasking.c C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/shared/supportpackages/stm32/src/rtiostream_serial.c C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/shared/supportpackages/stm32/src/stm_usart.c C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/shared/supportpackages/stm32/src/sys_arch_arm.c C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Core/Src/main.c C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Core/Src/STM32F~3.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Core/Src/STM32F~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Core/Src/STM32F~2.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/ST776E~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/STAC45~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/STF360~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/ST432B~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/STCF17~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/ST2FAB~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/STE597~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/ST2E9D~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/STB5DF~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/ST214E~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/ST3284~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/STBAE8~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/ST5F90~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/ST6219~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/ST28D3~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/ST1A52~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/STD26F~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/ST0779~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/STCE86~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/STM32F~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/ST2EEB~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/ST23DD~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/ST510D~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/STC40E~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Core/Src/SYSTEM~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/STM32C~1/APPLIC~1/User/Core/syscalls.c C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/STM32C~1/APPLIC~1/User/Core/sysmem.c C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/STM32C~1/APPLIC~1/User/Startup/STARTU~1.S C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/shared/supportpackages/stm32/src/stm_timer_ll.c C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/shared/supportpackages/stm32/src/stm_adc_ll.c
+SRCS = C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/shared/supportpackages/stm32/src/mw_stm32_spi_ll.c $(START_DIR)/PMSM_to_BLDC_mod1_ert_rtw/PMSM_to_BLDC_mod1.c $(START_DIR)/PMSM_to_BLDC_mod1_ert_rtw/PMSM_to_BLDC_mod1_data.c $(START_DIR)/PMSM_to_BLDC_mod1_ert_rtw/rtGetNaN.c $(START_DIR)/PMSM_to_BLDC_mod1_ert_rtw/rt_nonfinite.c $(START_DIR)/SPI_code.c C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/ST0D6C~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Core/Src/spi.c C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Core/Src/adc.c C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Core/Src/dma.c C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Core/Src/gpio.c C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Core/Src/tim.c C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Core/Src/usart.c C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/shared/supportpackages/stm32/src/overrideHALDelay.c C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/shared/supportpackages/stm32/src/platform_timer.c $(MATLAB_ROOT)/toolbox/target/shared/armcortexmbase/scheduler/src/SysTickScheduler.c $(MATLAB_ROOT)/toolbox/target/shared/armcortexmbase/scheduler/src/m3m4m4f_multitasking.c C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Core/Src/main.c C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Core/Src/STM32F~3.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Core/Src/STM32F~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Core/Src/STM32F~2.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/ST776E~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/STAC45~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/STF360~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/ST432B~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/STCF17~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/ST2FAB~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/STE597~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/ST2E9D~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/STB5DF~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/ST214E~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/ST3284~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/STBAE8~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/ST5F90~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/ST6219~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/ST28D3~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/ST1A52~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/STD26F~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/ST0779~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/STCE86~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/STM32F~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/ST2EEB~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/ST23DD~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/ST510D~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Drivers/STM32F~1/Src/STC40E~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Core/Src/SYSTEM~1.C C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/STM32C~1/APPLIC~1/User/Core/syscalls.c C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/STM32C~1/APPLIC~1/User/Core/sysmem.c C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/STM32C~1/APPLIC~1/User/Startup/STARTU~1.S C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/shared/supportpackages/stm32/src/stm_timer_ll.c C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/shared/supportpackages/stm32/src/stm_adc_ll.c
 
 MAIN_SRC = $(START_DIR)/PMSM_to_BLDC_mod1_ert_rtw/ert_main.c
 
@@ -234,7 +235,7 @@ ALL_SRCS = $(SRCS) $(MAIN_SRC)
 ## OBJECTS
 ###########################################################################
 
-OBJS = mw_stm32_spi_ll.c.o xcp_ext_mode.c.o PMSM_to_BLDC_mod1.c.o PMSM_to_BLDC_mod1_data.c.o SPI_code.c.o stm32f4xx_hal_spi.c.o spi.c.o adc.c.o dma.c.o gpio.c.o tim.c.o usart.c.o xcp_ext_common.c.o xcp_ext_classic_trigger.c.o xcp.c.o xcp_standard.c.o xcp_daq.c.o xcp_calibration.c.o xcp_fifo.c.o xcp_transport.c.o xcp_mem_default.c.o xcp_drv_rtiostream.c.o xcp_utils.c.o xcp_frame_serial.c.o xcp_ext_param_default_serial.c.o overrideHALDelay.c.o platform_timer.c.o SysTickScheduler.c.o m3m4m4f_multitasking.c.o rtiostream_serial.c.o stm_usart.c.o sys_arch_arm.c.o main.c.o stm32f4xx_it.c.o stm32f4xx_hal_msp.c.o stm32f4xx_hal_timebase_tim.c.o stm32f4xx_hal_tim.c.o stm32f4xx_hal_tim_ex.c.o stm32f4xx_ll_gpio.c.o stm32f4xx_ll_adc.c.o stm32f4xx_ll_dma.c.o stm32f4xx_ll_rcc.c.o stm32f4xx_ll_utils.c.o stm32f4xx_ll_exti.c.o stm32f4xx_hal_rcc.c.o stm32f4xx_hal_rcc_ex.c.o stm32f4xx_hal_flash.c.o stm32f4xx_hal_flash_ex.c.o stm32f4xx_hal_flash_ramfunc.c.o stm32f4xx_hal_gpio.c.o stm32f4xx_hal_dma_ex.c.o stm32f4xx_hal_dma.c.o stm32f4xx_hal_pwr.c.o stm32f4xx_hal_pwr_ex.c.o stm32f4xx_hal_cortex.c.o stm32f4xx_hal.c.o stm32f4xx_hal_exti.c.o stm32f4xx_ll_spi.c.o stm32f4xx_ll_tim.c.o stm32f4xx_ll_usart.c.o system_stm32f4xx.c.o syscalls.c.o sysmem.c.o startup_stm32f405rgtx.s.o stm_timer_ll.c.o stm_adc_ll.c.o
+OBJS = mw_stm32_spi_ll.c.o PMSM_to_BLDC_mod1.c.o PMSM_to_BLDC_mod1_data.c.o rtGetNaN.c.o rt_nonfinite.c.o SPI_code.c.o stm32f4xx_hal_spi.c.o spi.c.o adc.c.o dma.c.o gpio.c.o tim.c.o usart.c.o overrideHALDelay.c.o platform_timer.c.o SysTickScheduler.c.o m3m4m4f_multitasking.c.o main.c.o stm32f4xx_it.c.o stm32f4xx_hal_msp.c.o stm32f4xx_hal_timebase_tim.c.o stm32f4xx_hal_tim.c.o stm32f4xx_hal_tim_ex.c.o stm32f4xx_ll_gpio.c.o stm32f4xx_ll_adc.c.o stm32f4xx_ll_dma.c.o stm32f4xx_ll_rcc.c.o stm32f4xx_ll_utils.c.o stm32f4xx_ll_exti.c.o stm32f4xx_hal_rcc.c.o stm32f4xx_hal_rcc_ex.c.o stm32f4xx_hal_flash.c.o stm32f4xx_hal_flash_ex.c.o stm32f4xx_hal_flash_ramfunc.c.o stm32f4xx_hal_gpio.c.o stm32f4xx_hal_dma_ex.c.o stm32f4xx_hal_dma.c.o stm32f4xx_hal_pwr.c.o stm32f4xx_hal_pwr_ex.c.o stm32f4xx_hal_cortex.c.o stm32f4xx_hal.c.o stm32f4xx_hal_exti.c.o stm32f4xx_ll_spi.c.o stm32f4xx_ll_tim.c.o stm32f4xx_ll_usart.c.o system_stm32f4xx.c.o syscalls.c.o sysmem.c.o startup_stm32f405rgtx.s.o stm_timer_ll.c.o stm_adc_ll.c.o
 
 MAIN_OBJ = ert_main.c.o
 
@@ -271,22 +272,6 @@ CFLAGS_BASIC = $(DEFINES) $(INCLUDES) @$(COMPILER_COMMAND_FILE)
 
 CFLAGS += $(CFLAGS_SKIPFORSIL) $(CFLAGS_BASIC)
 
-#-----------
-# Linker
-#-----------
-
-LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard --entry Reset_Handler --specs=nosys.specs  -T "C:\Users\Surinova\OneDrive - Surinova Pvt Ltd\Documents\Github\MatLab_FOC_model\F405_PMSM_Mod1\STM32CubeIDE\STM32F405RGTX_FLASH.ld"
-
-LDFLAGS += $(LDFLAGS_SKIPFORSIL)
-
-#--------------------------
-# Shared Library Linker
-#--------------------------
-
-SHAREDLIB_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard --entry Reset_Handler --specs=nosys.specs  -T "C:\Users\Surinova\OneDrive - Surinova Pvt Ltd\Documents\Github\MatLab_FOC_model\F405_PMSM_Mod1\STM32CubeIDE\STM32F405RGTX_FLASH.ld"
-
-SHAREDLIB_LDFLAGS += $(SHAREDLIB_LDFLAGS_SKIPFORSIL)
-
 #-----------------
 # C++ Compiler
 #-----------------
@@ -311,6 +296,38 @@ CPP_LDFLAGS += $(CPP_LDFLAGS_SKIPFORSIL)
 CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard --entry Reset_Handler --specs=nosys.specs  -T "C:\Users\Surinova\OneDrive - Surinova Pvt Ltd\Documents\Github\MatLab_FOC_model\F405_PMSM_Mod1\STM32CubeIDE\STM32F405RGTX_FLASH.ld"
 
 CPP_SHAREDLIB_LDFLAGS += $(CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL)
+
+#-----------
+# Linker
+#-----------
+
+LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard --entry Reset_Handler --specs=nosys.specs  -T "C:\Users\Surinova\OneDrive - Surinova Pvt Ltd\Documents\Github\MatLab_FOC_model\F405_PMSM_Mod1\STM32CubeIDE\STM32F405RGTX_FLASH.ld"
+
+LDFLAGS += $(LDFLAGS_SKIPFORSIL)
+
+#---------------------
+# MEX C++ Compiler
+#---------------------
+
+MEX_CPP_Compiler_BASIC =  @$(COMPILER_COMMAND_FILE)
+
+MEX_CPPFLAGS += $(MEX_CPP_Compiler_BASIC)
+
+#-----------------
+# MEX Compiler
+#-----------------
+
+MEX_Compiler_BASIC =  @$(COMPILER_COMMAND_FILE)
+
+MEX_CFLAGS += $(MEX_Compiler_BASIC)
+
+#--------------------------
+# Shared Library Linker
+#--------------------------
+
+SHAREDLIB_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard --entry Reset_Handler --specs=nosys.specs  -T "C:\Users\Surinova\OneDrive - Surinova Pvt Ltd\Documents\Github\MatLab_FOC_model\F405_PMSM_Mod1\STM32CubeIDE\STM32F405RGTX_FLASH.ld"
+
+SHAREDLIB_LDFLAGS += $(SHAREDLIB_LDFLAGS_SKIPFORSIL)
 
 ###########################################################################
 ## INLINED COMMANDS
@@ -651,151 +668,7 @@ $(PRODUCT) : $(OBJS) $(PREBUILT_OBJS) $(LIBS) $(MAIN_OBJ)
 	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
-%.c.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/protocol/src/%.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-%.s.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/protocol/src/%.s
-	$(AS) $(ASFLAGS) -o "$@" "$<"
-
-
-%.s.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/protocol/src/%.S
-	$(AS) $(ASFLAGS) -o "$@" "$<"
-
-
-%.cpp.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/protocol/src/%.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.cpp.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/protocol/src/%.cc
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.cpp.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/protocol/src/%.C
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.cpp.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/protocol/src/%.cxx
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.c.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/transport/src/%.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-%.s.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/transport/src/%.s
-	$(AS) $(ASFLAGS) -o "$@" "$<"
-
-
-%.s.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/transport/src/%.S
-	$(AS) $(ASFLAGS) -o "$@" "$<"
-
-
-%.cpp.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/transport/src/%.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.cpp.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/transport/src/%.cc
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.cpp.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/transport/src/%.C
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.cpp.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/transport/src/%.cxx
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.c.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/ext_mode/src/%.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-%.s.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/ext_mode/src/%.s
-	$(AS) $(ASFLAGS) -o "$@" "$<"
-
-
-%.s.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/ext_mode/src/%.S
-	$(AS) $(ASFLAGS) -o "$@" "$<"
-
-
-%.cpp.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/ext_mode/src/%.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.cpp.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/ext_mode/src/%.cc
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.cpp.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/ext_mode/src/%.C
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.cpp.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/ext_mode/src/%.cxx
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.c.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/common/%.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-%.s.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/common/%.s
-	$(AS) $(ASFLAGS) -o "$@" "$<"
-
-
-%.s.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/common/%.S
-	$(AS) $(ASFLAGS) -o "$@" "$<"
-
-
-%.cpp.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/common/%.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.cpp.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/common/%.cc
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.cpp.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/common/%.C
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.cpp.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/common/%.cxx
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.c.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/platform/default/%.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-%.s.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/platform/default/%.s
-	$(AS) $(ASFLAGS) -o "$@" "$<"
-
-
-%.s.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/platform/default/%.S
-	$(AS) $(ASFLAGS) -o "$@" "$<"
-
-
-%.cpp.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/platform/default/%.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.cpp.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/platform/default/%.cc
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.cpp.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/platform/default/%.C
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.cpp.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/platform/default/%.cxx
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
 mw_stm32_spi_ll.c.o : C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/shared/supportpackages/stm32/src/mw_stm32_spi_ll.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-xcp_ext_mode.c.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/ext_mode/src/xcp_ext_mode.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
@@ -808,6 +681,14 @@ PMSM_to_BLDC_mod1_data.c.o : $(START_DIR)/PMSM_to_BLDC_mod1_ert_rtw/PMSM_to_BLDC
 
 
 ert_main.c.o : $(START_DIR)/PMSM_to_BLDC_mod1_ert_rtw/ert_main.c
+	$(CC) $(CFLAGS) -o "$@" "$<"
+
+
+rtGetNaN.c.o : $(START_DIR)/PMSM_to_BLDC_mod1_ert_rtw/rtGetNaN.c
+	$(CC) $(CFLAGS) -o "$@" "$<"
+
+
+rt_nonfinite.c.o : $(START_DIR)/PMSM_to_BLDC_mod1_ert_rtw/rt_nonfinite.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
@@ -843,58 +724,6 @@ usart.c.o : C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/F405_P~1/Core/Sr
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-xcp_ext_common.c.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/ext_mode/src/xcp_ext_common.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-xcp_ext_classic_trigger.c.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/ext_mode/src/xcp_ext_classic_trigger.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-xcp.c.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/protocol/src/xcp.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-xcp_standard.c.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/protocol/src/xcp_standard.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-xcp_daq.c.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/protocol/src/xcp_daq.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-xcp_calibration.c.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/protocol/src/xcp_calibration.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-xcp_fifo.c.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/transport/src/xcp_fifo.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-xcp_transport.c.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/transport/src/xcp_transport.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-xcp_mem_default.c.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/platform/default/xcp_mem_default.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-xcp_drv_rtiostream.c.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/platform/default/xcp_drv_rtiostream.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-xcp_utils.c.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/common/xcp_utils.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-xcp_frame_serial.c.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/server/transport/src/xcp_frame_serial.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-xcp_ext_param_default_serial.c.o : $(MATLAB_ROOT)/toolbox/coder/xcp/src/target/ext_mode/src/xcp_ext_param_default_serial.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
 overrideHALDelay.c.o : C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/shared/supportpackages/stm32/src/overrideHALDelay.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
@@ -908,18 +737,6 @@ SysTickScheduler.c.o : $(MATLAB_ROOT)/toolbox/target/shared/armcortexmbase/sched
 
 
 m3m4m4f_multitasking.c.o : $(MATLAB_ROOT)/toolbox/target/shared/armcortexmbase/scheduler/src/m3m4m4f_multitasking.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-rtiostream_serial.c.o : C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/shared/supportpackages/stm32/src/rtiostream_serial.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-stm_usart.c.o : C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/shared/supportpackages/stm32/src/stm_usart.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-sys_arch_arm.c.o : C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/shared/supportpackages/stm32/src/sys_arch_arm.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
