@@ -7,7 +7,7 @@
 %endfunction
 %function ChartDataMap(block, system) void
   %createrecord ChartDataElements {\
-    NumChartData   7 \
+    NumChartData   12 \
     ChartDataDefaults {\
       RecordType   "ChartData"\
       Dimensions   []\
@@ -21,6 +21,20 @@
       SrcLocation  ""\
     }\
     ChartData {\
+      Name         "t"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "t"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "write_done"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "write_done"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
       Name         "Drv_ok"\
       Description  "ChartLocal"\
       SFName       ""\
@@ -28,25 +42,51 @@
       SrcLocation  ""\
     }\
     ChartData {\
-      Name         "is_active_c3_PMSM_to_BLDC_mod1"\
-      Description  "StateIsActive"\
+      Name         "sfEvent"\
+      Description  "ActiveChartEvent"\
       SFName       ""\
       Path         ""\
       SrcLocation  ""\
     }\
     ChartData {\
+      Name         "is_active_c3_PMSM_to_BLDC_mod1"\
+      Description  "StateIsActive"\
+      SFName       "is_active_c3_PMSM_to_BLDC_mod1"\
+      Path         "is_active_c3_PMSM_to_BLDC_mod1"\
+      SrcLocation  ""\
+      IsTestPoint  1\
+    }\
+    ChartData {\
+      Name         "is_active_Test2"\
+      Description  "StateIsActive"\
+      SFName       "is_active_Test2"\
+      Path         "SPI_Check.Test2.is_active_Test2"\
+      SrcLocation  ""\
+      IsTestPoint  1\
+    }\
+    ChartData {\
       Name         "is_Test2"\
       Description  "StateActiveChild"\
-      SFName       ""\
-      Path         "SPI_Check.Test2"\
+      SFName       "is_Test2"\
+      Path         "SPI_Check.Test2.is_Test2"\
       SrcLocation  ""\
+      IsTestPoint  1\
+    }\
+    ChartData {\
+      Name         "is_active_Test"\
+      Description  "StateIsActive"\
+      SFName       "is_active_Test"\
+      Path         "SPInit.Test.is_active_Test"\
+      SrcLocation  ""\
+      IsTestPoint  1\
     }\
     ChartData {\
       Name         "is_Test"\
       Description  "StateActiveChild"\
-      SFName       ""\
-      Path         "SPInit.Test"\
+      SFName       "is_Test"\
+      Path         "SPInit.Test.is_Test"\
       SrcLocation  ""\
+      IsTestPoint  1\
     }\
     ChartData {\
       Name         "temporalCounter_i1"\

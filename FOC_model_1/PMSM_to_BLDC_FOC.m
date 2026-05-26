@@ -1,6 +1,6 @@
 % Parameters
 pwm_frequency = 20e3;
-x=600;
+x=100;
 rps=x/6.28;
 f_speed=pwm_frequency/100;
 f_current=pwm_frequency/10
@@ -9,7 +9,7 @@ omg_cl = 2 * 3.14 * pwm_frequency;
 Ld = 0.0018;
 Lq = 0.0018;
 R_s = 0.037;
-flux_linkage = 0.0170;
+flux_linkage = 0.002386705174987;
 motor_polepairs = 7;
 Kv= 330;
 J = 4.5e-5;

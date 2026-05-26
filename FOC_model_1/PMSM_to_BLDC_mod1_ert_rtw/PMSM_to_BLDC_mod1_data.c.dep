@@ -2,11 +2,16 @@ PMSM_to_BLDC_mod1_data.c.o: \
  C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/FOC_MO~1/PMSM_to_BLDC_mod1_ert_rtw/PMSM_to_BLDC_mod1_data.c \
  C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/FOC_MO~1/PMSM_to_BLDC_mod1_ert_rtw/PMSM_to_BLDC_mod1.h \
  C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/FOC_MO~1/PMSM_to_BLDC_mod1_ert_rtw/rtwtypes.h \
- C:/Program\ Files/MATLAB/R2025b/simulink/include/rtw_continuous.h \
+ C:/Program\ Files/MATLAB/R2025b/simulink/include/rtw_extmode.h \
  C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/FOC_model_1/PMSM_to_BLDC_mod1_ert_rtw/rtwtypes.h \
+ C:/Program\ Files/MATLAB/R2025b/simulink/include/sysran_types.h \
+ C:/Program\ Files/MATLAB/R2025b/simulink/include/rtw_continuous.h \
  C:/Program\ Files/MATLAB/R2025b/simulink/include/rtw_solver.h \
  C:/Program\ Files/MATLAB/R2025b/simulink/include/rtw_continuous.h \
  C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/FOC_MO~1/PMSM_to_BLDC_mod1_ert_rtw/rt_nonfinite.h \
+ C:/Program\ Files/MATLAB/R2025b/toolbox/coder/xcp/src/target/ext_mode/include/ext_mode.h \
+ C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/FOC_model_1/PMSM_to_BLDC_mod1_ert_rtw/ext_mode_types.h \
+ C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/FOC_model_1/PMSM_to_BLDC_mod1_ert_rtw/rtwtypes.h \
  C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/F405_PMSM_Mod1/Core/Inc/main.h \
  C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/F405_PMSM_Mod1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/F405_PMSM_Mod1/Core/Inc/stm32f4xx_hal_conf.h \
@@ -74,11 +79,16 @@ PMSM_to_BLDC_mod1_data.c.o: \
  C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/F405_PMSM_Mod1/Core/Inc/usart.h
 C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/FOC_MO~1/PMSM_to_BLDC_mod1_ert_rtw/PMSM_to_BLDC_mod1.h:
 C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/FOC_MO~1/PMSM_to_BLDC_mod1_ert_rtw/rtwtypes.h:
-C:/Program\ Files/MATLAB/R2025b/simulink/include/rtw_continuous.h:
+C:/Program\ Files/MATLAB/R2025b/simulink/include/rtw_extmode.h:
 C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/FOC_model_1/PMSM_to_BLDC_mod1_ert_rtw/rtwtypes.h:
+C:/Program\ Files/MATLAB/R2025b/simulink/include/sysran_types.h:
+C:/Program\ Files/MATLAB/R2025b/simulink/include/rtw_continuous.h:
 C:/Program\ Files/MATLAB/R2025b/simulink/include/rtw_solver.h:
 C:/Program\ Files/MATLAB/R2025b/simulink/include/rtw_continuous.h:
 C:/Users/Surinova/ONEDRI~1/DOCUME~1/Github/MATLAB~1/FOC_MO~1/PMSM_to_BLDC_mod1_ert_rtw/rt_nonfinite.h:
+C:/Program\ Files/MATLAB/R2025b/toolbox/coder/xcp/src/target/ext_mode/include/ext_mode.h:
+C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/FOC_model_1/PMSM_to_BLDC_mod1_ert_rtw/ext_mode_types.h:
+C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/FOC_model_1/PMSM_to_BLDC_mod1_ert_rtw/rtwtypes.h:
 C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/F405_PMSM_Mod1/Core/Inc/main.h:
 C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/F405_PMSM_Mod1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 C:/Users/Surinova/OneDrive\ -\ Surinova\ Pvt\ Ltd/Documents/Github/MatLab_FOC_model/F405_PMSM_Mod1/Core/Inc/stm32f4xx_hal_conf.h:

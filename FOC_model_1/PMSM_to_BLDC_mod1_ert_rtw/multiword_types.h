@@ -3,7 +3,7 @@
  * course requirements at degree granting institutions only.  Not for
  * government, commercial, or other organizational use.
  *
- * File: rtmodel.h
+ * File: multiword_types.h
  *
  * Code generated for Simulink model 'PMSM_to_BLDC_mod1'.
  *
@@ -17,10 +17,17 @@
  * Validation result: Not run
  */
 
-#ifndef rtmodel_h_
-#define rtmodel_h_
-#include "PMSM_to_BLDC_mod1.h"
-#endif                                 /* rtmodel_h_ */
+#ifndef MULTIWORD_TYPES_H
+#define MULTIWORD_TYPES_H
+#include "rtwtypes.h"
+
+/*
+ * Definitions supporting external data access
+ */
+typedef int64_T chunk_T;
+typedef uint64_T uchunk_T;
+
+#endif                                 /* MULTIWORD_TYPES_H */
 
 /*
  * File trailer for generated code.

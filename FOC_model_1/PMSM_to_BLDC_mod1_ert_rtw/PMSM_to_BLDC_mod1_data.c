@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'PMSM_to_BLDC_mod1'.
  *
- * Model version                  : 4.972
+ * Model version                  : 4.1012
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Sat May 23 16:23:15 2026
+ * C/C++ source code generated on : Tue May 26 17:31:20 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -21,39 +21,42 @@
 
 /* Invariant block signals (default storage) */
 const ConstB_PMSM_to_BLDC_mod1_T PMSM_to_BLDC_mod1_ConstB = {
-  1.0,                                 /* '<S77>/Constant3' */
-  0.0,                                 /* '<S78>/Constant3' */
-  24.0,                                /* '<S372>/Switch' */
-  4200.0,                              /* '<S377>/Gain' */
-  0.0,                                 /* '<S392>/Index Vector' */
+  136.66424165744107,                  /* '<S59>/Gain4' */
+  1.0,                                 /* '<S80>/Constant3' */
+  0.0,                                 /* '<S81>/Constant3' */
+  24.0,                                /* '<S375>/Switch' */
+  700.0,                               /* '<S380>/Gain' */
   0.0018,                              /* '<S394>/Index Vector' */
-  0.0018,                              /* '<S395>/Index Vector' */
-  0.0018,                              /* '<S395>/Index Vector1' */
-  0.0018,                              /* '<S396>/Index Vector' */
-  0.0,                                 /* '<S393>/Index Vector' */
+  0.0018,                              /* '<S394>/Index Vector1' */
+  0.0,                                 /* '<S394>/Add' */
+  0.0,                                 /* '<S395>/Index Vector' */
   0.0018,                              /* '<S397>/Index Vector' */
   0.0018,                              /* '<S398>/Index Vector' */
   0.0018,                              /* '<S398>/Index Vector1' */
   0.0018,                              /* '<S399>/Index Vector' */
-  39666.666666666672,                  /* '<S399>/Product' */
+  0.0,                                 /* '<S396>/Index Vector' */
   0.0018,                              /* '<S400>/Index Vector' */
-  0U,                                  /* '<S259>/Data Type Conversion' */
-  2048U,                               /* '<S7>/Data Type Conversion1' */
-  0U,                                  /* '<S47>/Bitwise AND' */
-  0U,                                  /* '<S46>/Bitwise AND' */
-  0U,                                  /* '<S40>/Bitwise AND' */
-  0U,                                  /* '<S34>/Bitwise AND' */
-  1360U,                               /* '<S21>/Bitwise AND' */
-  4U,                                  /* '<S20>/Bitwise AND' */
-  true                                 /* '<S7>/Data Type Conversion' */
+  0.0018,                              /* '<S401>/Index Vector' */
+  0.0018,                              /* '<S401>/Index Vector1' */
+  0.0018,                              /* '<S402>/Index Vector' */
+  928.16312360605559,                  /* '<S402>/Product' */
+  0.0018,                              /* '<S403>/Index Vector' */
+  0U,                                  /* '<S262>/Data Type Conversion' */
+  0U,                                  /* '<S50>/Bitwise AND' */
+  0U,                                  /* '<S49>/Bitwise AND' */
+  0U,                                  /* '<S43>/Bitwise AND' */
+  0U,                                  /* '<S37>/Bitwise AND' */
+  1360U,                               /* '<S24>/Bitwise AND' */
+  4U,                                  /* '<S23>/Bitwise AND' */
+  true                                 /* '<S8>/Data Type Conversion' */
 };
 
 /* Constant parameters (default storage) */
 const ConstP_PMSM_to_BLDC_mod1_T PMSM_to_BLDC_mod1_ConstP = {
   /* Pooled Parameter (Expression: dlgSett.sin_table)
    * Referenced by:
-   *   '<S194>/sine_table_values'
-   *   '<S220>/sine_table_values'
+   *   '<S197>/sine_table_values'
+   *   '<S223>/sine_table_values'
    */
   { 0.0, 0.0078539008887113342, 0.015707317311820675, 0.02355976483361015,
     0.031410759078128292, 0.03925981575906861, 0.047106450709642658,
@@ -389,7 +392,7 @@ const ConstP_PMSM_to_BLDC_mod1_T PMSM_to_BLDC_mod1_ConstP = {
     0.99987663248166059, 0.99996915764478966, 1.0, 0.99996915764478966 },
 
   /* Computed Parameter: sine_table_values_Value
-   * Referenced by: '<S359>/sine_table_values'
+   * Referenced by: '<S362>/sine_table_values'
    */
   { 0.0F, 0.00785390101F, 0.0157073177F, 0.023559764F, 0.0314107575F,
     0.0392598175F, 0.0471064523F, 0.0549501814F, 0.0627905205F, 0.070626989F,

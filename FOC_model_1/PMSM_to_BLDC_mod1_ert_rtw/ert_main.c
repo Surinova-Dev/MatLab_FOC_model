@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'PMSM_to_BLDC_mod1'.
  *
- * Model version                  : 4.972
+ * Model version                  : 4.1012
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Sat May 23 16:23:15 2026
+ * C/C++ source code generated on : Tue May 26 17:31:20 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -19,6 +19,8 @@
 
 #include "PMSM_to_BLDC_mod1.h"
 #include "rtwtypes.h"
+#include "xcp.h"
+#include "ext_mode.h"
 #include "MW_target_hardware_resources.h"
 
 volatile int IsrOverrun = 0;
@@ -46,6 +48,7 @@ int main(int argc, char **argv)
 {
   float modelBaseRate = 5.0E-5;
   float systemClock = 144.0;
+  extmodeErrorCode_T errorCode = EXTMODE_SUCCESS;
 
   /* Initialize variables */
   stopRequested = false;
@@ -74,18 +77,52 @@ int main(int argc, char **argv)
 
   // End Peripheral initialization imported from STM32CubeMX project;
   rtmSetErrorStatus(PMSM_to_BLDC_mod1_M, 0);
+
+  /* Parse External Mode command line arguments */
+  errorCode = extmodeParseArgs(0, NULL);
+  if (errorCode != EXTMODE_SUCCESS) {
+    return (errorCode);
+  }
+
   PMSM_to_BLDC_mod1_initialize();
+  __disable_irq();
+  __enable_irq();
+
+  /* External Mode initialization */
+  errorCode = extmodeInit(PMSM_to_BLDC_mod1_M->extModeInfo, &rtmGetTFinal
+    (PMSM_to_BLDC_mod1_M));
+  if (errorCode != EXTMODE_SUCCESS) {
+    /* Code to handle External Mode initialization errors
+       may be added here */
+  }
+
+  if (errorCode == EXTMODE_SUCCESS) {
+    /* Wait until a Start or Stop Request has been received from the Host */
+    extmodeWaitForHostRequest(EXTMODE_WAIT_FOREVER);
+    if (extmodeStopRequested()) {
+      rtmSetStopRequested(PMSM_to_BLDC_mod1_M, true);
+    }
+  }
+
   __disable_irq();
   ARMCM_SysTick_Config(modelBaseRate);
   runModel =
-    rtmGetErrorStatus(PMSM_to_BLDC_mod1_M) == (NULL)&& !rtmGetStopRequested
-    (PMSM_to_BLDC_mod1_M);
+    !extmodeSimulationComplete()&& !extmodeStopRequested()&&
+    !rtmGetStopRequested(PMSM_to_BLDC_mod1_M);
   __enable_irq();
   __enable_irq();
   while (runModel) {
+    /* Run External Mode background activities */
+    errorCode = extmodeBackgroundRun();
+    if (errorCode != EXTMODE_SUCCESS && errorCode != EXTMODE_EMPTY) {
+      /* Code to handle External Mode background task errors
+         may be added here */
+    }
+
     stopRequested = !(
-                      rtmGetErrorStatus(PMSM_to_BLDC_mod1_M) == (NULL)&&
+                      !extmodeSimulationComplete()&& !extmodeStopRequested()&&
                       !rtmGetStopRequested(PMSM_to_BLDC_mod1_M));
+    runModel = !(stopRequested);
     if (stopRequested) {
       SysTick->CTRL &= ~SysTick_CTRL_ENABLE_Msk;
     }
@@ -95,6 +132,9 @@ int main(int argc, char **argv)
 
   /* Terminate model */
   PMSM_to_BLDC_mod1_terminate();
+
+  /* External Mode reset */
+  extmodeReset();
 
 #if !defined(MW_FREERTOS) && !defined(USE_RTX)
 
