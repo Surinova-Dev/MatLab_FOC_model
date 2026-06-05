@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'PMSM_to_BLDC_mod1'.
  *
- * Model version                  : 4.1040
+ * Model version                  : 4.1160
  * Simulink Coder version         : 25.2 (R2025b) 28-Jul-2025
- * C/C++ source code generated on : Thu May 28 16:12:04 2026
+ * C/C++ source code generated on : Fri Jun  5 12:36:16 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -21,14 +21,36 @@
 #define PMSM_to_BLDC_mod1_private_h_
 #include "rtwtypes.h"
 #include "multiword_types.h"
+#include "zero_crossing_types.h"
 #include "PMSM_to_BLDC_mod1.h"
 #include "PMSM_to_BLDC_mod1_types.h"
 
 /* Private macros used by the generated code to access rtModel */
+#ifndef rtmSetFirstInitCond
+#define rtmSetFirstInitCond(rtm, val)  ((rtm)->Timing.firstInitCondFlag = (val))
+#endif
+
+#ifndef rtmIsFirstInitCond
+#define rtmIsFirstInitCond(rtm)        ((rtm)->Timing.firstInitCondFlag)
+#endif
+
+#ifndef rtmIsMajorTimeStep
+#define rtmIsMajorTimeStep(rtm)        (((rtm)->Timing.simTimeStep) == MAJOR_TIME_STEP)
+#endif
+
+#ifndef rtmIsMinorTimeStep
+#define rtmIsMinorTimeStep(rtm)        (((rtm)->Timing.simTimeStep) == MINOR_TIME_STEP)
+#endif
+
 #ifndef rtmSetTFinal
 #define rtmSetTFinal(rtm, val)         ((rtm)->Timing.tFinal = (val))
 #endif
 
+#ifndef rtmSetTPtr
+#define rtmSetTPtr(rtm, val)           ((rtm)->Timing.t = (val))
+#endif
+
+extern real_T rt_modd_snf(real_T u0, real_T u1);
 extern void PMSM_to_BLDC_mod1_BitShift_Init(DW_BitShift_PMSM_to_BLDC_mod1_T
   *localDW);
 extern void PMSM_to_BLDC_mod_BitShift_Reset(DW_BitShift_PMSM_to_BLDC_mod1_T
@@ -61,6 +83,8 @@ extern void PMSM_to_BLDC_SPITransmit_d_Init(DW_SPITransmit_PMSM_to_BLDC_f_T
   *localDW);
 extern void PMSM_to_BLDC_mod1_SPITransmit_p(uint16_T rtu_0,
   DW_SPITransmit_PMSM_to_BLDC_f_T *localDW);
+extern void PMSM_to_BLDC__IfActionSubsystem(real_T rtu_In1, real_T *rty_Out1);
+extern void PMSM_to_BLDC_IfActionSubsystem1(real_T rtu_In1, real_T *rty_Out1);
 extern void PMSM_to_BLDC_mo_SPIReceive_Term(DW_SPIReceive_PMSM_to_BLDC_mo_T
   *localDW);
 extern void PMSM_to_BLDC_m_SPITransmit_Term(DW_SPITransmit_PMSM_to_BLDC_m_T
@@ -71,6 +95,9 @@ extern void PMSM_to_BLDC__SPIReceive_c_Term(DW_SPIReceive_PMSM_to_BLDC_fw_T
   *localDW);
 extern void PMSM_to_BLDC_SPITransmit_a_Term(DW_SPITransmit_PMSM_to_BLDC_f_T
   *localDW);
+
+/* private model entry point functions */
+extern void PMSM_to_BLDC_mod1_derivatives(void);
 
 #endif                                 /* PMSM_to_BLDC_mod1_private_h_ */
 

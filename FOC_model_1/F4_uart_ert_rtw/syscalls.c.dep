@@ -1,2 +1,0 @@
-syscalls.c.o: \
- D:/Harini/ST_UART_Matlab/F4_UART/STM32CubeIDE/Application/User/Core/syscalls.c

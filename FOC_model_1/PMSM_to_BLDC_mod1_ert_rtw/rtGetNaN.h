@@ -3,7 +3,7 @@
  * course requirements at degree granting institutions only.  Not for
  * government, commercial, or other organizational use.
  *
- * File: multiword_types.h
+ * File: rtGetNaN.h
  *
  * Code generated for Simulink model 'PMSM_to_BLDC_mod1'.
  *
@@ -17,17 +17,15 @@
  * Validation result: Not run
  */
 
-#ifndef MULTIWORD_TYPES_H
-#define MULTIWORD_TYPES_H
+#ifndef rtGetNaN_h_
+#define rtGetNaN_h_
+#include "rt_nonfinite.h"
 #include "rtwtypes.h"
 
-/*
- * Definitions supporting external data access
- */
-typedef int64_T chunk_T;
-typedef uint64_T uchunk_T;
+extern real_T rtGetNaN(void);
+extern real32_T rtGetNaNF(void);
 
-#endif                                 /* MULTIWORD_TYPES_H */
+#endif                                 /* rtGetNaN_h_ */
 
 /*
  * File trailer for generated code.

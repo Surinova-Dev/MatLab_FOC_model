@@ -1,20 +1,21 @@
 % Parameters
 pwm_frequency = 20e3;
-x=100;
+x=200;
 rps=x/6.28;
 f_speed=pwm_frequency/100;
-f_current=pwm_frequency/10
-omg_cl = 2 * 3.14 * pwm_frequency;
+f_current=pwm_frequency/10;
+omg_cl = (2 * 3.14 * pwm_frequency);
 %Bldc RPP parameters
-Ld = 0.0018;
-Lq = 0.0018;
+Ld = 0.0036;
+Lq = Ld;  %bldc 
 R_s = 0.037;
-flux_linkage = 0.002386705174987;
+flux_linkage = 0.004133; %0.002386705174987;
 motor_polepairs = 7;
 Kv= 330;
-J = 4.5e-5;
-B = 0.0025;
-Damping_viscous = 0.00012;
+J = 4.5e-5;   %inertia
+B = 0.0025;  %viscous damping
+Damping_viscous = 2.5e-4;   % viscous damping (same as B)
+Friction = 15e-3;
 Trq_cnst = 0.025;
 %Bldc RPP parameters
 omg_cls = 2 * 3.14 * f_speed;
@@ -28,7 +29,7 @@ ki_speed = ((B *omg_cls * omg_cls)/(1.5*motor_polepairs*flux_linkage)) ;
 Torque = [0,0.5,1.6,2];
 speed = [0,0,5000.7900];
 Vdc = [48];
-
+I=0;
 %control data
 
 reg_ctrl_1= ( bitshift(21,6) + bitshift(1,4) + bitshift(0,3) + bitshift(0,2) + bitshift(0,0));
@@ -41,3 +42,12 @@ stat_reg1 = 0x00;
 stat_reg2 = 0x01;
 reg1_check = uint16(0x1550);
 reg2_check = uint16(0x1804);
+
+%inverter parameter
+
+inverter_Igain= -1;  %depends on shunt resistance polarity
+Current_sense_gain =1/((4096/3.3)*10*0.0005);
+
+%Foc variable
+
+OL_speed=100;

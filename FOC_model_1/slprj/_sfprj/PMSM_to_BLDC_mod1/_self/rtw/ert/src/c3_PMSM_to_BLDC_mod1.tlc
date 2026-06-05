@@ -7,7 +7,7 @@
 %endfunction
 %function ChartDataMap(block, system) void
   %createrecord ChartDataElements {\
-    NumChartData   12 \
+    NumChartData   15 \
     ChartDataDefaults {\
       RecordType   "ChartData"\
       Dimensions   []\
@@ -89,6 +89,22 @@
       IsTestPoint  1\
     }\
     ChartData {\
+      Name         "is_active_Test2"\
+      Description  "StateIsActive"\
+      SFName       "is_active_Test2"\
+      Path         "SPI_Status_Check.Test2.is_active_Test2"\
+      SrcLocation  ""\
+      IsTestPoint  1\
+    }\
+    ChartData {\
+      Name         "is_Test2"\
+      Description  "StateActiveChild"\
+      SFName       "is_Test2"\
+      Path         "SPI_Status_Check.Test2.is_Test2"\
+      SrcLocation  ""\
+      IsTestPoint  1\
+    }\
+    ChartData {\
       Name         "temporalCounter_i1"\
       Description  "TemporalCounter"\
       SFName       ""\
@@ -97,6 +113,13 @@
     }\
     ChartData {\
       Name         "temporalCounter_i2"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i3"\
       Description  "TemporalCounter"\
       SFName       ""\
       Path         ""\

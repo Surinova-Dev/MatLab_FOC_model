@@ -7,9 +7,9 @@
  *
  * Code generation for model "PMSM_to_BLDC_mod1".
  *
- * Model version              : 4.1040
+ * Model version              : 4.1160
  * Simulink Coder version : 25.2 (R2025b) 28-Jul-2025
- * C source code generated on : Thu May 28 16:12:04 2026
+ * C source code generated on : Fri Jun  5 12:36:16 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -43,7 +43,7 @@ typedef real_T extmodeClassicTriggerSignal_T;
 #define XCP_UINT32_MAX                 0xFFFFFFFFU
 
 /** External Mode Base rate event id */
-#define EXTMODE_BASE_RATE_EVENT_ID     0
+#define EXTMODE_BASE_RATE_EVENT_ID     1
 
 /** External Mode Max Event Id */
 #define EXTMODE_MAX_EVENT_ID           0xFF

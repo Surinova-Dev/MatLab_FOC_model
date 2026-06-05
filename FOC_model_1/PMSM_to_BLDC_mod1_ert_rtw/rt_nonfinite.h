@@ -3,7 +3,7 @@
  * course requirements at degree granting institutions only.  Not for
  * government, commercial, or other organizational use.
  *
- * File: multiword_types.h
+ * File: rt_nonfinite.h
  *
  * Code generated for Simulink model 'PMSM_to_BLDC_mod1'.
  *
@@ -17,17 +17,22 @@
  * Validation result: Not run
  */
 
-#ifndef MULTIWORD_TYPES_H
-#define MULTIWORD_TYPES_H
+#ifndef rt_nonfinite_h_
+#define rt_nonfinite_h_
 #include "rtwtypes.h"
 
-/*
- * Definitions supporting external data access
- */
-typedef int64_T chunk_T;
-typedef uint64_T uchunk_T;
+extern real_T rtInf;
+extern real_T rtMinusInf;
+extern real_T rtNaN;
+extern real32_T rtInfF;
+extern real32_T rtMinusInfF;
+extern real32_T rtNaNF;
+extern boolean_T rtIsInf(real_T value);
+extern boolean_T rtIsInfF(real32_T value);
+extern boolean_T rtIsNaN(real_T value);
+extern boolean_T rtIsNaNF(real32_T value);
 
-#endif                                 /* MULTIWORD_TYPES_H */
+#endif                                 /* rt_nonfinite_h_ */
 
 /*
  * File trailer for generated code.

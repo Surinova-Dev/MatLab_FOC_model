@@ -1,1 +1,0 @@
-MW_ARM_TOOLS_PATH = C:/Program Files/ArmCompilerforEmbedded6.24/bin
