@@ -1,1 +1,0 @@
-var modelInfo = {model:"PMSM_to_BLDC_mod1"};var modelHierarchy=[{model:"PMSM_to_BLDC_mod1",relativePath:"_internal.html",parent:"null"},];var AddCode = true;var ProtectedModel = false;

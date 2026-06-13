@@ -6,7 +6,10 @@
       "mcp__matlab__model_edit",
       "mcp__matlab__evaluate_matlab_code",
       "mcp__MATLAB__evaluate_matlab_code",
-      "Bash(python3 -c ' *)"
+      "Bash(python3 -c ' *)",
+      "mcp__matlab__model_query_params",
+      "Bash(ls \"C:\\\\Users\\\\Surinova\\\\OneDrive - Surinova Pvt Ltd\\\\Documents\\\\Github\\\\MatLab_FOC_model\\\\\")",
+      "Bash(dir /b)"
     ]
   }
 }
